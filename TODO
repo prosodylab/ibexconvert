@@ -1,3 +1,5 @@
-* Pay attention to 'design' variable
-* Avoid adjecent items of same type
+* Pay attention to 'design' variable.
+* Avoid adjacent items of same type when randomziing.
 * Instructions file name column on every line.
+* MTurk code generation.
+* Get perception working.
