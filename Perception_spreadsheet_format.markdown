@@ -5,6 +5,8 @@ experiments to ibex. The main input is a spreadsheet saved as a CSV file.
 Typically, this spreadsheet will refer to an instructions file, which is a plain
 text (`.txt`) file.
 
+This format differs from the format currently used in the lab (as of July 17 2014)
+in that it uses one big spreadsheet rather than multiple separate spreadsheets.
 
 Columns (in order)
 -----
@@ -24,13 +26,23 @@ item              | Item number
                   |
 condition         | Condition number
                   |
+practice          | `yes` or `no`, specifying whether the item is a practice item.
+                  |
+context           | Context for question.
+                  |
+contextFile       | **??? TODO ??? Assume same but audio file rather than text?**
+                  |
 conditionLabel    | Condition label
+                  |
+cleft             |
                   |
 wavFile           | Name of the audio file to be played.
                   |
 question          | Question to ask participant
                   |
 qType             | See 'question types' below.
+                  |
+question          | Text of the question (if any).
                   |
 design            | See 'design' below.
                   |
@@ -46,14 +58,14 @@ Question types
 
 Column value | Description
 -------------|------------
-jm           | **???**
+jm           | **??? TODO ???**
 
 
 Design
 ------
 
-Column value | Description
--------------|------------
-LatinSquare  | One condition from each item is displayed.
-PseudoRandom | All conditions of all items are presented; order is random.
-**???**      | **TODO:** Should have the option of presenting all conditions in such a way that the first part of the experiment can be analyzed as a latin square design.
+Column value      | Description
+------------------|------------
+LatinSquare       | One condition from each item is displayed.
+PseudoRandom      | All conditions of all items are presented; order is random.
+**??? TODO ???**  | **??? TODO ???** Should have the option of presenting all conditions in such a way that the first part of the experiment can be analyzed as a latin square design.
