@@ -29,37 +29,42 @@ them in the following order.
 Not all columns need be present. For example, `wavFile` is not required if
 there is no sound file to be played.
 
-Column name       | Description
-------------------|------------
-experiment        | Name of the experiment
-                  |
-item              | Item number
-                  |
-condition         | Condition number
-                  |
-instructions      | The name of the plain text file containing instructions.
-                  |
-practice          | `yes` or `no`, specifying whether the item is a practice item.
-                  |
-context           | Context for question.
-                  |
-contextFile       | **??? TODO ??? Assume same but audio file rather than text?**
-                  |
-conditionLabel    | Condition label
-                  |
-cleft             | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
-                  |
-wavFile           | Name of the audio file to be played.
-                  |
-question          | Question to ask participant
-                  |
-qType             | See 'question types' below.
-                  |
-question          | Text of the question (if any).
-                  |
-design            | See 'design' below.
-                  |
-text              | Text to show participant.
+Column name                       | Description
+----------------------------------|------------
+`experiment`                      | Name of the experiment
+                                  |
+session                           | Session number.
+                                  |
+item                              | Item number
+                                  |
+condition                         | Condition number
+                                  |
+`instructions` or `instructions1` | The name of the plain text file containing instructions for the first session.
+                                  |
+`instructions2`,                  |
+`instructions3`, ...              | Instructions files for subsequent sessions.
+                                  |
+context                           | Context for question.
+                                  |
+contextFile                       | **??? TODO ??? Assume same but audio file rather than text?**
+                                  |
+conditionLabel                    | Condition label
+                                  |
+cleft                             | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
+                                  |
+`wavFile`                         | Name of the audio file to be played.
+                                  |
+question                          | Question to ask participant
+                                  |
+qType                             | See 'question types' below.
+                                  |
+question                          | Text of the question (if any).
+                                  |
+correct answer/alt answer etc.    | ***??? TODO ???***                          
+                                  |
+design                            | See 'design' below.
+                                  |
+text                              | Text to show participant.
 
 
 Question types
@@ -69,7 +74,8 @@ Question types
 
 Column value | Description
 -------------|------------
-jm           | **??? TODO ???**
+jm           | Acceptability judgment (answer on scale).
+mc           | Multiple choice.
 
 
 Design
