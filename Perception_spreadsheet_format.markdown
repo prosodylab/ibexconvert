@@ -38,6 +38,7 @@ Question types
 --------------
 
 Column value | Description
+-------------|------------
 jm           | **???**
 
 
@@ -45,6 +46,6 @@ Design
 ------
 
 Column value | Description
---------------------------
+-------------|------------
 LatinSquare  | One condition from each item is displayed.
-**???**         | **???**
+**???**      | **???**
