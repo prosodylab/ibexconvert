@@ -8,6 +8,17 @@ text (`.txt`) file.
 This format differs from the format currently used in the lab (as of July 17 2014)
 in that it uses one big spreadsheet rather than multiple separate spreadsheets.
 
+Using the conversion script
+-----
+
+    python convert.py infile outfile
+
+where `infile` is the input spreadsheet and `outfile` is the name for the ibex
+data file (a `.js` file).
+
+Audio files should be placed in the `chunk_includes` directory. Either `.wav`
+or `.mp3` encoding will work.
+
 Columns (in order)
 -----
 
