@@ -37,6 +37,8 @@ item              | Item number
                   |
 condition         | Condition number
                   |
+instructions      | The name of the plain text file containing instructions.
+                  |
 practice          | `yes` or `no`, specifying whether the item is a practice item.
                   |
 context           | Context for question.
@@ -58,8 +60,6 @@ question          | Text of the question (if any).
 design            | See 'design' below.
                   |
 text              | Text to show participant.
-                  |
-instructions      | The name of the plain text file containing instructions.
 
 
 Question types
