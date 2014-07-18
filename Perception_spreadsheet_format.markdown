@@ -34,7 +34,7 @@ contextFile       | **??? TODO ??? Assume same but audio file rather than text?*
                   |
 conditionLabel    | Condition label
                   |
-cleft             |
+cleft             | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
                   |
 wavFile           | Name of the audio file to be played.
                   |
