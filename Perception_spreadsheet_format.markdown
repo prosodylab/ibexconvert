@@ -85,5 +85,4 @@ Column value      | Description
 ------------------|------------
 LatinSquare       | One condition from each item is displayed (?avoiding more than one repetition of the same condition)
 Random            | ?All conditions of all items are presented in random order 
-PseudoRandom      | All conditions of all items are presented in pseudorandom order
-                    ? (creates n=number of conditions blocks of latin square lists, randomizing them internally as in latin square design, and then randomizes blocks; advantage: if each block appears for first for a balanced number of participants, the experiment can be analyzed at the same time as a latin square design, by taking the subset of n/condition trials)
+PseudoRandom      | All conditions of all items are presented in pseudorandom order ? (creates n=number of conditions blocks of latin square lists, randomizing them internally as in latin square design, and then randomizes blocks; advantage: if each block appears for first for a balanced number of participants, the experiment can be analyzed at the same time as a latin square design, by taking the subset of n/condition trials)
