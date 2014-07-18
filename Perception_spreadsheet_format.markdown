@@ -1,3 +1,5 @@
+Introduction
+-----
 This file documents the input format for the Python script which converts
 experiments to ibex. The main input is a spreadsheet saved as a CSV file.
 Typically, this spreadsheet will refer to an instructions file, which is a plain
