@@ -33,38 +33,38 @@ Column name                       | Description
 ----------------------------------|------------
 `experiment`                      | Name of the experiment
                                   |
-session                           | Session number.
+`session`                         | Session number.
                                   |
-item                              | Item number
+`item`                            | Item number
                                   |
-condition                         | Condition number
+`condition`                       | Condition number
                                   |
 `instructions` or `instructions1` | The name of the plain text file containing instructions for the first session.
                                   |
 `instructions2`,                  |
 `instructions3`, ...              | Instructions files for subsequent sessions.
                                   |
-context                           | Context for question.
+`context`                         | Context for question.
                                   |
-contextFile                       | **??? TODO ??? Assume same but audio file rather than text?**
+`contextFile`                     | **??? TODO ??? Assume same but audio file rather than text?**
                                   |
-conditionLabel                    | Condition label
+`conditionLabel`                  | Condition label
                                   |
-cleft                             | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
+`cleft`                           | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
                                   |
 `wavFile`                         | Name of the audio file to be played.
                                   |
-question                          | Question to ask participant
+`question`                        | Question to ask participant
                                   |
-qType                             | See 'question types' below.
+`qType`                           | See 'question types' below.
                                   |
-question                          | Text of the question (if any).
+`question`                        | Text of the question (if any).
                                   |
-correct answer/alt answer etc.    | ***??? TODO ???***                          
+`correct answer/alt answer etc.`  | ***??? TODO ???***
                                   |
-design                            | See 'design' below.
+`design`                          | See 'design' below.
                                   |
-text                              | Text to show participant.
+`text`                            | Text to show participant.
 
 
 Question types
@@ -74,8 +74,8 @@ Question types
 
 Column value | Description
 -------------|------------
-jm           | Acceptability judgment (answer on scale).
-mc           | Multiple choice.
+`jm`         | Acceptability judgment (answer on scale).
+`mc`         | Multiple choice.
 
 
 Design
@@ -83,6 +83,6 @@ Design
 
 Column value      | Description
 ------------------|------------
-LatinSquare       | One condition from each item is displayed.
-PseudoRandom      | All conditions of all items are presented; order is random.
+`LatinSquare`     | One condition from each item is displayed.
+`PseudoRandom`    | All conditions of all items are presented; order is random.
 **??? TODO ???**  | **??? TODO ???** Should have the option of presenting all conditions in such a way that the first part of the experiment can be analyzed as a latin square design.
