@@ -63,9 +63,38 @@ assert len(lines) > 0
 colnames = re.split(r"\s*\t+\s*", lines[0])
 lines = [re.split(r"\s*\t+\s*", x) for x in lines[1:]]
 
-conditions = { }
+sessions = { }
+session_names = [ ]
 for l in lines:
-    conditions[indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')] = True
+    sesh = indexwd(l, colnames, 'session')
+    if sesh is not None:
+        if not sessions.has_key(sesh):
+            sessions[sesh] = [ ]
+            session_names.append(sesh)
+        sessions[sesh].append(l)
+    else:
+        if sessions.has_key('default'):
+            sessions['default'].append(l)
+        else:
+            session_names.append(sesh)
+            sessions['default'] = [l]
+
+conditions = { }
+items = { }
+seshnum = 0
+primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
+for sn in session_names:
+    for l in sessions[sn]:
+        if indexwd(l, colnames, 'conditionLabel', None) is not None:
+            conditions[indexwd(l, colnames, 'conditionLabel')] = True
+
+        if indexwd(l, colnames, 'item', None) is not None:
+            it = int(indexwd(l,colnames,'item'))
+            if items.has_key(str(seshnum) + '-' + str(it)):
+                pass
+            else:
+                items[str(seshnum) + '-' + str(it)] = primes[seshnum] * it
+    seshnum += 1
 
 global_opts = { }
 for k in ['experiment', 'design', 'qType']:
@@ -89,6 +118,13 @@ for l in lines:
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+    if global_opts['design'].upper() == 'RANDOM':
+        pass
+    elif global_opts['design'].upper() == 'LATINSQUARE':
+        cond = "[" + cond + "," + str(items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]) + "]"
+    else:
+        sys.stderr.write("Did not recognize design type '%s'\n" % global_opts['design'])
+        sys.exit(1)
     controller = "AJ"
     ajoptions = None
     html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
@@ -118,22 +154,6 @@ def gen_item(sid, sn, l, colnames, line_index):
             rightComment = scale_comment_rights[line_index]
         )
     return json.dumps([cond, controller, ajoptions])
-
-sessions = { }
-session_names = [ ]
-for l in lines:
-    sesh = indexwd(l, colnames, 'session')
-    if sesh is not None:
-        if not sessions.has_key(sesh):
-            sessions[sesh] = [ ]
-            session_names.append(sesh)
-        sessions[sesh].append(l)
-    else:
-        if sessions.has_key('default'):
-            sessions['default'].append(l)
-        else:
-            session_names.append(sesh)
-            sessions['default'] = [l]
 
 instructions = None
 if 'instructions' in colnames:
