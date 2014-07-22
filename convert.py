@@ -121,7 +121,7 @@ def gen_item(sid, sn, l, colnames, line_index):
     if global_opts['design'].upper() == 'RANDOM':
         pass
     elif global_opts['design'].upper() == 'LATINSQUARE':
-        cond = "[" + cond + "," + str(items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]) + "]"
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % global_opts['design'])
         sys.exit(1)
