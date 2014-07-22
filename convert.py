@@ -69,7 +69,7 @@ for k in ['experiment', 'design', 'qType']:
     global_opts[k] = lines[0][colnames.index(k)]
 
 q = lines[0][colnames.index('question')]
-scale_regexp = re.compile(r".*?(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?")
+scale_regexp = re.compile(r"^.*?(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?\s*$")
 m = re.match(scale_regexp, q)
 if not m:
     sys.stderr.write("Error: could not parse scale comments\n")
