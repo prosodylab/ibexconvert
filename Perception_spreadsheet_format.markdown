@@ -48,7 +48,9 @@ Column name                       | Description
                                   |
 `context`                         | Context for question.
                                   |
-`contextFile`                     | **??? TODO ??? Assume same but audio file rather than text?**
+`contextFile`                     | Audio file which is played prior to wavFile.
+                                  |
+`contextPause`                    | Pause between contextFile and wavFile (no pause if this column is not present).
                                   |
 `cleft`                           | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
                                   |
@@ -70,7 +72,6 @@ Column name                       | Description
 Question types
 --------------
 
-**TODO**: What are the possible question types?
 
 Column value | Description
 -------------|------------
@@ -83,6 +84,6 @@ Design
 
 Column value      | Description
 ------------------|------------
-`LatinSquare`     | One condition from each item is displayed.
-`PseudoRandom`    | All conditions of all items are presented; order is random.
-**??? TODO ???**  | **??? TODO ???** Should have the option of presenting all conditions in such a way that the first part of the experiment can be analyzed as a latin square design.
+LatinSquare       | One condition from each item is displayed (?avoiding more than one repetition of the same condition)
+Random            | ?All conditions of all items are presented in random order
+PseudoRandom      | All conditions of all items are presented in pseudorandom order ? (creates n=number of conditions blocks of latin square lists, randomizing them internally as in latin square design, and then randomizes blocks; advantage: if each block appears for first for a balanced number of participants, the experiment can be analyzed at the same time as a latin square design, by taking the subset of n/condition trials)
