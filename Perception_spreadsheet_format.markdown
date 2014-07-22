@@ -39,6 +39,8 @@ Column name                       | Description
                                   |
 `condition`                       | Condition number
                                   |
+`conditionLabel`                  | Condition label
+                                  |
 `instructions` or `instructions1` | The name of the plain text file containing instructions for the first session.
                                   |
 `instructions2`,                  |
@@ -47,8 +49,6 @@ Column name                       | Description
 `context`                         | Context for question.
                                   |
 `contextFile`                     | **??? TODO ??? Assume same but audio file rather than text?**
-                                  |
-`conditionLabel`                  | Condition label
                                   |
 `cleft`                           | **??? TODO ??? Was this just a special option for a specific experiment, or is it more general?**
                                   |
