@@ -119,9 +119,19 @@ for l in lines:
 session_names = sessions.keys()
 session_names.sort()
 
+instructions = None
+if 'instructions' in colnames:
+    instructions = [ ]
+    for sn in session_names:
+        f = open(indexwd(sessions[sn][0], colnames, 'instructions'))
+        contents = f.read().decode('utf-8')
+        instructions.append(contents)
+
 shufseqs = [ ]
 prefix = 0
 for sn in session_names:
+    if instructions is not None:
+        shufseqs.append('"' + str(prefix) + "-instructions" + '"')
     shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions.keys()]))
     prefix += 1
 shufseq = 'seq(' + ','.join(shufseqs) + ')'
@@ -135,11 +145,24 @@ out.write("var items = [\n")
 first = True
 prefix = 0
 for sn in session_names:
+    if instructions is not None:
+        raw_text = instructions[prefix]
+        if raw_text is not None:
+            raw_text = raw_text.encode('utf-8', 'xmlcharrefreplace')
+            raw_text = raw_text.replace("\r\r", "<p>")
+            raw_text = raw_text.replace("\n\n", "<p>")
+            raw_text = raw_text.replace("\r\n\r\n", "<p>")
+            print raw_text
+            out.write("['%s', 'Message', { html: %s, transfer: 'keypress' }]" % (str(prefix) + "-instructions", json.dumps(raw_text)))
+            if prefix == 0:
+                out.write(",\n")
     for l in lines:
         if not first:
             out.write(",\n")
         first = False
         out.write(gen_item(prefix, sn, l, colnames))
     prefix += 1
+    if prefix < len(session_names):
+        out.write(",\n");
 
 out.write("\n];\n")
