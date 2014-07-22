@@ -85,8 +85,8 @@ seshnum = 0
 primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
 for sn in session_names:
     for l in sessions[sn]:
-        if indexwd(l, colnames, 'conditionLabel', None) is not None:
-            conditions[indexwd(l, colnames, 'conditionLabel')] = True
+        if indexwd(l, colnames, 'conditionLabel', None) is not None or indexwd(l, colnames, 'condition', None) is not None:
+            conditions[indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')] = True
 
         if indexwd(l, colnames, 'item', None) is not None:
             it = int(indexwd(l,colnames,'item'))
