@@ -69,7 +69,10 @@ for l in lines:
 
 global_opts = { }
 for k in ['experiment', 'design', 'qType']:
-    global_opts[k] = lines[0][colnames.index(k)]
+    if indexwd(lines[0], colnames, k, None) is None:
+        sys.sterr.write("Expecting '%s' column\n" % k)
+        sys.exit(1)
+    global_opts[k] = indexwd(lines[0], colnames, k)
 
 scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
