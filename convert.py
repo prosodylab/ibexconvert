@@ -1,3 +1,6 @@
+#
+# TODO: Question should be displayed.
+#
 import sys
 import re
 import json
@@ -68,16 +71,20 @@ global_opts = { }
 for k in ['experiment', 'design', 'qType']:
     global_opts[k] = lines[0][colnames.index(k)]
 
-q = lines[0][colnames.index('question')]
-scale_regexp = re.compile(r"^.*?(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?\s*$")
-m = re.match(scale_regexp, q)
-if not m:
-    sys.stderr.write("Error: could not parse scale comments\n")
-    sys.exit(1)
-scale_comment_left = m.group(1)
-scale_comment_right = m.group(2)
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?\s*$")
+questions = [ ]
+scale_comment_lefts = [ ]
+scale_comment_rights = [ ]
+for l in lines:
+    m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+    if not m:
+        sys.stderr.write("Error: could not parse scale comments\n")
+        sys.exit(1)
+    questions.append(m.group(1))
+    scale_comment_lefts.append(m.group(2))
+    scale_comment_rights.append(m.group(3))
 
-def gen_item(sid, sn, l, colnames):
+def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     controller = "AJ"
     ajoptions = None
@@ -92,32 +99,38 @@ def gen_item(sid, sn, l, colnames):
             audiofiles.append(indexwd(l, colnames, 'wavFile'))
         ajoptions = dict(
             html=html,
-            s = dict(audio=audiofiles)
+            s = dict(audio=audiofiles),
+            q = questions[line_index],
+            leftComment = scale_comment_lefts[line_index],
+            rightComment = scale_comment_rights[line_index]
         )
     else:
         print "TEXT!!"
         # Text
         ajoptions = dict(
-            html=html,
-            s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0]
+            html = html,
+            s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+            q = questions[line_index],
+            leftComment = scale_comment_lefts[line_index],
+            rightComment = scale_comment_rights[line_index]
         )
     return json.dumps([cond, controller, ajoptions])
 
 sessions = { }
+session_names = [ ]
 for l in lines:
     sesh = indexwd(l, colnames, 'session')
     if sesh is not None:
         if not sessions.has_key(sesh):
             sessions[sesh] = [ ]
+            session_names.append(sesh)
         sessions[sesh].append(l)
     else:
         if sessions.has_key('default'):
             sessions['default'].append(l)
         else:
+            session_names.append(sesh)
             sessions['default'] = [l]
-
-session_names = sessions.keys()
-session_names.sort()
 
 instructions = None
 if 'instructions' in colnames:
@@ -138,12 +151,13 @@ shufseq = 'seq(' + ','.join(shufseqs) + ')'
 
 out = open(outfile, "w")
 out.write(make_preamble(shufseq))
-out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
-out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
+#out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
+#out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
 out.write("var items = [\n")
 
 first = True
 prefix = 0
+line_index = 0
 for sn in session_names:
     if instructions is not None:
         raw_text = instructions[prefix]
@@ -159,7 +173,8 @@ for sn in session_names:
         if not first:
             out.write(",\n")
         first = False
-        out.write(gen_item(prefix, sn, l, colnames))
+        out.write(gen_item(prefix, sn, l, colnames, line_index))
+        line_index += 1
     prefix += 1
     if prefix < len(session_names):
         out.write(",\n");
