@@ -15,10 +15,10 @@ def indexwd(l, colnames, name, default=None):
 def make_shuffle_sequence(real_types):
     return "var shuffleSequence = seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "));\n"
 
-def make_preamble(real_types):
+def make_preamble(shuffle_sequence):
     return """
 var practiceItemTypes = ["practice"];
-""" + make_shuffle_sequence(real_types) + """
+""" + shuffle_sequence + """
 define_ibex_controller({
     name: "AJ",
 
@@ -77,15 +77,8 @@ if not m:
 scale_comment_left = m.group(1)
 scale_comment_right = m.group(2)
 
-out = open(outfile, "w");
-
-out.write(make_preamble(real_types=conditions.keys()))
-out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
-out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
-out.write("var items = [\n")
-
-def gen_item(l, colnames):
-    cond = indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+def gen_item(sid, sn, l, colnames):
+    cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     controller = "AJ"
     ajoptions = None
     html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
@@ -110,11 +103,40 @@ def gen_item(l, colnames):
         )
     return json.dumps([cond, controller, ajoptions])
 
-first = True
+sessions = { 'default': [ ] }
 for l in lines:
-    if not first:
-        out.write(",\n")
-    first = False
-    out.write(gen_item(l, colnames))
+    sesh = indexwd(l, colnames, 'session')
+    if sesh is not None:
+        if not sessions.has_key(sesh):
+            sessions[sesh] = [ ]
+        sessions[sesh].append(l)
+    else:
+        sessions['default'].append(l)
+
+session_names = sessions.keys()
+session_names.sort()
+
+shufseqs = [ ]
+prefix = 0
+for sn in session_names:
+    shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions.keys()]))
+    prefix += 1
+shufseq = 'seq(' + ','.join(shufseqs) + ')'
+
+out = open(outfile, "w")
+out.write(make_preamble(shufseq))
+out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
+out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
+out.write("var items = [\n")
+
+first = True
+prefix = 0
+for sn in session_names:
+    for l in lines:
+        if not first:
+            out.write(",\n")
+        first = False
+        out.write(gen_item(prefix, sn, l, colnames))
+    prefix += 1
 
 out.write("\n];\n")
