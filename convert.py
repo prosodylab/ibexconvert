@@ -152,11 +152,10 @@ for sn in session_names:
             raw_text = raw_text.replace("\r\r", "<p>")
             raw_text = raw_text.replace("\n\n", "<p>")
             raw_text = raw_text.replace("\r\n\r\n", "<p>")
-            print raw_text
             out.write("['%s', 'Message', { html: %s, transfer: 'keypress' }]" % (str(prefix) + "-instructions", json.dumps(raw_text)))
             if prefix == 0:
                 out.write(",\n")
-    for l in lines:
+    for l in sessions[sn]:
         if not first:
             out.write(",\n")
         first = False
