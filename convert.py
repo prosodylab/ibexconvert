@@ -13,12 +13,12 @@ def indexwd(l, colnames, name, default=None):
     return l[index]
 
 def make_shuffle_sequence(real_types):
-    return "var shuffleSequence = seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "));\n"
+    return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
 
 def make_preamble(shuffle_sequence):
     return """
 var practiceItemTypes = ["practice"];
-""" + shuffle_sequence + """
+var shuffleSequence = """ + shuffle_sequence + """;
 define_ibex_controller({
     name: "AJ",
 
@@ -103,7 +103,7 @@ def gen_item(sid, sn, l, colnames):
         )
     return json.dumps([cond, controller, ajoptions])
 
-sessions = { 'default': [ ] }
+sessions = { }
 for l in lines:
     sesh = indexwd(l, colnames, 'session')
     if sesh is not None:
@@ -111,7 +111,10 @@ for l in lines:
             sessions[sesh] = [ ]
         sessions[sesh].append(l)
     else:
-        sessions['default'].append(l)
+        if sessions.has_key('default'):
+            sessions['default'].append(l)
+        else:
+            sessions['default'] = [l]
 
 session_names = sessions.keys()
 session_names.sort()
