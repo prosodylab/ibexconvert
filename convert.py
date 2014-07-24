@@ -1,5 +1,6 @@
 #
 # TODO: Question should be displayed.
+# practice > rhyme > practice > williams
 #
 import sys
 import re
@@ -84,9 +85,10 @@ items = { }
 seshnum = 0
 primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
 for sn in session_names:
+    conditions[sn] = { }
     for l in sessions[sn]:
         if indexwd(l, colnames, 'conditionLabel', None) is not None or indexwd(l, colnames, 'condition', None) is not None:
-            conditions[indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')] = True
+            conditions[sn][indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')] = True
 
         if indexwd(l, colnames, 'item', None) is not None:
             it = int(indexwd(l,colnames,'item'))
@@ -103,7 +105,7 @@ for k in ['experiment', 'design', 'qType']:
         sys.exit(1)
     global_opts[k] = indexwd(lines[0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))\s*7=\s*(.*?)\s*\)?\s*$")
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))?\s*7=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
@@ -144,7 +146,6 @@ def gen_item(sid, sn, l, colnames, line_index):
             rightComment = scale_comment_rights[line_index]
         )
     else:
-        print "TEXT!!"
         # Text
         ajoptions = dict(
             html = html,
@@ -168,7 +169,7 @@ prefix = 0
 for sn in session_names:
     if instructions is not None:
         shufseqs.append('"' + str(prefix) + "-instructions" + '"')
-    shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions.keys()]))
+    shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions[sn].keys()]))
     prefix += 1
 shufseq = 'seq(' + ','.join(shufseqs) + ')'
 
