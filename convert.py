@@ -1,7 +1,3 @@
-#
-# TODO: Question should be displayed.
-# practice > rhyme > practice > williams
-#
 import sys
 import re
 import json
