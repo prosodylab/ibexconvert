@@ -98,12 +98,14 @@ for sn in session_names:
                 items[str(seshnum) + '-' + str(it)] = primes[seshnum] * it
     seshnum += 1
 
-global_opts = { }
-for k in ['experiment', 'design', 'qType']:
-    if indexwd(lines[0], colnames, k, None) is None:
-        sys.sterr.write("Expecting '%s' column\n" % k)
-        sys.exit(1)
-    global_opts[k] = indexwd(lines[0], colnames, k)
+session_opts = { }
+for sn in session_names:
+    session_opts[sn] = { }
+    for k in ['experiment', 'design', 'qType']:
+        if indexwd(sessions[sn][0], colnames, k, None) is None:
+            sys.sterr.write("Expecting '%s' column in session '%s'\n" % sn)
+            sys.exit(1)
+        session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
 scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))?\s*7=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
@@ -120,18 +122,18 @@ for l in lines:
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
-    if global_opts['design'].upper() == 'RANDOM':
+    if session_opts[sn]['design'].upper() == 'RANDOM':
         pass
-    elif global_opts['design'].upper() == 'LATINSQUARE':
+    elif session_opts[sn]['design'].upper() == 'LATINSQUARE':
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:
-        sys.stderr.write("Did not recognize design type '%s'\n" % global_opts['design'])
+        sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
-    html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    html = ""#indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
-    if indexwd(l, colnames, 'contextFile') is not None:
+    if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio.
         audiofiles = [ ]
         if indexwd(l, colnames, 'contextFile') is not None:
