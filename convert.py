@@ -73,7 +73,7 @@ for l in lines:
         if sessions.has_key('default'):
             sessions['default'].append(l)
         else:
-            session_names.append(sesh)
+            session_names.append('default')
             sessions['default'] = [l]
 
 conditions = { }
@@ -99,7 +99,7 @@ for sn in session_names:
     session_opts[sn] = { }
     for k in ['experiment', 'design', 'qType']:
         if indexwd(sessions[sn][0], colnames, k, None) is None:
-            sys.sterr.write("Expecting '%s' column in session '%s'\n" % sn)
+            sys.stderr.write("Expecting '%s' column in session '%s'\n" % (k, sn))
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
