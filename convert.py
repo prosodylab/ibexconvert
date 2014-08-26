@@ -17,6 +17,8 @@ def make_shuffle_sequence(real_types):
 
 def make_preamble(shuffle_sequence):
     return """
+var counterOverride = parseInt(Math.round(Math.random()*10000));
+
 var practiceItemTypes = ["practice"];
 var shuffleSequence = """ + shuffle_sequence + """;
 define_ibex_controller({
