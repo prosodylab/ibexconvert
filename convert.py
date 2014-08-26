@@ -17,6 +17,18 @@ def make_shuffle_sequence(real_types):
 
 def make_preamble(shuffle_sequence):
     return """
+var manualSendResults = true;
+function genCode()
+{
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var c = "";
+    for (var i = 0; i < 5; ++i) {
+        var j = parseInt(Math.round(Math.random()*(chars.length-1)));
+        c = chars[j] + c + chars[j];
+    }
+    return c;
+}
+
 var counterOverride = parseInt(Math.round(Math.random()*10000));
 
 var practiceItemTypes = ["practice"];
@@ -171,13 +183,22 @@ for sn in session_names:
         shufseqs.append('"' + str(prefix) + "-instructions" + '"')
     shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions[sn].keys()]))
     prefix += 1
-shufseq = 'seq(' + ','.join(shufseqs) + ')'
+shufseq = 'seq("__workerid__",' + ','.join(shufseqs) + ', "__results__", "__code__")'
 
 out = open(outfile, "w")
 out.write(make_preamble(shufseq))
 #out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
 #out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
 out.write("var items = [\n")
+
+out.write("""
+["__workerid__", "Form", { html: "<p>Please enter your worker id: <p><input type='text' name='workerid' size='20'>" }],
+
+["__results__", "__SendResults__", { }],
+
+["__code__", "Message", { transfer: null, html: "Thank you! Your completion code is: " + genCode() }],
+
+""")
 
 first = True
 prefix = 0
