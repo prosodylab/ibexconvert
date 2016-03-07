@@ -117,7 +117,7 @@ for sn in session_names:
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?),?\s*(?:(?:et)|(?:and))?\s*7=\s*(.*?)\s*\)?\s*$")
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*(?:(?:et)|(?:and))?\s*8=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
@@ -162,7 +162,9 @@ def gen_item(sid, sn, l, colnames, line_index):
         ajoptions = dict(
             html = html,
             s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
-            q = questions[line_index],
+            #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
+            #instead, since that is in the datafile, in s, it repeats itself.
+            q = "Please select a number", # questions[line_index],
             leftComment = scale_comment_lefts[line_index],
             rightComment = scale_comment_rights[line_index]
         )
