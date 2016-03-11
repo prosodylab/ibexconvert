@@ -141,7 +141,10 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
-    html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
+        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    else:
+        html = indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio.
