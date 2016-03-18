@@ -117,7 +117,7 @@ for sn in session_names:
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*(?:(?:et)|(?:and))?\s*8=\s*(.*?)\s*\)?\s*$")
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*(?:(?:et)|(?:and))?\s*=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
@@ -141,10 +141,7 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
-    #if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
-     #   html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
-    #else:
-        html = indexwd(l, colnames, 'text', '')
+    html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio.
