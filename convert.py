@@ -51,17 +51,16 @@ define_ibex_controller({
     },
 
     properties: { }
-});
+});"""
 
-var defaults = [
-    "AJ", {
-        presentAsScale: true,
-        as: ["1", "2", "3", "4", "5", "6", "7"],
-        audioMessage: "Click here to play audio",
-        audioTrigger: "click"
-    }
-];
-    """
+#var defaults = [
+ #   "AJ", {
+ #       presentAsScale: true,
+ #       as: ["1", "2", "3", "4", "5", "6", "7"],
+ #       audioMessage: "Click here to play audio",
+ #       audioTrigger: "click"
+ #   }
+#];
 
 expfile = sys.argv[1]
 outfile = sys.argv[2]
@@ -117,7 +116,8 @@ for sn in session_names:
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*(?:(?:et)|(?:and))?\s*8=\s*(.*?)\s*\)?\s*$")
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*\d*(?:(?:et)|(?:and))?\s*=\s*(.*?)\s*\)?\s*$")
+scale_var = re.match()
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
@@ -146,7 +146,7 @@ def gen_item(sid, sn, l, colnames, line_index):
     else:
         html = indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
-    if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
+    '''if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio.
         audiofiles = [ ]
         if indexwd(l, colnames, 'contextFile') is not None:
@@ -160,17 +160,17 @@ def gen_item(sid, sn, l, colnames, line_index):
             leftComment = scale_comment_lefts[line_index],
             rightComment = scale_comment_rights[line_index]
         )
-    else:
+    else:'''
         # Text
-        ajoptions = dict(
-            html = html,
-            s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+    ajoptions = dict(
+        html = html,
+        s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
             #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
             #instead, since that is in the datafile, in s, it repeats itself.
-            q = "Please select a number", # questions[line_index],
-            leftComment = scale_comment_lefts[line_index],
-            rightComment = scale_comment_rights[line_index]
-        )
+        q = "Please select a number", # questions[line_index],
+        leftComment = scale_comment_lefts[line_index],
+        rightComment = scale_comment_rights[line_index]
+    )
     return json.dumps([cond, controller, ajoptions])
 
 instructions = None
