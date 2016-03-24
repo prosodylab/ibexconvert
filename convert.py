@@ -51,16 +51,16 @@ define_ibex_controller({
     },
 
     properties: { }
-});"""
+});
 
-#var defaults = [
- #   "AJ", {
- #       presentAsScale: true,
- #       as: ["1", "2", "3", "4", "5", "6", "7"],
- #       audioMessage: "Click here to play audio",
- #       audioTrigger: "click"
- #   }
-#];
+var defaults = [
+    "AJ", {
+        presentAsScale: true,
+        as: ["1", "2", "3", "4", "5", "6", "7"],
+        audioMessage: "Click here to play audio",
+        audioTrigger: "click"
+    }
+];"""
 
 expfile = sys.argv[1]
 outfile = sys.argv[2]
