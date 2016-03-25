@@ -60,8 +60,7 @@ var defaults = [
         audioMessage: "Click here to play audio",
         audioTrigger: "click"
     }
-];
-    """
+];"""
 
 expfile = sys.argv[1]
 outfile = sys.argv[2]
@@ -99,7 +98,6 @@ for sn in session_names:
     for l in sessions[sn]:
         if indexwd(l, colnames, 'conditionLabel', None) is not None or indexwd(l, colnames, 'condition', None) is not None:
             conditions[sn][indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')] = True
-
         if indexwd(l, colnames, 'item', None) is not None:
             it = int(indexwd(l,colnames,'item'))
             if items.has_key(str(seshnum) + '-' + str(it)):
@@ -117,7 +115,7 @@ for sn in session_names:
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?);?\s*(?:(?:et)|(?:and))?\s*=\s*(.*?)\s*\)?\s*$")
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?)\,?\s?(?:(?:et)|(?:and))?;?\s*\d*\s*=\s*(.*?)\s*\)?\s*$")
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
@@ -141,7 +139,10 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
-    html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
+        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    else:
+        html = indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio.
