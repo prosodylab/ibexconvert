@@ -116,7 +116,6 @@ for sn in session_names:
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
 scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?)\,?\s?(?:(?:et)|(?:and))?;?\s*\d*\s*=\s*(.*?)\s*\)?\s*$")
-#scale_var = re.match()
 questions = [ ]
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
