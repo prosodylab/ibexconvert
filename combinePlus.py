@@ -21,12 +21,14 @@ f2.close()
 nonHeadersString=''.join(experimentData[1:len(experimentData)])
 #attempting to grab the trial headers
 trialDataHeadersA=[]
-pattern=re.compile(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)")
+pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(.*)")
 for trialHeadA in trialDataList:
     match=pattern.match(trialHeadA)
     if match:
-        if ("\t"+match.group(1)) not in trialDataHeadersA:
-            trialDataHeadersA.append("\t"+match.group(1))
+        print match.group(1)
+        print match.group(2)
+        if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
+            trialDataHeadersA.append("\t"+match.group(2))
 
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
