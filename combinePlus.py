@@ -27,6 +27,8 @@ for trialHeadA in trialDataList:
     if match:
         if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
             trialDataHeadersA.append("\t"+match.group(2))
+        elif int(match.group(1)) < len(trialDataHeadersA) and (match.group(2) not in trialDataHeadersA[int(match.group(1))-1]) and ("\t"+match.group(2)) not in trialDataHeadersA:
+            trialDataHeadersA[int(match.group(1))-1]+="/"+match.group(2)
 
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
