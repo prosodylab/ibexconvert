@@ -134,7 +134,11 @@ def gen_item(sid, sn, l, colnames, line_index):
         pass
     elif session_opts[sn]['design'].upper() == 'LATINSQUARE':
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-    else:
+        #cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+    elif session_opts[sn]['design'].upper() == 'EVERYQUESTION':
+        cond = str(sid) + '-' + indexwd(l, colnames, 'item', '')
+    else:  
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
     controller = "AJ"
@@ -169,6 +173,9 @@ def gen_item(sid, sn, l, colnames, line_index):
             leftComment = scale_comment_lefts[line_index],
             rightComment = scale_comment_rights[line_index]
         )
+    #print "this is what you want:"
+    #print html
+    #print cond
     return json.dumps([cond, controller, ajoptions])
 
 instructions = None
