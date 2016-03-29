@@ -18,15 +18,13 @@ f2=open(trialDataFile)
 trialDataList=re.split(r"(?:\r\n)|(?:\n)|(?:\r)",f2.read())
 
 f2.close()
-nonHeadersString=''.join(experimentData[1:len(experimentData)])
+#nonHeadersString=''.join(experimentData[1:len(experimentData)])#old code, possibly useful later
 #attempting to grab the trial headers
 trialDataHeadersA=[]
 pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(.*)")
 for trialHeadA in trialDataList:
     match=pattern.match(trialHeadA)
     if match:
-        print match.group(1)
-        print match.group(2)
         if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
             trialDataHeadersA.append("\t"+match.group(2))
 
