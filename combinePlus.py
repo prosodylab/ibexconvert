@@ -33,13 +33,24 @@ for trialHeadA in trialDataList:
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
 
-#get worker ID
-workerid='ID not Found'
+#get worker ID\
+#workerid=[]
+#workerid[0]='ID not Found'
+workerid='ID not found'
+workerCount=0
+qNumWorkerCount=0
+fullcount=-1
 for workerLines in trialDataList:
+    fullcount+=1
     if len(workerLines)>0 and workerLines[0]!="#":
             workerLinesList=workerLines.split(',')
-            workerid=workerLinesList[8]
-            break
+            if workerCount==0:
+                qNumWorkerCount+=1
+            trialDataList[fullcount]+="\t"+workerid
+            if workerLinesList[7]=="workerid":
+                #workerid[workercount]=workerLinesList[8]
+                workerid=workerLinesList[8]
+                workerCount+=1
 #retrieve headers from original files
 headersString=experimentData[0]+trialString+"\tWorker ID Number"
 
@@ -48,10 +59,13 @@ newoutput=open(outputFileName,'w')
 #write headers to newoutput
 newoutput.write(headersString+'\n')
 #check item number(4th in each row from trial data) with row number of originalExperiment
+workerCount2=0
+qNumCount2=0
 for trialLine in trialDataList:
     if len(trialLine)>0 and trialLine[0]!="#":
         itemNum=int(trialLine.split(',')[3])-2
         if itemNum and itemNum>0:
             #take row number item num from experimentData
-            newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t"+workerid+"\n")
+            #add workerid based on experiment type
+            newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t""\n")
 newoutput.close()
