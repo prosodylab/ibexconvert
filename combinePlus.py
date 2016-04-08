@@ -32,7 +32,8 @@ for trialHeadA in trialDataList:
 
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
-
+commaCount=trialString.count('\t')
+print commaCount
 #get worker ID\
 #workerid=[]
 #workerid[0]='ID not Found'
@@ -46,7 +47,9 @@ for workerLines in trialDataList:
             workerLinesList=workerLines.split(',')
             if workerCount==0:
                 qNumWorkerCount+=1
-            trialDataList[fullcount]+="\t"+workerid
+            while trialDataList[fullcount].count(',') < commaCount-1:
+                trialDataList[fullcount]+=',NULL'
+            trialDataList[fullcount]+=","+workerid
             if workerLinesList[7]=="workerid":
                 #workerid[workercount]=workerLinesList[8]
                 workerid=workerLinesList[8]
