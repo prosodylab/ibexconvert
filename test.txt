@@ -1,0 +1,2 @@
+experiment	item	condition	blah	Syntax	Superlative	context	text	question	qType	record	design
+veen	1	1	Additive	VP	Super	"People lined up at the climate conference to see government officials. Everyone saw several well known politicians. Nancy felt happy because she saw the vice president, Joe Biden, among other people. But Bill was able to top that. "	He even saw the most famous politician of all: Obama.	How natural did you think this sentence was?\n(Between1=completely unnatural; 8=completely natural)	jm	n	LatinSquare
