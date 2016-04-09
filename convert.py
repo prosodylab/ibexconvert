@@ -12,6 +12,7 @@ def indexwd(l, colnames, name, default=None):
         return default
     return l[index]
 
+
 def make_shuffle_sequence(real_types):
     return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
 
@@ -68,10 +69,11 @@ outfile = sys.argv[2]
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
 
+
 assert len(lines) > 0
 
 colnames = re.split(r"\s*\t+\s*", lines[0])
-lines = [re.split(r"\s*\t+\s*", x) for x in lines[1:]]
+lines = [re.split(r"\"*\s*\t+\s*\"*", x) for x in lines[1:]]
 
 sessions = { }
 session_names = [ ]
@@ -190,7 +192,7 @@ shufseqs = [ ]
 prefix = 0
 for sn in session_names:
     if instructions is not None:
-        shufseqs.append('"' + str(prefix) + "-instructions" + '"')
+        shufseqs.append(str(prefix) + "-instructions")
     shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions[sn].keys()]))
     prefix += 1
 shufseq = 'seq("__workerid__",' + ','.join(shufseqs) + ', "__results__", "__code__")'
