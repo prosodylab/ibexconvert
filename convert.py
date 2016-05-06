@@ -30,6 +30,7 @@ function genCode()
     return c;
 }
 
+
 var counterOverride = parseInt(Math.round(Math.random()*10000));
 
 var practiceItemTypes = ["practice"];
@@ -69,7 +70,6 @@ outfile = sys.argv[2]
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
 
-
 assert len(lines) > 0
 
 colnames = re.split(r"\s*\t+\s*", lines[0])
@@ -85,6 +85,14 @@ for l in lines:
             session_names.append(sesh)
         sessions[sesh].append(l)
     else:
+        #out = open(outfile, "w")
+        #out.write("""var actual = [
+        #                "AJ", {
+        #                    presentAsScale: true,
+        #                    as: ["1","2","3"]
+        #                    audioMessage: "click here"
+        #                }
+        #            ];""")
         if sessions.has_key('default'):
             sessions['default'].append(l)
         else:
@@ -136,10 +144,15 @@ def gen_item(sid, sn, l, colnames, line_index):
         pass
     elif session_opts[sn]['design'].upper() == 'LATINSQUARE':
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        #cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+    elif session_opts[sn]['design'].upper() == 'WITHIN':
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-    elif session_opts[sn]['design'].upper() == 'EVERYQUESTION':
-        cond = str(sid) + '-' + indexwd(l, colnames, 'item', '')
+        #note 2 self: set playlist label here & print to html when testing playlist manipulation
+        #this works ok: cond = str(sid) + '-' + indexwd(l, colnames, 'item', '')
+        #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:  
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
@@ -151,7 +164,7 @@ def gen_item(sid, sn, l, colnames, line_index):
         html = indexwd(l, colnames, 'text', '')
     # Determine whether or not this is audio.
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
-        # Audio.
+        # Audio
         audiofiles = [ ]
         if indexwd(l, colnames, 'contextFile') is not None:
             audiofiles.append(indexwd(l, colnames, 'contextFile'))

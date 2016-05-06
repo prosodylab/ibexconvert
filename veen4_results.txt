@@ -1,0 +1,2080 @@
+#
+# Results on Friday April 15 2016 16:57:31 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 4918
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739452,dd71d40e3f214819e30ab79e71626cb1,Form,0,0,__workerid__,NULL,workerid,A1NM7ZPZ3NH412
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,41,0,0-7,NULL,Please select a number,7,NULL,8309
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,30,0,0-4,NULL,Please select a number,6,NULL,8290
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,4,0,0-2,NULL,Please select a number,7,NULL,9440
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,18,0,0-8,NULL,Please select a number,6,NULL,11670
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,51,0,0-1,NULL,Please select a number,6,NULL,13237
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,47,0,0-5,NULL,Please select a number,6,NULL,50521
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,8,0,0-6,NULL,Please select a number,6,NULL,3886
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,21,0,0-3,NULL,Please select a number,6,NULL,4868
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,49,0,0-7,NULL,Please select a number,6,NULL,6110
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,6,0,0-4,NULL,Please select a number,6,NULL,10726
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,52,0,0-2,NULL,Please select a number,5,NULL,8545
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,26,0,0-8,NULL,Please select a number,6,NULL,4456
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,19,0,0-1,NULL,Please select a number,7,NULL,5318
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,31,0,0-5,NULL,Please select a number,6,NULL,57399
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,56,0,0-6,NULL,Please select a number,5,NULL,3202
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,53,0,0-3,NULL,Please select a number,7,NULL,7566
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,17,0,0-7,NULL,Please select a number,6,NULL,6507
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,54,0,0-4,NULL,Please select a number,6,NULL,6634
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,44,0,0-2,NULL,Please select a number,6,NULL,4625
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,58,0,0-8,NULL,Please select a number,6,NULL,6119
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,27,0,0-1,NULL,Please select a number,6,NULL,5311
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,71,0,0-5,NULL,Please select a number,5,NULL,5681
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,24,0,0-6,NULL,Please select a number,5,NULL,7149
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,37,0,0-3,NULL,Please select a number,6,NULL,5530
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,33,0,0-7,NULL,Please select a number,5,NULL,7399
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,62,0,0-4,NULL,Please select a number,6,NULL,9522
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,20,0,0-2,NULL,Please select a number,7,NULL,5974
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,74,0,0-8,NULL,Please select a number,5,NULL,8290
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,43,0,0-1,NULL,Please select a number,6,NULL,4949
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,63,0,0-5,NULL,Please select a number,6,NULL,3036
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,32,0,0-6,NULL,Please select a number,6,NULL,3932
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,5,0,0-3,NULL,Please select a number,7,NULL,2971
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,25,0,0-7,NULL,Please select a number,6,NULL,5520
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,14,0,0-4,NULL,Please select a number,6,NULL,7885
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,68,0,0-2,NULL,Please select a number,5,NULL,6309
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,66,0,0-8,NULL,Please select a number,6,NULL,12325
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,35,0,0-1,NULL,Please select a number,7,NULL,6073
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,39,0,0-5,NULL,Please select a number,6,NULL,5676
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,16,0,0-6,NULL,Please select a number,6,NULL,7048
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,45,0,0-3,NULL,Please select a number,6,NULL,6096
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,73,0,0-7,NULL,Please select a number,5,NULL,6903
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,22,0,0-4,NULL,Please select a number,6,NULL,8080
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,12,0,0-2,NULL,Please select a number,7,NULL,5581
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,50,0,0-8,NULL,Please select a number,6,NULL,8073
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,67,0,0-1,NULL,Please select a number,7,NULL,6342
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,23,0,0-5,NULL,Please select a number,6,NULL,8564
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,40,0,0-6,NULL,Please select a number,5,NULL,6061
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,69,0,0-3,NULL,Please select a number,6,NULL,8639
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,57,0,0-7,NULL,Please select a number,5,NULL,30226
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,70,0,0-4,NULL,Please select a number,6,NULL,6205
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,60,0,0-2,NULL,Please select a number,7,NULL,13746
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,10,0,0-8,NULL,Please select a number,6,NULL,31077
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,11,0,0-1,NULL,Please select a number,7,NULL,8844
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,15,0,0-5,NULL,Please select a number,6,NULL,9586
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,72,0,0-6,NULL,Please select a number,5,NULL,6123
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,13,0,0-3,NULL,Please select a number,7,NULL,6368
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,9,0,0-7,NULL,Please select a number,5,NULL,7659
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,38,0,0-4,NULL,Please select a number,6,NULL,7435
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,28,0,0-2,NULL,Please select a number,5,NULL,6848
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,34,0,0-8,NULL,Please select a number,5,NULL,4490
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,3,0,0-1,NULL,Please select a number,7,NULL,4825
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,55,0,0-5,NULL,Please select a number,6,NULL,16745
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,48,0,0-6,NULL,Please select a number,6,NULL,5600
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,29,0,0-3,NULL,Please select a number,6,NULL,9692
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,65,0,0-7,NULL,Please select a number,6,NULL,10076
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,46,0,0-4,NULL,Please select a number,6,NULL,7596
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,36,0,0-2,NULL,Please select a number,6,NULL,53550
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,42,0,0-8,NULL,Please select a number,5,NULL,5024
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,59,0,0-1,NULL,Please select a number,7,NULL,3801
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,7,0,0-5,NULL,Please select a number,6,NULL,3088
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,64,0,0-6,NULL,Please select a number,6,NULL,2187
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460739452,dd71d40e3f214819e30ab79e71626cb1,AJ,61,0,0-3,NULL,Please select a number,6,NULL,2321
+#
+# Results on Friday April 15 2016 16:57:32 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 6731
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,Form,0,0,__workerid__,NULL,workerid,A1BQCRF5Q76YFY
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,62,0,0-4,NULL,Please select a number,5,NULL,13166
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,4,0,0-2,NULL,Please select a number,3,NULL,8422
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,5,0,0-3,NULL,Please select a number,3,NULL,18914
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,23,0,0-5,NULL,Please select a number,7,NULL,4630
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,16,0,0-6,NULL,Please select a number,2,NULL,10787
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,67,0,0-1,NULL,Please select a number,5,NULL,18675
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,49,0,0-7,NULL,Please select a number,7,NULL,5994
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,34,0,0-8,NULL,Please select a number,1,NULL,5373
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,14,0,0-4,NULL,Please select a number,2,NULL,5618
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,12,0,0-2,NULL,Please select a number,5,NULL,7688
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,21,0,0-3,NULL,Please select a number,6,NULL,5039
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,55,0,0-5,NULL,Please select a number,5,NULL,7202
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,32,0,0-6,NULL,Please select a number,2,NULL,2810
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,3,0,0-1,NULL,Please select a number,1,NULL,3788
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,65,0,0-7,NULL,Please select a number,5,NULL,5801
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,66,0,0-8,NULL,Please select a number,5,NULL,4424
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,46,0,0-4,NULL,Please select a number,6,NULL,5507
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,20,0,0-2,NULL,Please select a number,7,NULL,5527
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,53,0,0-3,NULL,Please select a number,6,NULL,3305
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,7,0,0-5,NULL,Please select a number,1,NULL,4401
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,40,0,0-6,NULL,Please select a number,6,NULL,7472
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,59,0,0-1,NULL,Please select a number,7,NULL,3825
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,25,0,0-7,NULL,Please select a number,6,NULL,9309
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,26,0,0-8,NULL,Please select a number,2,NULL,5077
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,30,0,0-4,NULL,Please select a number,1,NULL,1762
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,36,0,0-2,NULL,Please select a number,7,NULL,2911
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,45,0,0-3,NULL,Please select a number,6,NULL,1968
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,63,0,0-5,NULL,Please select a number,6,NULL,1706
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,48,0,0-6,NULL,Please select a number,6,NULL,2897
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,43,0,0-1,NULL,Please select a number,6,NULL,2219
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,73,0,0-7,NULL,Please select a number,5,NULL,9129
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,10,0,0-8,NULL,Please select a number,2,NULL,4789
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,6,0,0-4,NULL,Please select a number,1,NULL,1446
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,68,0,0-2,NULL,Please select a number,6,NULL,2342
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,29,0,0-3,NULL,Please select a number,1,NULL,2642
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,31,0,0-5,NULL,Please select a number,1,NULL,5055
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,56,0,0-6,NULL,Please select a number,5,NULL,4130
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,51,0,0-1,NULL,Please select a number,5,NULL,2811
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,41,0,0-7,NULL,Please select a number,7,NULL,3224
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,74,0,0-8,NULL,Please select a number,3,NULL,4186
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,70,0,0-4,NULL,Please select a number,1,NULL,3138
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,60,0,0-2,NULL,Please select a number,6,NULL,1780
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,69,0,0-3,NULL,Please select a number,1,NULL,2403
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,39,0,0-5,NULL,Please select a number,6,NULL,1669
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,64,0,0-6,NULL,Please select a number,6,NULL,1371
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,27,0,0-1,NULL,Please select a number,1,NULL,1671
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,33,0,0-7,NULL,Please select a number,1,NULL,1363
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,42,0,0-8,NULL,Please select a number,5,NULL,3008
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,22,0,0-4,NULL,Please select a number,6,NULL,3988
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,44,0,0-2,NULL,Please select a number,6,NULL,1508
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,13,0,0-3,NULL,Please select a number,1,NULL,3257
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,71,0,0-5,NULL,Please select a number,6,NULL,1712
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,8,0,0-6,NULL,Please select a number,2,NULL,2464
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,19,0,0-1,NULL,Please select a number,6,NULL,2284
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,9,0,0-7,NULL,Please select a number,1,NULL,1335
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,58,0,0-8,NULL,Please select a number,2,NULL,5985
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,38,0,0-4,NULL,Please select a number,1,NULL,4540
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,52,0,0-2,NULL,Please select a number,5,NULL,3012
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,37,0,0-3,NULL,Please select a number,6,NULL,2793
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,47,0,0-5,NULL,Please select a number,6,NULL,1488
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,72,0,0-6,NULL,Please select a number,7,NULL,3719
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,11,0,0-1,NULL,Please select a number,2,NULL,2625
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,57,0,0-7,NULL,Please select a number,5,NULL,6337
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,18,0,0-8,NULL,Please select a number,1,NULL,2930
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,54,0,0-4,NULL,Please select a number,5,NULL,2160
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,28,0,0-2,NULL,Please select a number,1,NULL,3620
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,61,0,0-3,NULL,Please select a number,6,NULL,2380
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,15,0,0-5,NULL,Please select a number,1,NULL,1311
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,24,0,0-6,NULL,Please select a number,6,NULL,1916
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,35,0,0-1,NULL,Please select a number,6,NULL,2055
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,17,0,0-7,NULL,Please select a number,1,NULL,55887
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460739453,38e3f02d43976c4fb9cc59c4fdb0b903,AJ,50,0,0-8,NULL,Please select a number,5,NULL,15480
+#
+# Results on Friday April 15 2016 16:58:34 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 6.0; rv:45.0) Gecko/20100101 Firefox/45.0
+# Design number was non-random = 6455
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,Form,0,0,__workerid__,NULL,workerid,A8028AFBBS29G
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,21,0,0-3,NULL,Please select a number,2,NULL,19969
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,36,0,0-2,NULL,Please select a number,3,NULL,20947
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,35,0,0-1,NULL,Please select a number,7,NULL,16923
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,73,0,0-7,NULL,Please select a number,1,NULL,15860
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,70,0,0-4,NULL,Please select a number,4,NULL,13853
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,15,0,0-5,NULL,Please select a number,4,NULL,30224
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,74,0,0-8,NULL,Please select a number,4,NULL,13279
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,72,0,0-6,NULL,Please select a number,4,NULL,9594
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,13,0,0-3,NULL,Please select a number,1,NULL,14766
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,20,0,0-2,NULL,Please select a number,2,NULL,15959
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,3,0,0-1,NULL,Please select a number,7,NULL,13477
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,33,0,0-7,NULL,Please select a number,3,NULL,23629
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,38,0,0-4,NULL,Please select a number,2,NULL,13376
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,31,0,0-5,NULL,Please select a number,3,NULL,10843
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,18,0,0-8,NULL,Please select a number,2,NULL,13306
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,40,0,0-6,NULL,Please select a number,6,NULL,9461
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,53,0,0-3,NULL,Please select a number,4,NULL,20385
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,12,0,0-2,NULL,Please select a number,7,NULL,8678
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,27,0,0-1,NULL,Please select a number,7,NULL,7457
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,41,0,0-7,NULL,Please select a number,2,NULL,7000
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,6,0,0-4,NULL,Please select a number,4,NULL,14098
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,47,0,0-5,NULL,Please select a number,5,NULL,23081
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,10,0,0-8,NULL,Please select a number,4,NULL,6669
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,24,0,0-6,NULL,Please select a number,4,NULL,11682
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,37,0,0-3,NULL,Please select a number,6,NULL,8156
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,60,0,0-2,NULL,Please select a number,7,NULL,10372
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,11,0,0-1,NULL,Please select a number,7,NULL,3873
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,65,0,0-7,NULL,Please select a number,1,NULL,5806
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,62,0,0-4,NULL,Please select a number,7,NULL,6403
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,23,0,0-5,NULL,Please select a number,2,NULL,8136
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,26,0,0-8,NULL,Please select a number,1,NULL,7406
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,32,0,0-6,NULL,Please select a number,4,NULL,5092
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,5,0,0-3,NULL,Please select a number,4,NULL,5944
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,4,0,0-2,NULL,Please select a number,7,NULL,4581
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,59,0,0-1,NULL,Please select a number,7,NULL,8085
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,17,0,0-7,NULL,Please select a number,1,NULL,5273
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,54,0,0-4,NULL,Please select a number,6,NULL,10888
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,7,0,0-5,NULL,Please select a number,4,NULL,8831
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,50,0,0-8,NULL,Please select a number,1,NULL,37089
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,8,0,0-6,NULL,Please select a number,4,NULL,4647
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,29,0,0-3,NULL,Please select a number,4,NULL,6732
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,28,0,0-2,NULL,Please select a number,7,NULL,4722
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,67,0,0-1,NULL,Please select a number,7,NULL,7120
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,25,0,0-7,NULL,Please select a number,1,NULL,5179
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,14,0,0-4,NULL,Please select a number,4,NULL,5962
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,71,0,0-5,NULL,Please select a number,4,NULL,6695
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,58,0,0-8,NULL,Please select a number,1,NULL,5552
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,16,0,0-6,NULL,Please select a number,5,NULL,8455
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,45,0,0-3,NULL,Please select a number,4,NULL,6496
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,44,0,0-2,NULL,Please select a number,7,NULL,2575
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,19,0,0-1,NULL,Please select a number,7,NULL,2649
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,9,0,0-7,NULL,Please select a number,4,NULL,3874
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,30,0,0-4,NULL,Please select a number,7,NULL,5081
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,55,0,0-5,NULL,Please select a number,4,NULL,6736
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,42,0,0-8,NULL,Please select a number,1,NULL,13058
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,64,0,0-6,NULL,Please select a number,5,NULL,6991
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,61,0,0-3,NULL,Please select a number,7,NULL,9559
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,68,0,0-2,NULL,Please select a number,4,NULL,8789
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,43,0,0-1,NULL,Please select a number,7,NULL,3920
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,57,0,0-7,NULL,Please select a number,1,NULL,8038
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,22,0,0-4,NULL,Please select a number,5,NULL,6312
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,63,0,0-5,NULL,Please select a number,4,NULL,5409
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,66,0,0-8,NULL,Please select a number,1,NULL,6031
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,56,0,0-6,NULL,Please select a number,1,NULL,4624
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,69,0,0-3,NULL,Please select a number,5,NULL,14015
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,52,0,0-2,NULL,Please select a number,7,NULL,9784
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,51,0,0-1,NULL,Please select a number,7,NULL,12062
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,49,0,0-7,NULL,Please select a number,1,NULL,5435
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,46,0,0-4,NULL,Please select a number,7,NULL,6986
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,39,0,0-5,NULL,Please select a number,7,NULL,10447
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,34,0,0-8,NULL,Please select a number,1,NULL,5349
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460739514,9bee6fba27bebf3e528f5c1e091cc738,AJ,48,0,0-6,NULL,Please select a number,7,NULL,8459
+#
+# Results on Friday April 15 2016 17:01:08 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 8036
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739669,2a54945897aa715bdb119a6a22dafb47,Form,0,0,__workerid__,NULL,workerid,A1NKBXOTZAI1YK
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,73,0,0-7,NULL,Please select a number,2,NULL,12487
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,72,0,0-6,NULL,Please select a number,4,NULL,8312
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,18,0,0-8,NULL,Please select a number,1,NULL,13738
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,15,0,0-5,NULL,Please select a number,5,NULL,4526
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,13,0,0-3,NULL,Please select a number,3,NULL,3163
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,52,0,0-2,NULL,Please select a number,1,NULL,3630
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,14,0,0-4,NULL,Please select a number,3,NULL,116712
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,67,0,0-1,NULL,Please select a number,5,NULL,3949
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,25,0,0-7,NULL,Please select a number,2,NULL,2117
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,48,0,0-6,NULL,Please select a number,2,NULL,1837
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,50,0,0-8,NULL,Please select a number,3,NULL,2278
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,31,0,0-5,NULL,Please select a number,5,NULL,4267
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,61,0,0-3,NULL,Please select a number,6,NULL,3133
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,36,0,0-2,NULL,Please select a number,2,NULL,7666
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,30,0,0-4,NULL,Please select a number,3,NULL,3103
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,19,0,0-1,NULL,Please select a number,7,NULL,3047
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,65,0,0-7,NULL,Please select a number,5,NULL,3150
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,16,0,0-6,NULL,Please select a number,3,NULL,5550
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,10,0,0-8,NULL,Please select a number,3,NULL,2155
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,63,0,0-5,NULL,Please select a number,2,NULL,3324
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,29,0,0-3,NULL,Please select a number,3,NULL,3761
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,4,0,0-2,NULL,Please select a number,1,NULL,3318
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,6,0,0-4,NULL,Please select a number,2,NULL,3126
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,27,0,0-1,NULL,Please select a number,6,NULL,2968
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,9,0,0-7,NULL,Please select a number,2,NULL,1834
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,64,0,0-6,NULL,Please select a number,3,NULL,3884
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,74,0,0-8,NULL,Please select a number,2,NULL,1542
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,7,0,0-5,NULL,Please select a number,2,NULL,1718
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,37,0,0-3,NULL,Please select a number,4,NULL,4744
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,60,0,0-2,NULL,Please select a number,6,NULL,2282
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,46,0,0-4,NULL,Please select a number,4,NULL,3039
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,35,0,0-1,NULL,Please select a number,5,NULL,5375
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,17,0,0-7,NULL,Please select a number,2,NULL,15713
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,40,0,0-6,NULL,Please select a number,1,NULL,4005
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,26,0,0-8,NULL,Please select a number,1,NULL,4623
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,23,0,0-5,NULL,Please select a number,3,NULL,3182
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,45,0,0-3,NULL,Please select a number,3,NULL,3400
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,68,0,0-2,NULL,Please select a number,4,NULL,2638
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,38,0,0-4,NULL,Please select a number,2,NULL,2952
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,3,0,0-1,NULL,Please select a number,6,NULL,3631
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,33,0,0-7,NULL,Please select a number,1,NULL,1678
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,56,0,0-6,NULL,Please select a number,2,NULL,6012
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,58,0,0-8,NULL,Please select a number,2,NULL,1391
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,39,0,0-5,NULL,Please select a number,1,NULL,3661
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,21,0,0-3,NULL,Please select a number,4,NULL,1966
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,44,0,0-2,NULL,Please select a number,7,NULL,3312
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,22,0,0-4,NULL,Please select a number,2,NULL,2592
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,51,0,0-1,NULL,Please select a number,6,NULL,2693
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,41,0,0-7,NULL,Please select a number,1,NULL,1664
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,8,0,0-6,NULL,Please select a number,3,NULL,2937
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,34,0,0-8,NULL,Please select a number,1,NULL,1623
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,47,0,0-5,NULL,Please select a number,4,NULL,8928
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,53,0,0-3,NULL,Please select a number,2,NULL,2047
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,12,0,0-2,NULL,Please select a number,7,NULL,2119
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,70,0,0-4,NULL,Please select a number,2,NULL,1710
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,11,0,0-1,NULL,Please select a number,7,NULL,3272
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,57,0,0-7,NULL,Please select a number,1,NULL,1584
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,24,0,0-6,NULL,Please select a number,3,NULL,2555
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,42,0,0-8,NULL,Please select a number,1,NULL,2319
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,55,0,0-5,NULL,Please select a number,6,NULL,4647
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,5,0,0-3,NULL,Please select a number,1,NULL,2754
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,28,0,0-2,NULL,Please select a number,1,NULL,2452
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,54,0,0-4,NULL,Please select a number,2,NULL,3145
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,43,0,0-1,NULL,Please select a number,7,NULL,2374
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,49,0,0-7,NULL,Please select a number,1,NULL,2121
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,32,0,0-6,NULL,Please select a number,2,NULL,4214
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,66,0,0-8,NULL,Please select a number,1,NULL,1397
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,71,0,0-5,NULL,Please select a number,4,NULL,3032
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,69,0,0-3,NULL,Please select a number,2,NULL,1768
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,20,0,0-2,NULL,Please select a number,7,NULL,3528
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,62,0,0-4,NULL,Please select a number,4,NULL,2528
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460739669,2a54945897aa715bdb119a6a22dafb47,AJ,59,0,0-1,NULL,Please select a number,7,NULL,2143
+#
+# Results on Friday April 15 2016 17:07:51 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 2257
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,Form,0,0,__workerid__,NULL,workerid,A2OXXHGAM7B0Y
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,23,0,0-5,NULL,Please select a number,4,NULL,12067
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,3,0,0-1,NULL,Please select a number,3,NULL,20100
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,13,0,0-3,NULL,Please select a number,2,NULL,12299
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,4,0,0-2,NULL,Please select a number,2,NULL,13507
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,49,0,0-7,NULL,Please select a number,4,NULL,9901
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,30,0,0-4,NULL,Please select a number,1,NULL,11539
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,50,0,0-8,NULL,Please select a number,3,NULL,7805
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,32,0,0-6,NULL,Please select a number,2,NULL,5583
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,15,0,0-5,NULL,Please select a number,5,NULL,8592
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,43,0,0-1,NULL,Please select a number,6,NULL,5937
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,21,0,0-3,NULL,Please select a number,4,NULL,6181
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,36,0,0-2,NULL,Please select a number,2,NULL,12295
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,57,0,0-7,NULL,Please select a number,3,NULL,15282
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,22,0,0-4,NULL,Please select a number,4,NULL,3074
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,34,0,0-8,NULL,Please select a number,2,NULL,3983
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,8,0,0-6,NULL,Please select a number,2,NULL,7209
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,39,0,0-5,NULL,Please select a number,2,NULL,25675
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,11,0,0-1,NULL,Please select a number,6,NULL,30748
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,29,0,0-3,NULL,Please select a number,2,NULL,7132
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,44,0,0-2,NULL,Please select a number,2,NULL,5116
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,25,0,0-7,NULL,Please select a number,4,NULL,7255
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,38,0,0-4,NULL,Please select a number,3,NULL,7393
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,42,0,0-8,NULL,Please select a number,2,NULL,5016
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,24,0,0-6,NULL,Please select a number,5,NULL,10865
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,55,0,0-5,NULL,Please select a number,4,NULL,11457
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,67,0,0-1,NULL,Please select a number,2,NULL,5940
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,53,0,0-3,NULL,Please select a number,6,NULL,2778
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,12,0,0-2,NULL,Please select a number,6,NULL,3918
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,33,0,0-7,NULL,Please select a number,2,NULL,5392
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,46,0,0-4,NULL,Please select a number,6,NULL,13233
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,58,0,0-8,NULL,Please select a number,2,NULL,20000
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,48,0,0-6,NULL,Please select a number,1,NULL,4232
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,47,0,0-5,NULL,Please select a number,6,NULL,5575
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,51,0,0-1,NULL,Please select a number,6,NULL,3455
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,45,0,0-3,NULL,Please select a number,6,NULL,5060
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,20,0,0-2,NULL,Please select a number,4,NULL,9560
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,9,0,0-7,NULL,Please select a number,2,NULL,3441
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,6,0,0-4,NULL,Please select a number,3,NULL,2786
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,18,0,0-8,NULL,Please select a number,2,NULL,3432
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,40,0,0-6,NULL,Please select a number,2,NULL,6096
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,63,0,0-5,NULL,Please select a number,2,NULL,49522
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,27,0,0-1,NULL,Please select a number,4,NULL,3777
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,69,0,0-3,NULL,Please select a number,6,NULL,4836
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,52,0,0-2,NULL,Please select a number,1,NULL,3336
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,17,0,0-7,NULL,Please select a number,2,NULL,3488
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,70,0,0-4,NULL,Please select a number,2,NULL,5702
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,26,0,0-8,NULL,Please select a number,4,NULL,26216
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,64,0,0-6,NULL,Please select a number,2,NULL,8512
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,31,0,0-5,NULL,Please select a number,2,NULL,15545
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,35,0,0-1,NULL,Please select a number,5,NULL,5277
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,37,0,0-3,NULL,Please select a number,5,NULL,3307
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,28,0,0-2,NULL,Please select a number,1,NULL,5362
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,41,0,0-7,NULL,Please select a number,3,NULL,5740
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,54,0,0-4,NULL,Please select a number,3,NULL,4352
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,66,0,0-8,NULL,Please select a number,1,NULL,8143
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,16,0,0-6,NULL,Please select a number,1,NULL,8267
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,7,0,0-5,NULL,Please select a number,6,NULL,6736
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,59,0,0-1,NULL,Please select a number,7,NULL,6472
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,61,0,0-3,NULL,Please select a number,7,NULL,2318
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,68,0,0-2,NULL,Please select a number,1,NULL,7633
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,73,0,0-7,NULL,Please select a number,1,NULL,6936
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,62,0,0-4,NULL,Please select a number,6,NULL,6480
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,74,0,0-8,NULL,Please select a number,1,NULL,3931
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,72,0,0-6,NULL,Please select a number,1,NULL,5416
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,71,0,0-5,NULL,Please select a number,6,NULL,3575
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,19,0,0-1,NULL,Please select a number,6,NULL,3853
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,5,0,0-3,NULL,Please select a number,5,NULL,11104
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,60,0,0-2,NULL,Please select a number,1,NULL,3209
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,65,0,0-7,NULL,Please select a number,3,NULL,5002
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,14,0,0-4,NULL,Please select a number,1,NULL,4280
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,10,0,0-8,NULL,Please select a number,1,NULL,4904
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460740072,02f0d34838da31527e3f3a9ed4c9b4ba,AJ,56,0,0-6,NULL,Please select a number,1,NULL,5482
+#
+# Results on Friday April 15 2016 17:10:29 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36
+# Design number was non-random = 5902
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740229,89c8924d0746253e8039c87504a726a1,Form,0,0,__workerid__,NULL,workerid,A2NA2OJT15COZY
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,7,0,0-5,NULL,Please select a number,6,NULL,12584
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,3,0,0-1,NULL,Please select a number,7,NULL,9325
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,60,0,0-2,NULL,Please select a number,2,NULL,19180
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,54,0,0-4,NULL,Please select a number,3,NULL,10019
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,40,0,0-6,NULL,Please select a number,1,NULL,9962
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,69,0,0-3,NULL,Please select a number,5,NULL,10539
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,10,0,0-8,NULL,Please select a number,3,NULL,13235
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,17,0,0-7,NULL,Please select a number,2,NULL,23360
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,31,0,0-5,NULL,Please select a number,2,NULL,24001
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,51,0,0-1,NULL,Please select a number,4,NULL,10970
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,36,0,0-2,NULL,Please select a number,4,NULL,8793
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,22,0,0-4,NULL,Please select a number,5,NULL,20013
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,64,0,0-6,NULL,Please select a number,2,NULL,7351
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,13,0,0-3,NULL,Please select a number,4,NULL,12301
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,74,0,0-8,NULL,Please select a number,1,NULL,11140
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,73,0,0-7,NULL,Please select a number,2,NULL,9051
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,55,0,0-5,NULL,Please select a number,3,NULL,13402
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,35,0,0-1,NULL,Please select a number,6,NULL,13371
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,4,0,0-2,NULL,Please select a number,3,NULL,9666
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,46,0,0-4,NULL,Please select a number,5,NULL,8237
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,16,0,0-6,NULL,Please select a number,2,NULL,12337
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,53,0,0-3,NULL,Please select a number,6,NULL,8816
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,58,0,0-8,NULL,Please select a number,2,NULL,11819
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,41,0,0-7,NULL,Please select a number,1,NULL,11240
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,63,0,0-5,NULL,Please select a number,5,NULL,10585
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,11,0,0-1,NULL,Please select a number,7,NULL,9156
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,28,0,0-2,NULL,Please select a number,1,NULL,13245
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,62,0,0-4,NULL,Please select a number,6,NULL,9230
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,72,0,0-6,NULL,Please select a number,2,NULL,8137
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,37,0,0-3,NULL,Please select a number,4,NULL,9345
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,26,0,0-8,NULL,Please select a number,1,NULL,9917
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,33,0,0-7,NULL,Please select a number,2,NULL,8359
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,15,0,0-5,NULL,Please select a number,4,NULL,12571
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,27,0,0-1,NULL,Please select a number,7,NULL,8411
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,68,0,0-2,NULL,Please select a number,5,NULL,9389
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,38,0,0-4,NULL,Please select a number,3,NULL,7691
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,56,0,0-6,NULL,Please select a number,2,NULL,6583
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,45,0,0-3,NULL,Please select a number,6,NULL,11597
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,66,0,0-8,NULL,Please select a number,2,NULL,7536
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,57,0,0-7,NULL,Please select a number,4,NULL,12416
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,23,0,0-5,NULL,Please select a number,5,NULL,11960
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,19,0,0-1,NULL,Please select a number,7,NULL,5500
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,44,0,0-2,NULL,Please select a number,2,NULL,10841
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,14,0,0-4,NULL,Please select a number,4,NULL,18242
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,32,0,0-6,NULL,Please select a number,2,NULL,9553
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,5,0,0-3,NULL,Please select a number,6,NULL,8484
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,42,0,0-8,NULL,Please select a number,2,NULL,7319
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,65,0,0-7,NULL,Please select a number,3,NULL,10333
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,39,0,0-5,NULL,Please select a number,5,NULL,10535
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,59,0,0-1,NULL,Please select a number,7,NULL,9624
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,12,0,0-2,NULL,Please select a number,3,NULL,10950
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,6,0,0-4,NULL,Please select a number,4,NULL,8088
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,48,0,0-6,NULL,Please select a number,3,NULL,8639
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,21,0,0-3,NULL,Please select a number,3,NULL,7794
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,18,0,0-8,NULL,Please select a number,2,NULL,6096
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,49,0,0-7,NULL,Please select a number,2,NULL,6736
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,71,0,0-5,NULL,Please select a number,5,NULL,11117
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,67,0,0-1,NULL,Please select a number,7,NULL,4294
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,20,0,0-2,NULL,Please select a number,3,NULL,13611
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,70,0,0-4,NULL,Please select a number,5,NULL,9219
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,8,0,0-6,NULL,Please select a number,2,NULL,8232
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,61,0,0-3,NULL,Please select a number,5,NULL,5800
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,50,0,0-8,NULL,Please select a number,3,NULL,23478
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,25,0,0-7,NULL,Please select a number,4,NULL,8835
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,47,0,0-5,NULL,Please select a number,4,NULL,8838
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,43,0,0-1,NULL,Please select a number,7,NULL,3985
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,52,0,0-2,NULL,Please select a number,3,NULL,7465
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,30,0,0-4,NULL,Please select a number,2,NULL,5339
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,24,0,0-6,NULL,Please select a number,2,NULL,6602
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,29,0,0-3,NULL,Please select a number,4,NULL,9538
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,34,0,0-8,NULL,Please select a number,2,NULL,6728
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460740229,89c8924d0746253e8039c87504a726a1,AJ,9,0,0-7,NULL,Please select a number,2,NULL,13695
+#
+# Results on Friday April 15 2016 17:14:13 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 3155
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740454,3a8127b61fbade78c434bdeade936d90,Form,0,0,__workerid__,NULL,workerid,A1LAZ3AO0NYBC1
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,30,0,0-4,NULL,Please select a number,4,NULL,8621
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,12,0,0-2,NULL,Please select a number,4,NULL,72980
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,47,0,0-5,NULL,Please select a number,5,NULL,3223
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,56,0,0-6,NULL,Please select a number,3,NULL,4793
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,57,0,0-7,NULL,Please select a number,3,NULL,25117
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,13,0,0-3,NULL,Please select a number,2,NULL,3239
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,42,0,0-8,NULL,Please select a number,4,NULL,4320
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,11,0,0-1,NULL,Please select a number,2,NULL,12805
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,54,0,0-4,NULL,Please select a number,2,NULL,59966
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,4,0,0-2,NULL,Please select a number,4,NULL,1768
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,31,0,0-5,NULL,Please select a number,3,NULL,4603
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,16,0,0-6,NULL,Please select a number,4,NULL,6883
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,9,0,0-7,NULL,Please select a number,3,NULL,1504
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,5,0,0-3,NULL,Please select a number,4,NULL,2017
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,66,0,0-8,NULL,Please select a number,5,NULL,26327
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,3,0,0-1,NULL,Please select a number,3,NULL,52124
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,62,0,0-4,NULL,Please select a number,2,NULL,40215
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,20,0,0-2,NULL,Please select a number,3,NULL,3725
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,63,0,0-5,NULL,Please select a number,4,NULL,2895
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,32,0,0-6,NULL,Please select a number,4,NULL,7182
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,25,0,0-7,NULL,Please select a number,3,NULL,10123
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,45,0,0-3,NULL,Please select a number,4,NULL,1190
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,58,0,0-8,NULL,Please select a number,5,NULL,7668
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,43,0,0-1,NULL,Please select a number,3,NULL,1484
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,14,0,0-4,NULL,Please select a number,4,NULL,4707
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,36,0,0-2,NULL,Please select a number,5,NULL,24110
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,15,0,0-5,NULL,Please select a number,3,NULL,1476
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,48,0,0-6,NULL,Please select a number,2,NULL,8805
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,65,0,0-7,NULL,Please select a number,3,NULL,3233
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,37,0,0-3,NULL,Please select a number,2,NULL,8508
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,74,0,0-8,NULL,Please select a number,5,NULL,2972
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,19,0,0-1,NULL,Please select a number,4,NULL,4417
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,70,0,0-4,NULL,Please select a number,3,NULL,3638
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,44,0,0-2,NULL,Please select a number,2,NULL,33086
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,71,0,0-5,NULL,Please select a number,3,NULL,4921
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,24,0,0-6,NULL,Please select a number,2,NULL,2659
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,33,0,0-7,NULL,Please select a number,4,NULL,2191
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,69,0,0-3,NULL,Please select a number,5,NULL,6312
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,26,0,0-8,NULL,Please select a number,5,NULL,23632
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,35,0,0-1,NULL,Please select a number,3,NULL,3231
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,22,0,0-4,NULL,Please select a number,5,NULL,36937
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,28,0,0-2,NULL,Please select a number,4,NULL,5404
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,23,0,0-5,NULL,Please select a number,5,NULL,2855
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,40,0,0-6,NULL,Please select a number,3,NULL,2695
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,49,0,0-7,NULL,Please select a number,4,NULL,5072
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,53,0,0-3,NULL,Please select a number,3,NULL,2197
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,10,0,0-8,NULL,Please select a number,4,NULL,7331
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,27,0,0-1,NULL,Please select a number,5,NULL,1546
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,6,0,0-4,NULL,Please select a number,3,NULL,48429
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,68,0,0-2,NULL,Please select a number,4,NULL,1663
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,39,0,0-5,NULL,Please select a number,5,NULL,5599
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,8,0,0-6,NULL,Please select a number,3,NULL,1760
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,73,0,0-7,NULL,Please select a number,4,NULL,11124
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,21,0,0-3,NULL,Please select a number,2,NULL,2008
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,34,0,0-8,NULL,Please select a number,4,NULL,2236
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,59,0,0-1,NULL,Please select a number,5,NULL,76077
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,46,0,0-4,NULL,Please select a number,5,NULL,40811
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,52,0,0-2,NULL,Please select a number,3,NULL,3141
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,55,0,0-5,NULL,Please select a number,4,NULL,109493
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,64,0,0-6,NULL,Please select a number,3,NULL,3248
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,41,0,0-7,NULL,Please select a number,3,NULL,14335
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,61,0,0-3,NULL,Please select a number,3,NULL,13491
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,18,0,0-8,NULL,Please select a number,4,NULL,1689
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,67,0,0-1,NULL,Please select a number,2,NULL,1256
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,38,0,0-4,NULL,Please select a number,2,NULL,4886
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,60,0,0-2,NULL,Please select a number,4,NULL,1014
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,7,0,0-5,NULL,Please select a number,5,NULL,4252
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,72,0,0-6,NULL,Please select a number,3,NULL,2496
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,17,0,0-7,NULL,Please select a number,4,NULL,6140
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,29,0,0-3,NULL,Please select a number,5,NULL,6140
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,50,0,0-8,NULL,Please select a number,3,NULL,1439
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460740454,3a8127b61fbade78c434bdeade936d90,AJ,51,0,0-1,NULL,Please select a number,2,NULL,1648
+#
+# Results on Friday April 15 2016 17:35:41 UTC.
+# USER AGENT: Mozilla/5.0 (X11; CrOS x86_64 7834.70.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 1837
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460741741,7c89800ac7e6d774c75e7090da780b0c,Form,0,0,__workerid__,NULL,workerid,ARX0S1CIDJLOX
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,41,0,0-7,NULL,Please select a number,3,NULL,74353
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,64,0,0-6,NULL,Please select a number,4,NULL,8012
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,70,0,0-4,NULL,Please select a number,6,NULL,6954
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,11,0,0-1,NULL,Please select a number,7,NULL,6460
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,60,0,0-2,NULL,Please select a number,3,NULL,14138
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,53,0,0-3,NULL,Please select a number,6,NULL,8265
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,10,0,0-8,NULL,Please select a number,2,NULL,6812
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,47,0,0-5,NULL,Please select a number,5,NULL,4998
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,49,0,0-7,NULL,Please select a number,1,NULL,5382
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,72,0,0-6,NULL,Please select a number,1,NULL,7484
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,6,0,0-4,NULL,Please select a number,5,NULL,5071
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,59,0,0-1,NULL,Please select a number,6,NULL,7633
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,4,0,0-2,NULL,Please select a number,7,NULL,7146
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,13,0,0-3,NULL,Please select a number,7,NULL,6786
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,34,0,0-8,NULL,Please select a number,1,NULL,6072
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,55,0,0-5,NULL,Please select a number,4,NULL,7349
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,33,0,0-7,NULL,Please select a number,2,NULL,2387
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,48,0,0-6,NULL,Please select a number,2,NULL,8474
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,30,0,0-4,NULL,Please select a number,2,NULL,10271
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,35,0,0-1,NULL,Please select a number,5,NULL,9451
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,36,0,0-2,NULL,Please select a number,3,NULL,7372
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,29,0,0-3,NULL,Please select a number,4,NULL,7390
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,42,0,0-8,NULL,Please select a number,1,NULL,6436
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,31,0,0-5,NULL,Please select a number,4,NULL,7855
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,57,0,0-7,NULL,Please select a number,4,NULL,6455
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,24,0,0-6,NULL,Please select a number,2,NULL,9516
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,14,0,0-4,NULL,Please select a number,3,NULL,7619
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,67,0,0-1,NULL,Please select a number,6,NULL,7980
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,12,0,0-2,NULL,Please select a number,2,NULL,14306
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,69,0,0-3,NULL,Please select a number,7,NULL,4440
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,18,0,0-8,NULL,Please select a number,1,NULL,5549
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,7,0,0-5,NULL,Please select a number,4,NULL,5458
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,73,0,0-7,NULL,Please select a number,2,NULL,4576
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,56,0,0-6,NULL,Please select a number,1,NULL,209182
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,46,0,0-4,NULL,Please select a number,6,NULL,5226
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,27,0,0-1,NULL,Please select a number,5,NULL,4707
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,28,0,0-2,NULL,Please select a number,2,NULL,3500
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,21,0,0-3,NULL,Please select a number,7,NULL,4155
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,50,0,0-8,NULL,Please select a number,2,NULL,5621
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,39,0,0-5,NULL,Please select a number,4,NULL,3724
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,9,0,0-7,NULL,Please select a number,2,NULL,5708
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,32,0,0-6,NULL,Please select a number,2,NULL,5616
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,22,0,0-4,NULL,Please select a number,3,NULL,4851
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,43,0,0-1,NULL,Please select a number,7,NULL,6171
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,44,0,0-2,NULL,Please select a number,5,NULL,329416
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,45,0,0-3,NULL,Please select a number,7,NULL,6421
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,58,0,0-8,NULL,Please select a number,1,NULL,5071
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,15,0,0-5,NULL,Please select a number,6,NULL,4053
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,17,0,0-7,NULL,Please select a number,2,NULL,2539
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,40,0,0-6,NULL,Please select a number,3,NULL,7033
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,38,0,0-4,NULL,Please select a number,3,NULL,5146
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,19,0,0-1,NULL,Please select a number,7,NULL,3225
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,68,0,0-2,NULL,Please select a number,1,NULL,3862
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,61,0,0-3,NULL,Please select a number,7,NULL,175548
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,74,0,0-8,NULL,Please select a number,2,NULL,4898
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,71,0,0-5,NULL,Please select a number,3,NULL,4081
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,65,0,0-7,NULL,Please select a number,2,NULL,5954
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,16,0,0-6,NULL,Please select a number,2,NULL,1779596
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,62,0,0-4,NULL,Please select a number,5,NULL,4257
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,51,0,0-1,NULL,Please select a number,7,NULL,2895
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,20,0,0-2,NULL,Please select a number,1,NULL,4937
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,5,0,0-3,NULL,Please select a number,6,NULL,3606
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,26,0,0-8,NULL,Please select a number,2,NULL,2967
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,23,0,0-5,NULL,Please select a number,2,NULL,4157
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,25,0,0-7,NULL,Please select a number,2,NULL,3792
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,8,0,0-6,NULL,Please select a number,1,NULL,6733
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,54,0,0-4,NULL,Please select a number,1,NULL,3786
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,3,0,0-1,NULL,Please select a number,7,NULL,3882
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,52,0,0-2,NULL,Please select a number,1,NULL,3383
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,37,0,0-3,NULL,Please select a number,6,NULL,3848
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,66,0,0-8,NULL,Please select a number,2,NULL,3668
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460741741,7c89800ac7e6d774c75e7090da780b0c,AJ,63,0,0-5,NULL,Please select a number,5,NULL,4825
+#
+# Results on Friday April 15 2016 17:43:37 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 6592
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,Form,0,0,__workerid__,NULL,workerid,A1FBO95OVBYOH1
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,53,0,0-3,NULL,Please select a number,4,NULL,27088
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,46,0,0-4,NULL,Please select a number,5,NULL,5534
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,64,0,0-6,NULL,Please select a number,1,NULL,9836
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,11,0,0-1,NULL,Please select a number,7,NULL,3725
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,74,0,0-8,NULL,Please select a number,1,NULL,13199
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,73,0,0-7,NULL,Please select a number,1,NULL,6243
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,4,0,0-2,NULL,Please select a number,1,NULL,10622
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,31,0,0-5,NULL,Please select a number,1,NULL,9306
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,37,0,0-3,NULL,Please select a number,2,NULL,14545
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,6,0,0-4,NULL,Please select a number,1,NULL,5301
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,72,0,0-6,NULL,Please select a number,1,NULL,6525
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,3,0,0-1,NULL,Please select a number,7,NULL,7089
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,34,0,0-8,NULL,Please select a number,1,NULL,72179
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,17,0,0-7,NULL,Please select a number,1,NULL,3453
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,20,0,0-2,NULL,Please select a number,2,NULL,10900
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,39,0,0-5,NULL,Please select a number,7,NULL,4341
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,21,0,0-3,NULL,Please select a number,6,NULL,4292
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,14,0,0-4,NULL,Please select a number,1,NULL,5318
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,32,0,0-6,NULL,Please select a number,1,NULL,11915
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,51,0,0-1,NULL,Please select a number,7,NULL,2957
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,66,0,0-8,NULL,Please select a number,2,NULL,3570
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,57,0,0-7,NULL,Please select a number,1,NULL,1988
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,60,0,0-2,NULL,Please select a number,3,NULL,6353
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,7,0,0-5,NULL,Please select a number,7,NULL,2888
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,13,0,0-3,NULL,Please select a number,4,NULL,4782
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,62,0,0-4,NULL,Please select a number,2,NULL,2973
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,40,0,0-6,NULL,Please select a number,1,NULL,5846
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,19,0,0-1,NULL,Please select a number,7,NULL,3252
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,18,0,0-8,NULL,Please select a number,2,NULL,3181
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,25,0,0-7,NULL,Please select a number,1,NULL,3588
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,68,0,0-2,NULL,Please select a number,2,NULL,2685
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,63,0,0-5,NULL,Please select a number,7,NULL,3798
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,29,0,0-3,NULL,Please select a number,2,NULL,8457
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,30,0,0-4,NULL,Please select a number,1,NULL,2310
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,48,0,0-6,NULL,Please select a number,2,NULL,2937
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,27,0,0-1,NULL,Please select a number,5,NULL,3685
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,42,0,0-8,NULL,Please select a number,3,NULL,2320
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,33,0,0-7,NULL,Please select a number,1,NULL,4885
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,52,0,0-2,NULL,Please select a number,2,NULL,3519
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,47,0,0-5,NULL,Please select a number,7,NULL,3053
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,69,0,0-3,NULL,Please select a number,7,NULL,2694
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,22,0,0-4,NULL,Please select a number,2,NULL,4125
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,8,0,0-6,NULL,Please select a number,1,NULL,5275
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,59,0,0-1,NULL,Please select a number,7,NULL,3086
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,50,0,0-8,NULL,Please select a number,2,NULL,3267
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,9,0,0-7,NULL,Please select a number,3,NULL,3935
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,12,0,0-2,NULL,Please select a number,7,NULL,2832
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,15,0,0-5,NULL,Please select a number,5,NULL,6508
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,45,0,0-3,NULL,Please select a number,7,NULL,2858
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,54,0,0-4,NULL,Please select a number,3,NULL,3480
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,24,0,0-6,NULL,Please select a number,1,NULL,3022
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,43,0,0-1,NULL,Please select a number,7,NULL,2394
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,10,0,0-8,NULL,Please select a number,2,NULL,4044
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,41,0,0-7,NULL,Please select a number,2,NULL,3574
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,44,0,0-2,NULL,Please select a number,3,NULL,4536
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,23,0,0-5,NULL,Please select a number,3,NULL,4209
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,5,0,0-3,NULL,Please select a number,4,NULL,3587
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,70,0,0-4,NULL,Please select a number,1,NULL,2689
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,56,0,0-6,NULL,Please select a number,1,NULL,4272
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,67,0,0-1,NULL,Please select a number,7,NULL,3732
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,58,0,0-8,NULL,Please select a number,1,NULL,4551
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,49,0,0-7,NULL,Please select a number,3,NULL,3407
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,28,0,0-2,NULL,Please select a number,1,NULL,2014
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,55,0,0-5,NULL,Please select a number,4,NULL,3367
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,61,0,0-3,NULL,Please select a number,6,NULL,4155
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,38,0,0-4,NULL,Please select a number,1,NULL,1729
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,16,0,0-6,NULL,Please select a number,7,NULL,5366
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,35,0,0-1,NULL,Please select a number,5,NULL,3046
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,26,0,0-8,NULL,Please select a number,1,NULL,2595
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,65,0,0-7,NULL,Please select a number,1,NULL,2152
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,36,0,0-2,NULL,Please select a number,2,NULL,2226
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460742218,300b9f5f0e1e04c5f26b5e275b32f7e3,AJ,71,0,0-5,NULL,Please select a number,6,NULL,3985
+#
+# Results on Friday April 15 2016 17:55:05 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+# Design number was non-random = 7626
+#
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Field name.
+#     Col. 9: Field value.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,Form,0,0,__workerid__,NULL,workerid,A2VDDES6LFZOFW
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,60,0,0-2,NULL,How natural did you think this sentence was?
+# The lines below this comment are in groups of 2.
+# The formats of the lines in each of these groups are as follows:
+#
+# Line 1:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Question (NULL if none).
+#     Col. 9: Answer.
+#     Col. 10: Whether or not answer was correct (NULL if N/A).
+#     Col. 11: Time taken to answer.
+# Line 2:
+#     Col. 1: Time results were received.
+#     Col. 2: MD5 hash of participant's IP address.
+#     Col. 3: Controller name.
+#     Col. 4: Item number.
+#     Col. 5: Element number.
+#     Col. 6: Type.
+#     Col. 7: Group.
+#     Col. 8: Sentence (or sentence MD5).
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,60,0,0-2,NULL,Please select a number,4,NULL,38243
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,55,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,55,0,0-5,NULL,Please select a number,5,NULL,15085
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,26,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,26,0,0-8,NULL,Please select a number,4,NULL,27487
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,35,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,35,0,0-1,NULL,Please select a number,6,NULL,9610
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,5,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,5,0,0-3,NULL,Please select a number,6,NULL,7609
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,30,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,30,0,0-4,NULL,Please select a number,5,NULL,8767
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,64,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,64,0,0-6,NULL,Please select a number,4,NULL,9611
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,33,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,33,0,0-7,NULL,Please select a number,3,NULL,14045
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,68,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,68,0,0-2,NULL,Please select a number,6,NULL,9103
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,31,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,31,0,0-5,NULL,Please select a number,3,NULL,6789
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,58,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,58,0,0-8,NULL,Please select a number,2,NULL,22796
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,43,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,43,0,0-1,NULL,Please select a number,5,NULL,7333
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,69,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,69,0,0-3,NULL,Please select a number,4,NULL,6893
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,14,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,14,0,0-4,NULL,Please select a number,4,NULL,13231
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,72,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,72,0,0-6,NULL,Please select a number,4,NULL,13918
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,41,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,41,0,0-7,NULL,Please select a number,6,NULL,8524
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,20,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,20,0,0-2,NULL,Please select a number,4,NULL,304695
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,7,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,7,0,0-5,NULL,Please select a number,5,NULL,7824
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,74,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,74,0,0-8,NULL,Please select a number,4,NULL,3051
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,51,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,51,0,0-1,NULL,Please select a number,4,NULL,8924
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,13,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,13,0,0-3,NULL,Please select a number,6,NULL,8298
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,22,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,22,0,0-4,NULL,Please select a number,4,NULL,8233
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,56,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,56,0,0-6,NULL,Please select a number,3,NULL,6833
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,9,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,9,0,0-7,NULL,Please select a number,4,NULL,8386
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,4,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,4,0,0-2,NULL,Please select a number,6,NULL,23731
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,23,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,23,0,0-5,NULL,Please select a number,4,NULL,3220
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,50,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,50,0,0-8,NULL,Please select a number,5,NULL,5734
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,27,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,27,0,0-1,NULL,Please select a number,3,NULL,6988
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,61,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,61,0,0-3,NULL,Please select a number,6,NULL,5732
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,38,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,38,0,0-4,NULL,Please select a number,5,NULL,4868
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,40,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,40,0,0-6,NULL,Please select a number,3,NULL,4545
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,17,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,17,0,0-7,NULL,Please select a number,5,NULL,4379
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,28,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,28,0,0-2,NULL,Please select a number,4,NULL,4197
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,47,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,47,0,0-5,NULL,Please select a number,4,NULL,11302
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,42,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,42,0,0-8,NULL,Please select a number,5,NULL,3787
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,3,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,3,0,0-1,NULL,Please select a number,5,NULL,7252
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,21,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,21,0,0-3,NULL,Please select a number,4,NULL,4794
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,54,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,54,0,0-4,NULL,Please select a number,4,NULL,5963
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,32,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,32,0,0-6,NULL,Please select a number,3,NULL,3004
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,65,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,65,0,0-7,NULL,Please select a number,5,NULL,16980
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,52,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,52,0,0-2,NULL,Please select a number,4,NULL,3993
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,71,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,71,0,0-5,NULL,Please select a number,3,NULL,3386
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,18,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,18,0,0-8,NULL,Please select a number,4,NULL,9229
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,59,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,59,0,0-1,NULL,Please select a number,6,NULL,8744
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,53,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,53,0,0-3,NULL,Please select a number,4,NULL,6046
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,70,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,70,0,0-4,NULL,Please select a number,5,NULL,4062
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,48,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,48,0,0-6,NULL,Please select a number,4,NULL,6059
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,57,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,57,0,0-7,NULL,Please select a number,3,NULL,6746
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,44,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,44,0,0-2,NULL,Please select a number,6,NULL,3520
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,63,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,63,0,0-5,NULL,Please select a number,4,NULL,2919
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,34,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,34,0,0-8,NULL,Please select a number,4,NULL,4516
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,11,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,11,0,0-1,NULL,Please select a number,6,NULL,2692
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,37,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,37,0,0-3,NULL,Please select a number,2,NULL,5002
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,62,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,62,0,0-4,NULL,Please select a number,2,NULL,9176
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,16,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,16,0,0-6,NULL,Please select a number,4,NULL,3601
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,25,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,25,0,0-7,NULL,Please select a number,3,NULL,13334
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,12,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,12,0,0-2,NULL,Please select a number,6,NULL,7544
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,39,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,39,0,0-5,NULL,Please select a number,5,NULL,3845
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,10,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,10,0,0-8,NULL,Please select a number,4,NULL,4786
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,19,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,19,0,0-1,NULL,Please select a number,6,NULL,1610
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,29,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,29,0,0-3,NULL,Please select a number,4,NULL,6714
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,6,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,6,0,0-4,NULL,Please select a number,3,NULL,6743
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,24,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,24,0,0-6,NULL,Please select a number,3,NULL,3992
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,49,0,0-7,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,49,0,0-7,NULL,Please select a number,3,NULL,9911
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,36,0,0-2,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,36,0,0-2,NULL,Please select a number,5,NULL,6841
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,15,0,0-5,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,15,0,0-5,NULL,Please select a number,4,NULL,2421
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,66,0,0-8,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,66,0,0-8,NULL,Please select a number,4,NULL,3539
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,67,0,0-1,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,67,0,0-1,NULL,Please select a number,6,NULL,5483
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,45,0,0-3,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,45,0,0-3,NULL,Please select a number,5,NULL,2880
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,46,0,0-4,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,46,0,0-4,NULL,Please select a number,5,NULL,2414
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,8,0,0-6,NULL,How natural did you think this sentence was?
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,8,0,0-6,NULL,Please select a number,4,NULL,3487
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,73,0,0-7,NULL,How natural did you think this sentence was?
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. Question (NULL if none).
+# 9. Answer.
+# 10. Whether or not answer was correct (NULL if N/A).
+# 11. Time taken to answer.
+1460742906,1246aa7f500a6dcf5696c28873a7adf1,AJ,73,0,0-7,NULL,Please select a number,3,NULL,4476
