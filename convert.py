@@ -16,6 +16,7 @@ def indexwd(l, colnames, name, default=None):
 def make_shuffle_sequence(real_types):
     return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
 
+scale=["1","2","3","4","5","6","7"]
 def make_preamble(shuffle_sequence):
     return """
 var manualSendResults = true;
@@ -57,11 +58,12 @@ define_ibex_controller({
 var defaults = [
     "AJ", {
         presentAsScale: true,
-        as: ["1", "2", "3", "4", "5", "6", "7"],
+        as: """ + str(scale) + """,
         audioMessage: "Click here to play audio",
         audioTrigger: "click"
     }
-];"""
+];
+    """
 
 expfile = sys.argv[1]
 outfile = sys.argv[2]
@@ -82,7 +84,7 @@ for l in lines:
     if sesh is not None:
         if not sessions.has_key(sesh):
             sessions[sesh] = [ ]
-            session_names.append(sesh)
+            session_names.append(sesh) #session_names generation
         sessions[sesh].append(l)
     else:
         if sessions.has_key('default'):
@@ -108,17 +110,23 @@ for sn in session_names:
                 items[str(seshnum) + '-' + str(it)] = primes[seshnum] * it
     seshnum += 1
 
+firstdigits=1
+seconddigits=7
+
 session_opts = { }
 for sn in session_names:
     session_opts[sn] = { }
-    for k in ['experiment', 'design', 'qType']:
+    for k in ['experiment', 'design', 'qType']: #qtype
         if indexwd(sessions[sn][0], colnames, k, None) is None:
             sys.stderr.write("Expecting '%s' column in session '%s'\n" % (k, sn))
             sys.exit(1)
         session_opts[sn][k] = indexwd(sessions[sn][0], colnames, k)
 
-scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?1\s*=\s*(.*?)\,?\s?(?:(?:et)|(?:and))?;?\s*\d*\s*=\s*(.*?)\s*\)?\s*$")
+#I'm leaving the old regex in for now because I think it is still used to grab the question.
+scale_regexp = re.compile(r"^\s*(.*?)(?:\\n)+.*?(\d*)\s*=\s*(.*?)\,?\s?(?:(?:et)|(?:and))?;?\s*(\d*)\s*=\s*(.*?)\s*\)?\s*$")
+column_style_scale_regexp = re.compile(r"^\s*(.*)_(\d*)_(\d*)_(.*)_(.*)$")
 questions = [ ]
+qType=""
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
 for l in lines:
@@ -127,8 +135,20 @@ for l in lines:
         sys.stderr.write("Error: could not parse scale comments\n")
         sys.exit(1)
     questions.append(m.group(1))
-    scale_comment_lefts.append(m.group(2))
-    scale_comment_rights.append(m.group(3))
+    #firstdigits=m.group(2)   #these four things are the old version of grabbing the scale and scale_comments
+    #scale_comment_lefts.append(m.group(3))
+    #seconddigits=m.group(4)
+    #scale_comment_rights.append(m.group(5))
+    m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
+    if not m2:
+        sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
+        sys.exit(1)
+    qType=m2.group(1)    
+    firstdigits=m2.group(2)
+    seconddigits=m2.group(3)
+    scale_comment_rights.append(m2.group(5))
+    scale_comment_lefts.append(m2.group(4))
+
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
@@ -171,7 +191,7 @@ def gen_item(sid, sn, l, colnames, line_index):
             s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
             #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
             #instead, since that is in the datafile, in s, it repeats itself.
-            q = "Please select a number", # questions[line_index],
+            #q =  questions[line_index], #testing out uncommenting this
             leftComment = scale_comment_lefts[line_index],
             rightComment = scale_comment_rights[line_index]
         )
@@ -198,6 +218,10 @@ for sn in session_names:
 shufseq = 'seq("__workerid__",' + ','.join(shufseqs) + ', "__results__", "__code__")'
 
 out = open(outfile, "w")
+###ACTUAL PREAMBLE CODE GENNED HERE
+scale=range(int(firstdigits),1+int(seconddigits));
+for i in scale:
+    scale[scale.index(i)]=str(i)
 out.write(make_preamble(shufseq))
 #out.write("defaults[1].leftComment = " + json.dumps(scale_comment_left) + ";\n")
 #out.write("defaults[1].rightComment = " + json.dumps(scale_comment_right) + ";\n")
