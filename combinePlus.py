@@ -21,15 +21,15 @@ f2.close()
 #nonHeadersString=''.join(experimentData[1:len(experimentData)])#old code, possibly useful later
 #attempting to grab the trial headers
 trialDataHeadersA=[]
-pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(.*)")
+pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(?:\s*)(.*)")
 for trialHeadA in trialDataList:
     match=pattern.match(trialHeadA)
     if match:
         if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
-            trialDataHeadersA.append("\t"+match.group(2))
+            tstring=("\t"+match.group(2)).lstrip('')
+            trialDataHeadersA.append(tstring)
         elif int(match.group(1)) < len(trialDataHeadersA) and (match.group(2) not in trialDataHeadersA[int(match.group(1))-1]) and ("\t"+match.group(2)) not in trialDataHeadersA:
-            trialDataHeadersA[int(match.group(1))-1]+="/"+match.group(2)
-
+            trialDataHeadersA[int(match.group(1))-1]+=("/"+match.group(2)).lstrip('')
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
 commaCount=trialString.count('\t')
