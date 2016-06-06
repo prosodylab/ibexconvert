@@ -3,8 +3,8 @@ import re
 import json
 import sys
 # trigger to write consent intro and instructions into file
-# default is off because most experiments won't have this
-wIntro = True
+# default is off (False) because most experiments won't have this
+wIntro = False
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
