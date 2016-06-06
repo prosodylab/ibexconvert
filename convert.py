@@ -170,7 +170,6 @@ for l in lines:
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
 
-
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     if session_opts[sn]['design'].upper() == 'RANDOM':
