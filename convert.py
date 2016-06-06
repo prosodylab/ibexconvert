@@ -2,11 +2,6 @@ import sys
 import re
 import json
 import sys
-#REMEMBER TO CHANGE "PLEASE SELECT A NUMBER FOR PERSIAN EXPERIMENT"
-#unicode stuff, see comments when html gets defined
-#notunicode = "true"
-
-
 # trigger to write consent intro and instructions into file
 # default is off because most experiments won't have this
 wIntro = True
@@ -153,9 +148,6 @@ for l in lines:
         sys.exit(1)
     questions.append(m.group(1))
     checkQType = indexwd(l, colnames, 'qType', '')
-    #check = re.compile(r"(_)")
-    #print re.match(check, checkQType)
-    #print checkQType.startswith(checkQType+ '_')
     if checkQType.find('_') > 0:
         m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
         if not m2:
