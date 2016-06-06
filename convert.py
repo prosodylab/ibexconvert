@@ -9,7 +9,7 @@ import sys
 
 # trigger to write consent intro and instructions into file
 # default is off because most experiments won't have this
-wIntro = False
+wIntro = True
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -19,7 +19,6 @@ def indexwd(l, colnames, name, default=None):
     except ValueError:
         return default
     return l[index]
-
 
 def make_shuffle_sequence(real_types):
     return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
@@ -154,7 +153,10 @@ for l in lines:
         sys.exit(1)
     questions.append(m.group(1))
     checkQType = indexwd(l, colnames, 'qType', '')
-    if checkQType.startswith(checkQType + '_'):
+    #check = re.compile(r"(_)")
+    #print re.match(check, checkQType)
+    #print checkQType.startswith(checkQType+ '_')
+    if checkQType.find('_') > 0:
         m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
         if not m2:
             sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
@@ -164,22 +166,12 @@ for l in lines:
         seconddigits=m2.group(3)
         scale_comment_rights.append(m2.group(5))
         scale_comment_lefts.append(m2.group(4))
-    # OLD WAY
     else:
-        firstdigits=m.group(2)   #these four things are the old version of grabbing the scale and scale_comments
+        firstdigits=m.group(2) 
         scale_comment_lefts.append(m.group(3))
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
-    # NEW WAY
-    #m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
-    #if not m2:
-    #    sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
-    #    sys.exit(1)
-    #qType=m2.group(1)    
-    #firstdigits=m2.group(2)
-    #seconddigits=m2.group(3)
-    #scale_comment_rights.append(m2.group(5))
-    #scale_comment_lefts.append(m2.group(4))
+
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
@@ -273,8 +265,6 @@ out.write(make_preamble(shufseq))
 out.write("var items = [\n")
 
 out.write("""
-["intro", "Form", { html: { include: "example_intro.html" }, validators: { age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }}} ],
-
 ["__workerid__", "Form", { html: "<p>Please enter your worker id: <p><input type='text' name='workerid' size='20'>" }],
 
 ["__results__", "__SendResults__", { }],
@@ -284,14 +274,13 @@ out.write("""
 """)
 
 if wIntro:
-    out.write(""" 
-    ["instructions", "Form", {html: {include: "instructions.html"}}],
+    out.write("""["instructions", "Form", {html: {include: "instructions.html"}}],
 
-    ["intro", "Form", { html: { include: "example_intro.html" }, validators: {age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019";}, dlang: function (s) {if (s) return true; else return "bad"} }}],
+["intro", "Form", { html: { include: "example_intro.html" }, validators: {age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019";}, dlang: function (s) {if (s) return true; else return "bad"} }}],
 
-    ["consent", "Form", {html: {include: "consent.html"}}],
+["consent", "Form", {html: {include: "consent.html"}}],
 
-    """)
+""")
 
 first = True
 prefix = 0
