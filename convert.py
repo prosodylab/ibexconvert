@@ -164,22 +164,12 @@ for l in lines:
         seconddigits=m2.group(3)
         scale_comment_rights.append(m2.group(5))
         scale_comment_lefts.append(m2.group(4))
-    # OLD WAY
     else:
-        firstdigits=m.group(2)   #these four things are the old version of grabbing the scale and scale_comments
+        firstdigits=m.group(2)
         scale_comment_lefts.append(m.group(3))
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
-    # NEW WAY
-    #m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
-    #if not m2:
-    #    sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
-    #    sys.exit(1)
-    #qType=m2.group(1)    
-    #firstdigits=m2.group(2)
-    #seconddigits=m2.group(3)
-    #scale_comment_rights.append(m2.group(5))
-    #scale_comment_lefts.append(m2.group(4))
+
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
