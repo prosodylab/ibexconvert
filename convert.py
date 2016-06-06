@@ -2,6 +2,14 @@ import sys
 import re
 import json
 import sys
+#REMEMBER TO CHANGE "PLEASE SELECT A NUMBER FOR PERSIAN EXPERIMENT"
+#unicode stuff, see comments when html gets defined
+#notunicode = "true"
+
+
+# trigger to write consent intro and instructions into file
+# default is off because most experiments won't have this
+wIntro = False
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -105,6 +113,8 @@ conditions = { }
 items = { }
 seshnum = 0
 primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ]
+
+
 for sn in session_names:
     conditions[sn] = { }
     for l in sessions[sn]:
@@ -143,20 +153,33 @@ for l in lines:
         sys.stderr.write("Error: could not parse scale comments\n")
         sys.exit(1)
     questions.append(m.group(1))
-    #firstdigits=m.group(2)   #these four things are the old version of grabbing the scale and scale_comments
-    #scale_comment_lefts.append(m.group(3))
-    #seconddigits=m.group(4)
-    #scale_comment_rights.append(m.group(5))
-    m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
-    if not m2:
-        sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
-        sys.exit(1)
-    qType=m2.group(1)    
-    firstdigits=m2.group(2)
-    seconddigits=m2.group(3)
-    scale_comment_rights.append(m2.group(5))
-    scale_comment_lefts.append(m2.group(4))
-
+    checkQType = indexwd(l, colnames, 'qType', '')
+    if checkQType.startswith(checkQType + '_'):
+        m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
+        if not m2:
+            sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
+            sys.exit(1)
+        qType=m2.group(1)    
+        firstdigits=m2.group(2)
+        seconddigits=m2.group(3)
+        scale_comment_rights.append(m2.group(5))
+        scale_comment_lefts.append(m2.group(4))
+    # OLD WAY
+    else:
+        firstdigits=m.group(2)   #these four things are the old version of grabbing the scale and scale_comments
+        scale_comment_lefts.append(m.group(3))
+        seconddigits=m.group(4)
+        scale_comment_rights.append(m.group(5))
+    # NEW WAY
+    #m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
+    #if not m2:
+    #    sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
+    #    sys.exit(1)
+    #qType=m2.group(1)    
+    #firstdigits=m2.group(2)
+    #seconddigits=m2.group(3)
+    #scale_comment_rights.append(m2.group(5))
+    #scale_comment_lefts.append(m2.group(4))
 
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
@@ -166,22 +189,29 @@ def gen_item(sid, sn, l, colnames, line_index):
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     elif session_opts[sn]['design'].upper() == 'WITHIN':
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        #note 2 self: set playlist label here & print to html when testing playlist manipulation
-        #this works ok: cond = str(sid) + '-' + indexwd(l, colnames, 'item', '')
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-    else:  
+    else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
     if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
         html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+        #commented code below is for reading unicode strings backwards, didn't end up using this but maybe helpful later
+        #if notunicode == False:
+        #    html = indexwd(l, colnames, 'setup', '') + indexwd(l, colnames, 'context', '') + indexwd(l, colnames, 'text', '')
+        #    html = unicode(html, 'utf-8')
+        #    html = html[::-1]
     else:
         html = indexwd(l, colnames, 'text', '')
+        #likewise here for unicode stuff
+        #if notunicode == False:
+        #    html = unicode(html, 'utf-8')
+        #    html = html[::-1]
     # Determine whether or not this is audio.
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio
@@ -229,6 +259,8 @@ for sn in session_names:
     shufseqs.append(make_shuffle_sequence(real_types=[str(prefix) + '-' + x for x in conditions[sn].keys()]))
     prefix += 1
 shufseq = 'seq("__workerid__",' + ','.join(shufseqs) + ', "__results__", "__code__")'
+if wIntro:
+    shufseq = 'seq("consent", "intro", "instructions",' + ','.join(shufseqs) + ', "__results__", "__code__")'
 
 out = open(outfile, "w")
 ###ACTUAL PREAMBLE CODE GENNED HERE
@@ -241,6 +273,8 @@ out.write(make_preamble(shufseq))
 out.write("var items = [\n")
 
 out.write("""
+["intro", "Form", { html: { include: "example_intro.html" }, validators: { age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }}} ],
+
 ["__workerid__", "Form", { html: "<p>Please enter your worker id: <p><input type='text' name='workerid' size='20'>" }],
 
 ["__results__", "__SendResults__", { }],
@@ -248,6 +282,16 @@ out.write("""
 ["__code__", "Message", { transfer: null, html: "Thank you! Your completion code is: " + genCode() }],
 
 """)
+
+if wIntro:
+    out.write(""" 
+    ["instructions", "Form", {html: {include: "instructions.html"}}],
+
+    ["intro", "Form", { html: { include: "example_intro.html" }, validators: {age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019";}, dlang: function (s) {if (s) return true; else return "bad"} }}],
+
+    ["consent", "Form", {html: {include: "consent.html"}}],
+
+    """)
 
 first = True
 prefix = 0
