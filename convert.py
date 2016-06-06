@@ -2,9 +2,6 @@ import sys
 import re
 import json
 import sys
-#REMEMBER TO CHANGE "PLEASE SELECT A NUMBER FOR PERSIAN EXPERIMENT"
-#unicode stuff, see comments when html gets defined
-#notunicode = "true"
 
 
 # trigger to write consent intro and instructions into file
