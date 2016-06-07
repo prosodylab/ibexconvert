@@ -1,8 +1,0 @@
-Welcome!
-
-In this experiment you are asked to listen to some sentences of English, and rate how you natural you think they are, based on your intuition as a native speaker. 
-
-If a sentence is very unnatural, a rate it as 1 (=completely unnatural), if it’s completely natural and you wouldn’t be surprised if a native speaker of English would say, choose 7 (=completely natural).
-
-Press any key to continue.
-
