@@ -40,22 +40,21 @@ print commaCount
 #workerid=[]
 #workerid[0]='ID not Found'
 workerid='ID not found'
-workerCount=0
-qNumWorkerCount=0
 fullcount=-1
+idPattern=re.compile(r"^PARTICIPANT\sID:\s(\d*)$")
 for workerLines in trialDataList:
     fullcount+=1
-    if len(workerLines)>0 and workerLines[0]!="#":
+    match=idPattern.match(workerLines)
+    if len(workerLines)>0 and workerLines[0]!="#" and not match:
             workerLinesList=workerLines.split(',')
-            if workerCount==0:
-                qNumWorkerCount+=1
             while trialDataList[fullcount].count(',') < commaCount-1:
                 trialDataList[fullcount]+=',NULL'
             trialDataList[fullcount]+=","+workerid
-            if workerLinesList[7]=="workerid":
+            #if workerLinesList[7]=="workerid":
                 #workerid[workercount]=workerLinesList[8]
-                workerid=workerLinesList[8]
-                workerCount+=1
+                #workerid=workerLinesList[8]
+    elif match:
+        workerid=match.group(1)
 #retrieve headers from original files
 headersString=experimentData[0]+trialString+"\tWorker ID Number"
 #read number of tabs in experimentfile, to add form data without having odd number of columns
@@ -65,13 +64,12 @@ newoutput=open(outputFileName,'w')
 #write headers to newoutput
 newoutput.write(headersString+'\n')
 #check item number(4th in each row from trial data) with row number of originalExperiment
-workerCount2=0
-qNumCount2=0
 formNumber=0
 screeningPattern=re.compile(r"^.*,.*,Form,(\d),.*$")
 for trialLine in trialDataList:
     if len(trialLine)>0 and trialLine[0]!="#":
         match=screeningPattern.match(trialLine)
+        idMatch=idPattern.match(trialLine)
         if match:
             #need to acquire number of forms, this should always trigger before the else section does, but this is iffy
             if formNumber==0:
@@ -84,6 +82,9 @@ for trialLine in trialDataList:
             newoutput.write(trialLine.replace(",","\t")+"\t""\n")
             #if itemNum and itemNum>0:
             print "formfound"
+
+        elif idMatch:
+            pass
         else:
             itemNum=int(trialLine.split(',')[3])-formNumber
             if itemNum and itemNum>0:
