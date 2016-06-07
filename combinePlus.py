@@ -67,13 +67,15 @@ newoutput.write(headersString+'\n')
 #check item number(4th in each row from trial data) with row number of originalExperiment
 workerCount2=0
 qNumCount2=0
-screeningPattern=re.compile(r"^.*,.*,(Form).*$")
+formNumber=0
+screeningPattern=re.compile(r"^.*,.*,Form,(\d),.*$")
 for trialLine in trialDataList:
     if len(trialLine)>0 and trialLine[0]!="#":
         match=screeningPattern.match(trialLine)
-        itemNum=int(trialLine.split(',')[3])-2
         if match:
-            #place all in array and put at end? Or individual columns for each piece of info? Easy from this point
+            #need to acquire number of forms, this should always trigger before the else section does, but this is iffy
+            if formNumber==0:
+                formNumber=int(match.group(1))
             formGatherA=trialLine.split(',')
             t=-1
             while t<tabcount:
@@ -81,7 +83,9 @@ for trialLine in trialDataList:
                 newoutput.write("NULL\t")
             newoutput.write(trialLine.replace(",","\t")+"\t""\n")
             #if itemNum and itemNum>0:
+            print "formfound"
         else:
+            itemNum=int(trialLine.split(',')[3])-formNumber
             if itemNum and itemNum>0:
                 #take row number item num from experimentData
                 #add workerid based on experiment type
