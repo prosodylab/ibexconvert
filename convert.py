@@ -2,9 +2,15 @@ import sys
 import re
 import json
 import sys
+from itertools import *
+
 # trigger to write consent intro and instructions into file
 # default is off (False) because most experiments won't have this
 wIntro = False
+
+def indexwd(l, colnames, name, default=None):
+    assert name is not None
+    index = None
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -14,6 +20,25 @@ def indexwd(l, colnames, name, default=None):
     except ValueError:
         return default
     return l[index]
+
+
+def flatten(listOfLists):
+    #"Flatten one level of nesting"
+    return chain.from_iterable(listOfLists)
+
+
+def roundrobin(*iterables):
+    #"roundrobin('ABC', 'D', 'EF') --> A D E B F C"
+    # Recipe credited to George Sakkis
+    pending = len(iterables)
+    nexts = cycle(iter(it).next for it in iterables)
+    while pending:
+        try:
+            for next in nexts:
+                yield next()
+        except StopIteration:
+            pending -= 1
+            nexts = cycle(islice(nexts, pending))
 
 def make_shuffle_sequence(real_types):
     return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
@@ -67,9 +92,13 @@ var defaults = [
     }
 ];
     """
-
-expfile = sys.argv[1]
+num_input_files=len(sys.argv)
+experiment_list=[]
+experiment_indices=[]
+experiment_trials=[]
+expfile=sys.argv[1]
 outfile = sys.argv[2]
+
 
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
@@ -120,6 +149,34 @@ for sn in session_names:
                 pass
             else:
                 items[str(seshnum) + '-' + str(it)] = primes[seshnum] * it
+        if indexwd(l, colnames, 'experiment', None) is not None:
+            #count number of possible experiments and put them into seperate playlists
+            if indexwd(l,colnames,'experiment','') not in experiment_list:
+                #add experiment name to list
+                experiment_list.append(indexwd(l,colnames,'experiment',''))
+                #track index of where this experiment starts in the file
+                experiment_indices.append(sessions[sn].index(l))
+            else:
+                pass
+    if len(experiment_indices)>1:
+        for i in range(1,len(experiment_indices)):
+            #print experiment_indices
+            #print i
+            print "!"
+            experiment_trials.append([])
+            for ind in range(experiment_indices[i-1],experiment_indices[i]):
+                #fill list of lists, each inner list is the container of the experiment corresponding to that expind
+                #In order to do this, make a list in the inner loop, then append it? Maybe?
+                #errors in this nested loop because the experiment 
+                #print experiment_trials[i]
+                experiment_trials[i-1].append(lines[ind])
+        experiment_trials.append([])
+        for ind2 in range(experiment_indices[len(experiment_indices)-1],len(lines)):
+            print ind2
+            experiment_trials[len(experiment_trials)-1].append(lines[ind2])
+    else:
+        for l2 in sessions[sn]:
+            experiment_trials.append(l2)
     seshnum += 1
 
 firstdigits=1
@@ -159,7 +216,7 @@ for l in lines:
         scale_comment_rights.append(m2.group(5))
         scale_comment_lefts.append(m2.group(4))
     else:
-        firstdigits=m.group(2) 
+        firstdigits=m.group(2)
         scale_comment_lefts.append(m.group(3))
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
@@ -204,6 +261,7 @@ def gen_item(sid, sn, l, colnames, line_index):
             audiofiles.append(indexwd(l, colnames, 'contextFile'))
         if indexwd(l, colnames, 'wavFile') is not None:
             audiofiles.append(indexwd(l, colnames, 'wavFile'))
+            print indexwd(l, colnames, 'wavFile')
         ajoptions = dict(
             html=html,
             s = dict(audio=audiofiles),
@@ -288,7 +346,17 @@ for sn in session_names:
             out.write("['%s', 'Message', { html: %s, transfer: 'keypress' }]" % (str(prefix) + "-instructions", json.dumps(raw_text)))
             if prefix == 0:
                 out.write(",\n")
-    for l in sessions[sn]:
+    #put this loop inside another for loop? Going through all the sessions? 
+#    for l in sessions[sn]:
+#        if not first:
+#            out.write(",\n")
+#        first = False
+        #only gen_item call located here, alternately place the loop right here
+#        out.write(gen_item(prefix, sn, l, colnames, line_index))
+#        line_index += 1
+    tuple_exp=tuple(experiment_trials)
+    interleaved_list=roundrobin(flatten(experiment_trials))
+    for l in interleaved_list:
         if not first:
             out.write(",\n")
         first = False
