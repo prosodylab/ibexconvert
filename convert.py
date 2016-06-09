@@ -4,13 +4,10 @@ import json
 import sys
 from itertools import *
 
+
 # trigger to write consent intro and instructions into file
 # default is off because most experiments won't have this
 wIntro = False
-
-def indexwd(l, colnames, name, default=None):
-    assert name is not None
-    index = None
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -59,10 +56,6 @@ function genCode()
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 67334a72027894334f6b993898cd7d90b1a0ad9f
 var counterOverride = parseInt(Math.round(Math.random()*10000));
 
 var practiceItemTypes = ["practice"];
@@ -102,8 +95,12 @@ experiment_indices=[]
 experiment_trials=[]
 expfile=sys.argv[1]
 outfile = sys.argv[2]
-
-
+isSelfPaced=False
+#Check what flags are given
+#EX: -s indicates that the experiment is a self-paced reading experiment
+if num_input_files>3:
+    if sys.argv[3]=="-s":
+        isSelfPaced=True
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
 
@@ -252,15 +249,11 @@ def gen_item(sid, sn, l, colnames, line_index):
         #    html = html[::-1]
     else:
         html = indexwd(l, colnames, 'text', '')
-<<<<<<< HEAD
-    # Determine whether or not this is audio. Does not seem to be fully implemented.
-=======
         #likewise here for unicode stuff
         #if notunicode == False:
         #    html = unicode(html, 'utf-8')
         #    html = html[::-1]
     # Determine whether or not this is audio.
->>>>>>> 67334a72027894334f6b993898cd7d90b1a0ad9f
     if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
         # Audio
         audiofiles = [ ]
@@ -369,9 +362,9 @@ for sn in session_names:
     for l in interleaved_list:
         if not first:
             out.write(",\n")
-        first = False
+        first=False
         out.write(gen_item(prefix, sn, l, colnames, line_index))
-        line_index += 1
+        line_index+=1
     prefix += 1
     if prefix < len(session_names):
         out.write(",\n");
