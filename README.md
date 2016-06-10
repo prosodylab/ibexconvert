@@ -1,7 +1,7 @@
 # ibexconvert
 
 # How to get your own psycholinguistic experiment up!
-Assuming you've got the proper format on your spreadsheet (will flesh this out later to be more comprehensive in that regard, but for now refer to https://github.com/addrummond/ibex/blob/master/docs/manual.md)
+Assuming you've got the proper format on your spreadsheet (if not, refer to https://github.com/prosodylab/prosodylab-experimenter/blob/master/instructions.Rmd)
 
 #Run convert.py on your spreadsheet (done either remotely or locally)
 
