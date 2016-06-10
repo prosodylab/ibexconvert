@@ -24,10 +24,21 @@ Assuming you've got the proper format on your spreadsheet (will flesh this out l
 4. Scp (secure copy) your output.js file into the "data_includes" file (done locally)
 
 ``` sh
-    $ scp output.js firstname.lastname@prosody.linguistics.mcgill.ca:~/public_html/ibexexperiment/data_includes
+    $ scp output.js firstname.lastname@prosody.linguistics.mcgill.ca:~/public_html/experiment_name/data_includes
 ```
 
 5. Further configuration can be done, i.e. scp-ing audio files for audio experiments
 ...
+
+6. Release experiment, results can be accessed by... (remote)
+
+``` sh
+    $ cd /tmp/experiment_name/results
+```
+
+
+
+
+
 
 
