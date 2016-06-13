@@ -161,19 +161,12 @@ for sn in session_names:
                 pass
     if len(experiment_indices)>1:
         for i in range(1,len(experiment_indices)):
-            #print experiment_indices
-            #print i
-            print "!"
             experiment_trials.append([])
             for ind in range(experiment_indices[i-1],experiment_indices[i]):
                 #fill list of lists, each inner list is the container of the experiment corresponding to that expind
-                #In order to do this, make a list in the inner loop, then append it? Maybe?
-                #errors in this nested loop because the experiment 
-                #print experiment_trials[i]
                 experiment_trials[i-1].append(lines[ind])
         experiment_trials.append([])
         for ind2 in range(experiment_indices[len(experiment_indices)-1],len(lines)):
-            print ind2
             experiment_trials[len(experiment_trials)-1].append(lines[ind2])
     else:
         for l2 in sessions[sn]:
@@ -357,9 +350,7 @@ for sn in session_names:
         #only gen_item call located here, alternately place the loop right here
 #        out.write(gen_item(prefix, sn, l, colnames, line_index))
 #        line_index += 1
-    tuple_exp=tuple(experiment_trials)
-    interleaved_list=roundrobin(flatten(experiment_trials))
-    for l in interleaved_list:
+    for l in sessions[sn]:
         if not first:
             out.write(",\n")
         first=False
