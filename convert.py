@@ -6,11 +6,9 @@ from itertools import *
 
 # trigger to write consent intro and instructions into file
 # default is off (False) because most experiments won't have this
-wIntro = False
-
-def indexwd(l, colnames, name, default=None):
-    assert name is not None
-    index = None
+wIntro = True
+#noFiller defaulted to true bc most experiments don't need it
+noFiller = True
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -40,8 +38,17 @@ def roundrobin(*iterables):
             pending -= 1
             nexts = cycle(islice(nexts, pending))
 
+#def make_shuffle_sequence(real_types):
+#    return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+
 def make_shuffle_sequence(real_types):
-    return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+    if noFiller:
+        return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+    else:
+        #print indexwd(l, colnames, 'experiment', None)
+        #print "shuffle(randomize("+indexwd(l, colnames, 'experiment', None)+"), seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + ")))"
+        return "shuffle(randomize("+indexwd(l, colnames, 'experiment', None)+"), seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + ")))"
+
 
 scale=["1","2","3","4","5","6","7"]
 def make_preamble(shuffle_sequence):
@@ -63,6 +70,34 @@ var counterOverride = parseInt(Math.round(Math.random()*10000));
 
 var practiceItemTypes = ["practice"];
 var shuffleSequence = """ + shuffle_sequence + """;
+define_ibex_controller({
+    name: "DAJ",
+
+    jqueryWidget: {
+        _init: function () {
+            this.options.transfer = null; // Remove 'click to continue message'.
+            this.options.hideS = true;
+        this.element.VBox({
+                options: this.options,
+                triggers: [1],
+                children: [
+                    "DashedSentence", this.options,
+                    "AcceptabilityJudgment", this.options,
+                ]
+        });
+        }
+    },
+
+    properties: { }
+});
+
+var defaults = [
+    "DAJ", {
+        presentAsScale: true,
+        as: """ + str(scale) + """,
+    }
+]
+
 define_ibex_controller({
     name: "AJ",
 
@@ -179,6 +214,7 @@ for sn in session_names:
             experiment_trials.append(l2)
     seshnum += 1
 
+
 firstdigits=1
 seconddigits=7
 
@@ -223,6 +259,7 @@ for l in lines:
 
 
 def gen_item(sid, sn, l, colnames, line_index):
+    #cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     if session_opts[sn]['design'].upper() == 'RANDOM':
         pass
@@ -240,15 +277,15 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     controller = "AJ"
     ajoptions = None
-    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
-        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    #if indexwd(l, colnames, 'setup', '') is not None:
+    #    html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
         #commented code below is for reading unicode strings backwards, didn't end up using this but maybe helpful later
         #if notunicode == False:
         #    html = indexwd(l, colnames, 'setup', '') + indexwd(l, colnames, 'context', '') + indexwd(l, colnames, 'text', '')
         #    html = unicode(html, 'utf-8')
         #    html = html[::-1]
-    else:
-        html = indexwd(l, colnames, 'text', '')
+    #else:
         #likewise here for unicode stuff
         #if notunicode == False:
         #    html = unicode(html, 'utf-8')
@@ -354,9 +391,9 @@ for sn in session_names:
         #only gen_item call located here, alternately place the loop right here
 #        out.write(gen_item(prefix, sn, l, colnames, line_index))
 #        line_index += 1
-    tuple_exp=tuple(experiment_trials)
-    interleaved_list=roundrobin(flatten(experiment_trials))
-    for l in interleaved_list:
+    #tuple_exp=tuple(experiment_trials)
+    #interleaved_list=roundrobin(flatten(experiment_trials))
+    for l in sessions[sn]:
         if not first:
             out.write(",\n")
         first = False
