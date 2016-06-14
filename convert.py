@@ -215,6 +215,40 @@ for l in lines:
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
 
+def gen_item_DashAJ(sid, sn, l, colnames, line_index):
+    cond = str(sid)  + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+    if session_opts[sn]['design'].upper() == 'RANDOM':
+        pass
+    elif session_opts[sn]['design'].upper() == 'LATINSQUARE':
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+    elif session_opts[sn]['design'].upper() == 'WITHIN':
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+    else:
+        sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
+        sys.exit(1)
+    controller="DAJ"
+    dashedAJOptions=None  
+    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
+        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    else:
+        html = indexwd(l, colnames, 'text', '')
+    if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
+       print "dug" 
+    else:
+        ajoptions = dict(
+                        html = html,
+                        s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                        #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
+                        #instead, since that is in the datafile, in s, it repeats itself.
+                        #q =  questions[line_index], #testing out uncommenting this
+                        leftComment = scale_comment_lefts[line_index],
+                        rightComment = scale_comment_rights[line_index]
+        )
+    return json.dumps([cond, controller, dashedAJOptions])
+
 def gen_item(sid, sn, l, colnames, line_index):
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     if session_opts[sn]['design'].upper() == 'RANDOM':
@@ -231,7 +265,10 @@ def gen_item(sid, sn, l, colnames, line_index):
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
-    controller = "AJ"
+    if isSelfPaced:
+        controller ="DAJ"
+    else:
+        controller = "AJ"
     ajoptions = None
     if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
         html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
@@ -264,15 +301,27 @@ def gen_item(sid, sn, l, colnames, line_index):
         )
     else:
         # Text
-        ajoptions = dict(
-            html = html,
-            s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
-            #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
-            #instead, since that is in the datafile, in s, it repeats itself.
-            #q =  questions[line_index], #testing out uncommenting this
-            leftComment = scale_comment_lefts[line_index],
-            rightComment = scale_comment_rights[line_index]
-        )
+        if isSelfPaced:
+            ajoptions = dict(
+                    html = html,
+                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                    q = questions[line_index],
+                    leftComment = scale_comment_lefts[line_index],
+                    rightComment = scale_comment_rights[line_index],
+                    mode = "self-paced reading",
+                    #as = ["1","2","3","4","5","6","7"],
+                    presentAsScale = "true"
+                )
+        else:
+            ajoptions = dict(
+                html = html,
+                s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
+                #instead, since that is in the datafile, in s, it repeats itself.
+                #q =  questions[line_index], #testing out uncommenting this
+                leftComment = scale_comment_lefts[line_index],
+                rightComment = scale_comment_rights[line_index]
+            )
     #print "this is what you want:"
     #print html
     #print cond
