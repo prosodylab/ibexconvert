@@ -91,13 +91,6 @@ define_ibex_controller({
     properties: { }
 });
 
-var defaults = [
-    "DAJ", {
-        presentAsScale: true,
-        as: """ + str(scale) + """,
-    }
-]
-
 define_ibex_controller({
     name: "AJ",
 
@@ -124,6 +117,10 @@ var defaults = [
         as: """ + str(scale) + """,
         audioMessage: "Click here to play audio",
         audioTrigger: "click"
+    },
+    "DAJ", {
+        presentAsScale: true,
+        as: """ + str(scale) + """,
     }
 ];
     """
