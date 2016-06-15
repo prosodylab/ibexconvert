@@ -82,7 +82,7 @@ define_ibex_controller({
                 triggers: [1],
                 children: [
                     "DashedSentence", this.options,
-                    "AcceptabilityJudgment", this.options,
+                    "Question", this.options,
                 ]
         });
         }
