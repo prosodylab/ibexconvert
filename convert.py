@@ -61,6 +61,22 @@ var counterOverride = parseInt(Math.round(Math.random()*10000));
 var practiceItemTypes = ["practice"];
 var shuffleSequence = """ + shuffle_sequence + """;
 define_ibex_controller({
+    name: "DAJ",
+    jqueryWidget: {
+        _init: function () {
+            this.options.transfer = null; // Remove 'click to continue message'.
+            this.options.hideS = true;
+            this.element.VBox({
+                options: this.options,
+                triggers: [1],
+                children: [
+                "DashedSentence", this.options,"Question", this.options,]});
+                }
+            },
+    properties: { }
+});
+
+define_ibex_controller({
     name: "AJ",
 
     jqueryWidget: {
@@ -86,6 +102,10 @@ var defaults = [
         as: """ + str(scale) + """,
         audioMessage: "Click here to play audio",
         audioTrigger: "click"
+    },
+    "DAJ", {
+        presentAsScale: true,
+        as: """ + str(scale) + """,
     }
 ];
     """
@@ -223,9 +243,9 @@ def gen_item_DashAJ(sid, sn, l, colnames, line_index):
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     elif session_opts[sn]['design'].upper() == 'WITHIN':
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
@@ -259,9 +279,9 @@ def gen_item(sid, sn, l, colnames, line_index):
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
@@ -304,7 +324,7 @@ def gen_item(sid, sn, l, colnames, line_index):
         if isSelfPaced:
             ajoptions = dict(
                     html = html,
-                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'text', ''))[0],
                     q = questions[line_index],
                     leftComment = scale_comment_lefts[line_index],
                     rightComment = scale_comment_rights[line_index],
