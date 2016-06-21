@@ -102,14 +102,12 @@ for trialLine in trialDataList:
         elif idMatch:
             pass
         else:
-            print str(formNumber)+"!"
             if formNumber==0:
                 formNumber=2
             itemNum=int(trialLine.split(',')[3])-formNumber
             if itemNum and itemNum>0:
                 #take row number item num from experimentData
                 #add workerid based on experiment type
-                print itemNum
                 print experimentData[itemNum]+trialLine
                 newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t""\n")
 newoutput.close()
