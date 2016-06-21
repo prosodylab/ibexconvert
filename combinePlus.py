@@ -1,3 +1,4 @@
+#New Plan: Take another optional argument of -s to specify self paced reading
 #PLAN: take two input files, and an output name(3 args). The first input is the original experiment file, the second is
 #the experiment results.
 #plan to adjust new  stuff:
@@ -9,6 +10,13 @@ import json
 originalExperiment=sys.argv[1]
 trialDataFile=sys.argv[2]
 outputFileName=sys.argv[3]
+isSelfPaced=False
+if len(sys.argv)>4:
+    if sys.argv[1]=="-s":
+        isSelfPaced=True
+        originalExperiment=sys.argv[2]
+        trialDataFile=sys.argv[3]
+        outputFileName=sys.argv[4]
 
 f=open(originalExperiment)
 
@@ -23,10 +31,18 @@ f2.close()
 #nonHeadersString=''.join(experimentData[1:len(experimentData)])#old code, possibly useful later
 #grabs the trial headers
 trialDataHeadersA=[]
+sentenceLocatedIn=0
 pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(?:\s*)(.*)")
 for trialHeadA in trialDataList:
     match=pattern.match(trialHeadA)
     if match:
+        if isSelfPaced:
+            print "SELF PACED SHIT HAPPENS"
+            if (int(match.group(1))==12 and match.group(2)==" Sentence (or sentence MD5)."):
+                #need to get sentence, and number of chunks in said sentence(for now just word count?)
+                #perhaps track the number of lines I've gone through, comparing it to the word count.
+                #Once they are equal, check for new one?
+                print "inner if"
         if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
             tstring=("\t"+match.group(2)).lstrip('')
             trialDataHeadersA.append(tstring)
@@ -86,9 +102,14 @@ for trialLine in trialDataList:
         elif idMatch:
             pass
         else:
+            print str(formNumber)+"!"
+            if formNumber==0:
+                formNumber=2
             itemNum=int(trialLine.split(',')[3])-formNumber
             if itemNum and itemNum>0:
                 #take row number item num from experimentData
                 #add workerid based on experiment type
+                print itemNum
+                print experimentData[itemNum]+trialLine
                 newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t""\n")
 newoutput.close()
