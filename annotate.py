@@ -86,27 +86,81 @@ def WOI_Annotation(Exp,Res,Out):
     for r in ResRowList:
         ResRowList[resInd]=r.split(",")
         if woiInd>=len(actualWOI):
-            break
-        if indexwd(ResRowList[resInd],ResHeaderList,wordColName)==actualWOI[woiInd]:
-            ind=ResRowList[resInd].index(actualWOI[woiInd])
-            ResRowList[resInd].insert(ind+1,actualWOIMarkers[woiInd])
-            woiInd+=1
+            pass
         else:
-            ind=ResRowList[resInd].index(indexwd(ResRowList[resInd],ResHeaderList,wordColName))
-            if resInd==0:
-                ResRowList[resInd].insert(ind+1,"Words of Interest")
+            if indexwd(ResRowList[resInd],ResHeaderList,wordColName)==actualWOI[woiInd]:
+                ind=ResRowList[resInd].index(actualWOI[woiInd])
+                ResRowList[resInd].insert(ind+1,actualWOIMarkers[woiInd])
+                woiInd+=1
             else:
-                ResRowList[resInd].insert(ind+1,"!WOI")
-        while len(ResRowList[resInd])<commaCount+2:
-            ResRowList[resInd].append("NULL")
+                ind=ResRowList[resInd].index(indexwd(ResRowList[resInd],ResHeaderList,wordColName))
+                if resInd==0:
+                    ResRowList[resInd].insert(ind+1,"Words of Interest")
+                else:
+                    ResRowList[resInd].insert(ind+1,"!WOI")
+            while len(ResRowList[resInd])<commaCount+2:
+                ResRowList[resInd].append("NULL")
         resInd+=1
     #rowlist now a list of lists of strings, each inner list is a row
     output=open(Out,"w")
     for rl in ResRowList:
         output.write('\t'.join(rl)+'\n')
 
-#Second Function
+#Second Function:extract the neccessary stuff from the EXPERIMENT file, either add it onto the results file or vice versa?
+#Always run after the first file
+def spr_Exp_Combination(Exp, Res, Out):
+    #PLAN: Need to decide(add exp onto results, or add results onto exp)
+    #Take each row of exp file, find matching item num, write that row of the res onto the exp
+    f=open(Exp)
+    #get experiment file array of rows
+    ExpLines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
+    f.close()
+    #get experiment column names
+    ExpColNames = re.split(r"\s*\t+\s*", ExpLines[0])
+    ExpLines = [re.split(r"\"*\s*\t+\s*\"*", x) for x in ExpLines[1:]]
+    #get result row array
+    f2=open(Out) #using out because function one has already written to there
+    ResLines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f2.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
+    f2.close()
+    #get result column names
+    ResColNames = re.split(r"\s*\t+\s*", ResLines[0])
+    ResRowList = [re.split(r"\"*\s*\t+\s*\"*", x) for x in ResLines[1:]]
+    #get list of itemnums from Results
+    itemNumbers=[]
+    for cellz in ResLines:
+        cell=cellz.split("\t")
+        itemNumbers.append(indexwd(cell,ResColNames,"Item number."))
+    #For each row in expfile, find matching item num in results file and attach the res onto the exp
+    #alternately, each itemnumber is used as the the index to access the matching item num
+    j=0
+    inSentence=False
+    f3=open(Out, "w")
+    for item in itemNumbers:
+        if item=="Item number.":
+            pass
+        else:
+            item=int(item)-4
+            ##ExpLines[item]+=
+            #print j
+            #ExpLines[item]+=ResRowList[j]
+            j+=1
+        #if inSentence:
+            #Take only the word number, word, woi, reading time, time taken to answer
+            #ExpRow[item]+=
+            #check if end of sentence, if so, set inSentence
+        #else:
+            #take everything from resrow[j], set inSentence
+            #ExpRow[item]+=ResRowList
+            #inSentence=True
+        #j+=1
+    print ExpLines[0]
+    print ExpLines[5]
+    for ex in ExpLines:
+        f3.write('\t'.join(ex)+'\n')
+    f3.close()
+    return Out
 
 #Main body here
 WOI_Annotation(ExperimentFile,ResultsFile,OutputFile)
+#spr_Exp_Combination(ExperimentFile,ResultsFile,OutputFile)
 print "Success!"

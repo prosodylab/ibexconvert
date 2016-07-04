@@ -32,17 +32,21 @@ f2.close()
 #grabs the trial headers
 trialDataHeadersA=[]
 sentenceLocatedIn=0
+newSentenceApproaching=False
 pattern=re.compile(r"(?:^#\s*Col\.\s*)(\d?\d?)(?::)(?:\s*)(.*)")
 for trialHeadA in trialDataList:
     match=pattern.match(trialHeadA)
     if match:
         if isSelfPaced:
-            print "SELF PACED SHIT HAPPENS"
-            if (int(match.group(1))==12 and match.group(2)==" Sentence (or sentence MD5)."):
+            print match.group(2)
+            if (int(match.group(1))==12 and match.group(2)=="Sentence (or sentence MD5)."):
                 #need to get sentence, and number of chunks in said sentence(for now just word count?)
                 #perhaps track the number of lines I've gone through, comparing it to the word count.
                 #Once they are equal, check for new one?
-                print "inner if"
+                #Possibly keep an array of locations where the sentences end?
+                newSentenceApproaching=True
+                print newSentenceApproaching
+                #need to put this elsewhere
         if ("\t"+match.group(2)) not in trialDataHeadersA and int(match.group(1)) >len(trialDataHeadersA):
             tstring=("\t"+match.group(2)).lstrip('')
             trialDataHeadersA.append(tstring)
@@ -51,7 +55,7 @@ for trialHeadA in trialDataList:
 #trialDataHeadersA=re.split(r"(?:^#\s*Col\.\s*\d?\d?:)(.*)",f2.read())
 trialString=''.join(trialDataHeadersA)
 commaCount=trialString.count('\t')
-print commaCount
+#print commaCount
 #get worker ID\
 #workerid=[]
 #workerid[0]='ID not Found'
@@ -97,7 +101,7 @@ for trialLine in trialDataList:
                 newoutput.write("NULL\t")
             newoutput.write(trialLine.replace(",","\t")+"\t""\n")
             #if itemNum and itemNum>0:
-            print "formfound"
+            #print "formfound"
 
         elif idMatch:
             pass
@@ -108,6 +112,6 @@ for trialLine in trialDataList:
             if itemNum and itemNum>0:
                 #take row number item num from experimentData
                 #add workerid based on experiment type
-                print experimentData[itemNum]+trialLine
+                #print experimentData[itemNum]+trialLine
                 newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t""\n")
 newoutput.close()
