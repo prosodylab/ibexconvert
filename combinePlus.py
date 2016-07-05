@@ -90,5 +90,9 @@ for trialLine in trialDataList:
             if itemNum and itemNum>0:
                 #take row number item num from experimentData
                 #add workerid based on experiment type
+                print len(experimentData)
+                print "itemNum:"
+                print itemNum
+                print experimentData[itemNum]
                 newoutput.write(experimentData[itemNum]+"\t"+trialLine.replace(",", "\t")+"\t""\n")
 newoutput.close()
