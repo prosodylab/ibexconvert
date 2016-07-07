@@ -11,20 +11,20 @@ python convert.py originalExperimentFile.txt dataFileName.js
 
 ####Download the scripts titled setup.sh and editFile.py to your computer, and SCP the two scripts to your Prosody Server account
 
-``` sh
+``` {r, engine='bash', count_lines}
 scp setup.sh firstname.lastname@prosody.linguistics.mcgill.ca
 scp editFile.py firstname.lastname@prosody.linguistics.mcgill.ca
 ```
 
 ####SSH into the Prosody Lab web server (must have an account)
 
-``` sh
+``` {r, engine='bash', count_lines}
 ssh first.last@prosody.linguistics.mcgill.ca
 ```
 
 ####Run the script titled setup.sh (done remotely on prosody server)
 
-``` sh
+``` {r, engine='bash', count_lines}
 sh setup.sh experimentName dataFileName.js
 ```
 
@@ -33,6 +33,6 @@ sh setup.sh experimentName dataFileName.js
 
 ####Release experiment, results can be accessed by... (remote)
 
-``` sh
+``` {r, engine='bash', count_lines}
 cd /tmp/experiment_name/results
 ```
