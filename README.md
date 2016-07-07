@@ -25,11 +25,15 @@ ssh first.last@prosody.linguistics.mcgill.ca
 ####Run the script titled setup.sh (done remotely on prosody server)
 
 ``` {r, engine='bash', count_lines}
-sh setup.sh experimentName dataFileName.js
+sh setup.sh *experimentName dataFileName.js*
 ```
 
 ####Further configuration can be done, i.e. SCP-ing audio files for audio experiments
 ...
+
+####Go to...
+http://prosody.linguistics.mcgill.ca/~*firstname*.*lastname*/*experimentName*/www/experiment.html
+
 
 ####Release experiment, results can be accessed by... (remote)
 
