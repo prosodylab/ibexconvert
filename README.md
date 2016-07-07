@@ -1,4 +1,4 @@
-# ibexconvert
+## ibexconvert
 
 ### How to get your own psycholinguistic experiment up!
 Assuming you've got the proper format on your spreadsheet (if not, refer to https://github.com/prosodylab/prosodylab-experimenter/blob/master/instructions.Rmd)
@@ -6,7 +6,14 @@ Assuming you've got the proper format on your spreadsheet (if not, refer to http
 ####Run convert.py on your spreadsheet from the command line
 
 ``` sh
-python convert.py original_experiment_file.txt output_file.js 
+python convert.py originalExperimentFile.txt dataFileName.js 
+```
+
+####Download the scripts titled setup.sh and editFile.py to your computer, and SCP the two scripts to your Prosody Server account
+
+``` sh
+scp setup.sh firstname.lastname@prosody.linguistics.mcgill.ca
+scp editFile.py firstname.lastname@prosody.linguistics.mcgill.ca
 ```
 
 ####SSH into the Prosody Lab web server (must have an account)
@@ -15,19 +22,13 @@ python convert.py original_experiment_file.txt output_file.js
 ssh first.last@prosody.linguistics.mcgill.ca
 ```
 
-####Run the script titled configure.sh (done remotely on prosody server)
+####Run the script titled setup.sh (done remotely on prosody server)
 
 ``` sh
-sh configure.sh experimentName dataFileName
+sh setup.sh experimentName dataFileName.js
 ```
 
-####Run the following commands, and then everything should be working!
-``` sh
-python ~/public_html/experimentName/www/server.cgi -r ./
-chmod 777 ~/public_html/experimentName/www/server.log
-```
-
-####Further configuration can be done, i.e. scp-ing audio files for audio experiments
+####Further configuration can be done, i.e. SCP-ing audio files for audio experiments
 ...
 
 ####Release experiment, results can be accessed by... (remote)
