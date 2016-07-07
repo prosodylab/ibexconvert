@@ -5,7 +5,7 @@ Assuming you've got the proper format on your spreadsheet (if not, refer to http
 
 ####Run convert.py on your spreadsheet from the command line
 
-``` sh
+``` {r, engine='bash', count_lines}
 python convert.py originalExperimentFile.txt dataFileName.js 
 ```
 
