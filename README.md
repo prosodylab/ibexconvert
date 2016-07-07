@@ -32,7 +32,7 @@ sh setup.sh experimentName dataFileName.js
 ...
 
 ####Go to...
-http://prosody.linguistics.mcgill.ca/~*firstname*.*lastname*/*experimentName*/www/experiment.html
+`http://prosody.linguistics.mcgill.ca/~*firstname*.*lastname*/*experimentName*/www/experiment.html`
 
 
 ####Release experiment, results can be accessed by... (remote)
