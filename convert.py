@@ -4,12 +4,19 @@ import json
 import sys
 from itertools import *
 
+
 # trigger to write consent intro and instructions into file
 # default is off (False) because most experiments won't have this
 wIntro = False
-#noFiller defaulted to true bc most experiments don't need it
+# add filler trials trigger
+# default is true
 noFiller = True
-sep = True
+# separators trigger
+# default is false
+sep = False
+# defaults to AJ when off
+isQAJ = False
+
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -75,7 +82,6 @@ var practiceItemTypes = ["practice"];
 var shuffleSequence = """ + shuffle_sequence + """;
 define_ibex_controller({
     name: "DAJ",
-
     jqueryWidget: {
         _init: function () {
             this.options.transfer = null; // Remove 'click to continue message'.
@@ -90,7 +96,6 @@ define_ibex_controller({
         });
         }
     },
-
     properties: { }
 });
 
@@ -166,8 +171,12 @@ experiment_indices=[]
 experiment_trials=[]
 expfile=sys.argv[1]
 outfile = sys.argv[2]
-
-
+isSelfPaced=False
+#Check what flags are given
+#EX: -s indicates that the experiment is a self-paced reading experiment
+if num_input_files>3:
+    if sys.argv[3]=="-s":
+        isSelfPaced=True
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
 
@@ -228,19 +237,12 @@ for sn in session_names:
                 pass
     if len(experiment_indices)>1:
         for i in range(1,len(experiment_indices)):
-            #print experiment_indices
-            #print i
-            print "!"
             experiment_trials.append([])
             for ind in range(experiment_indices[i-1],experiment_indices[i]):
                 #fill list of lists, each inner list is the container of the experiment corresponding to that expind
-                #In order to do this, make a list in the inner loop, then append it? Maybe?
-                #errors in this nested loop because the experiment 
-                #print experiment_trials[i]
                 experiment_trials[i-1].append(lines[ind])
         experiment_trials.append([])
         for ind2 in range(experiment_indices[len(experiment_indices)-1],len(lines)):
-            print ind2
             experiment_trials[len(experiment_trials)-1].append(lines[ind2])
     else:
         for l2 in sessions[sn]:
@@ -293,6 +295,39 @@ for l in lines:
         seconddigits=m.group(4)
         scale_comment_rights.append(m.group(5))
 
+def gen_item_DashAJ(sid, sn, l, colnames, line_index):
+    cond = str(sid)  + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+    if session_opts[sn]['design'].upper() == 'RANDOM':
+        pass
+    elif session_opts[sn]['design'].upper() == 'LATINSQUARE':
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+    elif session_opts[sn]['design'].upper() == 'WITHIN':
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+    else:
+        sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
+        sys.exit(1)
+    controller="DAJ"
+    dashedAJOptions=None  
+    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
+        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    else:
+        html = indexwd(l, colnames, 'text', '')
+    if indexwd(l, colnames, 'contextFile') is not None or indexwd(l, colnames, 'wavFile') is not None:
+       print "dug" 
+    else:
+        ajoptions = dict(
+                        html = html,
+                        s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                        #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
+                        #instead, since that is in the datafile, in s, it repeats itself.
+                        #q =  questions[line_index], #testing out uncommenting this
+                        leftComment = scale_comment_lefts[line_index],
+                        rightComment = scale_comment_rights[line_index]
+        )
+    return json.dumps([cond, controller, dashedAJOptions])
 
 def gen_item(sid, sn, l, colnames, line_index):
     #cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
@@ -305,12 +340,22 @@ def gen_item(sid, sn, l, colnames, line_index):
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
         cond = indexwd(l, colnames, 'condition', '') + '-' + indexwd(l, colnames, 'item', '')
+        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
-    controller = "AJ"
+    if isSelfPaced:
+        controller ="DAJ"
+    elif isQAJ:
+        controller = "QAJ"
+    else:
+        controller = "AJ"
+        html = "Read the passage below carefully: <br><br>" + indexwd(l, colnames, 'context', '')
     ajoptions = None
-    html = "Read the passage below carefully: <br><br>" + indexwd(l, colnames, 'context', '')
+
     #html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
     #if indexwd(l, colnames, 'setup', '') is not None:
     #    html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
@@ -319,7 +364,8 @@ def gen_item(sid, sn, l, colnames, line_index):
         #    html = indexwd(l, colnames, 'setup', '') + indexwd(l, colnames, 'context', '') + indexwd(l, colnames, 'text', '')
         #    html = unicode(html, 'utf-8')
         #    html = html[::-1]
-    #else:
+   # else:
+   #     html = indexwd(l, colnames, 'text', '')
         #likewise here for unicode stuff
         #if notunicode == False:
         #    html = unicode(html, 'utf-8')
@@ -353,17 +399,18 @@ def gen_item(sid, sn, l, colnames, line_index):
                 moreHTML = indexwd(l, colnames, 'text', '')
         )
     else:
-        if indexwd(l, colnames, 'qType', '') == "jm":
+        # Text
+        if isSelfPaced:
             ajoptions = dict(
-                html = html,
-                s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
-                #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
-                #instead, since that is in the datafile, in s, it repeats itself.
-                #q =  questions[line_index], #testing out uncommenting this
-                leftComment = scale_comment_lefts[line_index],
-                rightComment = scale_comment_rights[line_index],
-                moreHTML = indexwd(l, colnames, 'text', '')
-        )
+                    html = html,
+                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'text', ''))[0],
+                    q = questions[line_index],
+                    leftComment = scale_comment_lefts[line_index],
+                    rightComment = scale_comment_rights[line_index],
+                    mode = "self-paced reading",
+                    #as = ["1","2","3","4","5","6","7"],
+                    presentAsScale = "true"
+                )
         elif indexwd(l, colnames, 'qType', '') == "mcF":
             ajoptions = dict(
                 qAJ= indexwd(l, colnames, 'question', ''),
@@ -375,9 +422,27 @@ def gen_item(sid, sn, l, colnames, line_index):
                 rightComment = scale_comment_rights[line_index],
                 moreHTML = indexwd(l, colnames, 'text', '')
         )
+        elif indexwd(l, colnames, 'qType', '') == "jm":
+            ajoptions = dict(
+                    html = html,
+                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'text', ''))[0],
+                    q = questions[line_index],
+                    leftComment = scale_comment_lefts[line_index],
+                    rightComment = scale_comment_rights[line_index],
+                    as = ["1","2","3","4","5","6","7"],
+                    presentAsScale = "true"
+                )
         else:
-            print "error"
-
+            ajoptions = dict(
+                html = html,
+                s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                #THIS IS A PLACEHOLDER TO SHOW RESULTS, the q will normally hold the 'acceptability judgement' statement
+                #instead, since that is in the datafile, in s, it repeats itself.
+                #q =  questions[line_index], #testing out uncommenting this
+                leftComment = scale_comment_lefts[line_index],
+                rightComment = scale_comment_rights[line_index],
+                moreHTML = indexwd(l, colnames, 'text', '')
+        )
     #print "this is what you want:"
     #print html
     #print cond
@@ -458,9 +523,9 @@ for sn in session_names:
     for l in sessions[sn]:
         if not first:
             out.write(",\n")
-        first = False
+        first=False
         out.write(gen_item(prefix, sn, l, colnames, line_index))
-        line_index += 1
+        line_index+=1
     prefix += 1
     if prefix < len(session_names):
         out.write(",\n");
