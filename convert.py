@@ -18,7 +18,6 @@ def indexwd(l, colnames, name, default=None):
         index = colnames.index(name)
     except ValueError:
         return default
-    print l[index]
     return l[index]
 
 
@@ -305,7 +304,7 @@ def gen_item(sid, sn, l, colnames, line_index):
     elif session_opts[sn]['design'].upper() == 'WITHIN':
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
-        cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
+        cond = indexwd(l, colnames, 'condition', '') + '-' + indexwd(l, colnames, 'item', '')
     else:
         sys.stderr.write("Did not recognize design type '%s'\n" % session_opts[sn]['design'])
         sys.exit(1)
@@ -331,7 +330,6 @@ def gen_item(sid, sn, l, colnames, line_index):
         audiofiles = [ ]
         if indexwd(l, colnames, 'contextFile') is not None:
             audiofiles.append(indexwd(l, colnames, 'contextFile'))
-        audiofiles.append('Untitled.wav')
         if indexwd(l, colnames, 'wavFile') is not None:
             audiofiles.append(indexwd(l, colnames, 'wavFile'))
         if indexwd(l, colnames, 'qType', '') == "jm":
@@ -407,7 +405,6 @@ if wIntro:
 out = open(outfile, "w")
 ###ACTUAL PREAMBLE CODE GENNED HERE
 scale=range(int(firstdigits),1+int(seconddigits));
-print scale
 for i in scale:
     scale[scale.index(i)]=str(i)
 out.write(make_preamble(shufseq))
