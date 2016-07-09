@@ -6,8 +6,17 @@ from itertools import *
 
 
 # trigger to write consent intro and instructions into file
-# default is off because most experiments won't have this
+# default is off (False) because most experiments won't have this
 wIntro = False
+# add filler trials trigger
+# default is true
+noFiller = True
+# separators trigger
+# default is false
+sep = False
+# defaults to AJ when off
+isQAJ = False
+
 
 def indexwd(l, colnames, name, default=None):
     assert name is not None
@@ -37,8 +46,19 @@ def roundrobin(*iterables):
             pending -= 1
             nexts = cycle(islice(nexts, pending))
 
+#def make_shuffle_sequence(real_types):
+#    return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+
 def make_shuffle_sequence(real_types):
-    return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+    if sep:
+        return "sepWith(\"sep\", seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) +")))"
+    elif noFiller:
+        return "seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + "))"
+    else:
+        #print indexwd(l, colnames, 'experiment', None)
+        #print "shuffle(randomize("+indexwd(l, colnames, 'experiment', None)+"), seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + ")))"
+        return "shuffle(randomize("+indexwd(l, colnames, 'experiment', None)+"), seq(rshuffle(" + ', '.join([json.dumps(t) for t in real_types]) + ")))"
+
 
 scale=["1","2","3","4","5","6","7"]
 def make_preamble(shuffle_sequence):
@@ -66,13 +86,16 @@ define_ibex_controller({
         _init: function () {
             this.options.transfer = null; // Remove 'click to continue message'.
             this.options.hideS = true;
-            this.element.VBox({
+        this.element.VBox({
                 options: this.options,
                 triggers: [1],
                 children: [
-                "DashedSentence", this.options,"Question", this.options,]});
-                }
-            },
+                    "DashedSentence", this.options,
+                    "Question", this.options,
+                ]
+        });
+        }
+    },
     properties: { }
 });
 
@@ -84,10 +107,32 @@ define_ibex_controller({
             this.options.transfer = null; // Remove 'click to continue message'.
             this.element.VBox({
                 options: this.options,
-                triggers: [1],
+                triggers: [3],
                 children: [
                     "Message", this.options,
-                    "AcceptabilityJudgment", this.options,
+                    "FlashSentence", this.options,
+                    "newCont", this.options,
+                    "Question", this.options
+                ]
+            });
+        }
+    },
+
+    properties: { }
+});
+
+define_ibex_controller({
+    name: "QAJ",
+
+    jqueryWidget: {
+        _init: function () {
+            this.options.transfer = null; // Remove 'click to continue message'.
+            this.element.VBox({
+                options: this.options,
+                triggers: [1],
+                children: [
+                    "Question2", this.options,
+                    "Question", this.options,
                 ]
             });
         }
@@ -100,12 +145,23 @@ var defaults = [
     "AJ", {
         presentAsScale: true,
         as: """ + str(scale) + """,
-        audioMessage: "Click here to play audio",
+        audioMessage: "Click here when you're ready to listen to the story with the additional remark",
         audioTrigger: "click"
     },
     "DAJ", {
         presentAsScale: true,
-        as: """ + str(scale) + """,
+        as: """ + str(scale) + """
+    },
+    "QAJ", {
+        hasCorrectAJ: true,
+        presentAsScaleAJ: false,
+        audioMessage: "Click here to play audio",
+        audioTrigger: "click",
+        randomOrderAJ: false,
+        randomOrder: false,
+        presentAsScale: true,
+        hasCorrect: false,
+        as: """ + str(scale) + """
     }
 ];
     """
@@ -193,6 +249,7 @@ for sn in session_names:
             experiment_trials.append(l2)
     seshnum += 1
 
+
 firstdigits=1
 seconddigits=7
 
@@ -213,13 +270,16 @@ qType=""
 scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
 for l in lines:
-    m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+    if indexwd(l, colnames, 'qType2', '') is not None:
+        m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+    else:
+        m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
     if not m:
         sys.stderr.write("Error: could not parse scale comments\n")
         sys.exit(1)
     questions.append(m.group(1))
     checkQType = indexwd(l, colnames, 'qType', '')
-    if checkQType.startswith(checkQType + '_'):
+    if checkQType.find('_') > 0:
         m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
         if not m2:
             sys.stderr.write("Error: could not parse scale comments or digits. Please format it as 'qtype_scaledigit1_scaledigit2_scalecommentleft_scalecommentright'\n")
@@ -270,6 +330,7 @@ def gen_item_DashAJ(sid, sn, l, colnames, line_index):
     return json.dumps([cond, controller, dashedAJOptions])
 
 def gen_item(sid, sn, l, colnames, line_index):
+    #cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     cond = str(sid) + '-' + indexwd(l, colnames, 'conditionLabel', '') + indexwd(l, colnames, 'condition', '')
     if session_opts[sn]['design'].upper() == 'RANDOM':
         pass
@@ -278,6 +339,7 @@ def gen_item(sid, sn, l, colnames, line_index):
     elif session_opts[sn]['design'].upper() == 'WITHIN':
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
+        cond = indexwd(l, colnames, 'condition', '') + '-' + indexwd(l, colnames, 'item', '')
         cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
@@ -287,18 +349,23 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     if isSelfPaced:
         controller ="DAJ"
+    elif isQAJ:
+        controller = "QAJ"
     else:
         controller = "AJ"
+        html = "Read the passage below carefully: <br><br>" + indexwd(l, colnames, 'context', '')
     ajoptions = None
-    if indexwd(l, colnames, 'setup', '') is not None and indexwd(l, colnames, 'context', '') is not None:
-        html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+
+    #html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    #if indexwd(l, colnames, 'setup', '') is not None:
+    #    html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
         #commented code below is for reading unicode strings backwards, didn't end up using this but maybe helpful later
         #if notunicode == False:
         #    html = indexwd(l, colnames, 'setup', '') + indexwd(l, colnames, 'context', '') + indexwd(l, colnames, 'text', '')
         #    html = unicode(html, 'utf-8')
         #    html = html[::-1]
-    else:
-        html = indexwd(l, colnames, 'text', '')
+   # else:
+   #     html = indexwd(l, colnames, 'text', '')
         #likewise here for unicode stuff
         #if notunicode == False:
         #    html = unicode(html, 'utf-8')
@@ -311,13 +378,25 @@ def gen_item(sid, sn, l, colnames, line_index):
             audiofiles.append(indexwd(l, colnames, 'contextFile'))
         if indexwd(l, colnames, 'wavFile') is not None:
             audiofiles.append(indexwd(l, colnames, 'wavFile'))
-            print indexwd(l, colnames, 'wavFile')
-        ajoptions = dict(
-            html=html,
-            s = dict(audio=audiofiles),
-            q = questions[line_index],
-            leftComment = scale_comment_lefts[line_index],
-            rightComment = scale_comment_rights[line_index]
+        if indexwd(l, colnames, 'qType', '') == "jm":
+            ajoptions = dict(
+                html=html,
+                s = dict(audio=audiofiles),
+                q = questions[line_index],
+                leftComment = scale_comment_lefts[line_index],
+                rightComment = scale_comment_rights[line_index],
+                moreHTML = indexwd(l, colnames, 'text', '')
+        )
+        elif indexwd(l, colnames, 'qType', '') == "mcF":
+            ajoptions = dict(
+                qAJ= indexwd(l, colnames, 'question', ''),
+                AJas = [indexwd(l, colnames, 'correctAnswer', ''), indexwd(l, colnames, 'alt1Answer', '')],
+                html=html,
+                s=dict(audio=audiofiles),
+                q= questions[line_index],
+                leftComment = scale_comment_lefts[line_index],
+                rightComment = scale_comment_rights[line_index],
+                moreHTML = indexwd(l, colnames, 'text', '')
         )
     else:
         # Text
@@ -332,6 +411,27 @@ def gen_item(sid, sn, l, colnames, line_index):
                     #as = ["1","2","3","4","5","6","7"],
                     presentAsScale = "true"
                 )
+        elif indexwd(l, colnames, 'qType', '') == "mcF":
+            ajoptions = dict(
+                qAJ= indexwd(l, colnames, 'question', ''),
+                AJas = [indexwd(l, colnames, 'correctAnswer', ''), indexwd(l, colnames, 'alt1Answer', '')],
+                html=html,
+                #s=re.split(r"\s*\\n\s*", indexwd(l, colnames, 'question', ''))[0],
+                s= questions[line_index],
+                leftComment = scale_comment_lefts[line_index],
+                rightComment = scale_comment_rights[line_index],
+                moreHTML = indexwd(l, colnames, 'text', '')
+        )
+        elif indexwd(l, colnames, 'qType', '') == "jm":
+            ajoptions = dict(
+                    html = html,
+                    s = re.split(r"\s*\\n\s*", indexwd(l, colnames, 'text', ''))[0],
+                    q = questions[line_index],
+                    leftComment = scale_comment_lefts[line_index],
+                    rightComment = scale_comment_rights[line_index],
+                    as = ["1","2","3","4","5","6","7"],
+                    presentAsScale = "true"
+                )
         else:
             ajoptions = dict(
                 html = html,
@@ -340,8 +440,9 @@ def gen_item(sid, sn, l, colnames, line_index):
                 #instead, since that is in the datafile, in s, it repeats itself.
                 #q =  questions[line_index], #testing out uncommenting this
                 leftComment = scale_comment_lefts[line_index],
-                rightComment = scale_comment_rights[line_index]
-            )
+                rightComment = scale_comment_rights[line_index],
+                moreHTML = indexwd(l, colnames, 'text', '')
+        )
     #print "this is what you want:"
     #print html
     #print cond
@@ -377,25 +478,23 @@ out.write(make_preamble(shufseq))
 out.write("var items = [\n")
 
 out.write("""
-["intro", "Form", { html: { include: "example_intro.html" }, validators: { age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }}} ],
-
-["__workerid__", "Form", { html: "<p>Please enter your worker id: <p><input type='text' name='workerid' size='20'>" }],
+["__workerid__", "Form", { html: "<p>Please enter your participant number: <p><input type='text' name='workerid' size='20'>" }],
 
 ["__results__", "__SendResults__", { }],
 
 ["__code__", "Message", { transfer: null, html: "Thank you! Your completion code is: " + genCode() }],
 
+["sep", "Separator", {transfer: "keypress", normalMessage: "Please press any key to move     on to the next passage.", ignoreFailure: true}],
 """)
 
 if wIntro:
-    out.write(""" 
-    ["instructions", "Form", {html: {include: "instructions.html"}}],
+    out.write("""["instructions", "Form", {html: {include: "instructions.html"}}],
 
-    ["intro", "Form", { html: { include: "example_intro.html" }, validators: {age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019";}, dlang: function (s) {if (s) return true; else return "bad"} }}],
+["intro", "Form", { html: { include: "example_intro.html" }, validators: {age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019";}, dlang: function (s) {if (s) return true; else return "bad"} }}],
 
-    ["consent", "Form", {html: {include: "consent.html"}}],
+["consent", "Form", {html: {include: "consent.html"}}],
 
-    """)
+""")
 
 first = True
 prefix = 0
@@ -419,6 +518,8 @@ for sn in session_names:
         #only gen_item call located here, alternately place the loop right here
 #        out.write(gen_item(prefix, sn, l, colnames, line_index))
 #        line_index += 1
+    #tuple_exp=tuple(experiment_trials)
+    #interleaved_list=roundrobin(flatten(experiment_trials))
     for l in sessions[sn]:
         if not first:
             out.write(",\n")
