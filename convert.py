@@ -15,7 +15,7 @@ noFiller = True
 # default is false
 sep = False
 # defaults to AJ when off
-isQAJ = False
+isQAJ = True
 
 
 def indexwd(l, colnames, name, default=None):
@@ -131,8 +131,9 @@ define_ibex_controller({
                 options: this.options,
                 triggers: [1],
                 children: [
+                    "FlashSentence", this.options,
                     "Question2", this.options,
-                    "Question", this.options,
+                    "Question", this.options
                 ]
             });
         }
@@ -271,7 +272,7 @@ scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
 for l in lines:
     if indexwd(l, colnames, 'qType2', '') is not None:
-        m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+        m = re.match(scale_regexp, indexwd(l, colnames, 'question2', ''))
     else:
         m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
     if not m:
@@ -340,7 +341,7 @@ def gen_item(sid, sn, l, colnames, line_index):
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = str(sid) + '-' + indexwd(l, colnames, 'item', '') 
         cond = indexwd(l, colnames, 'condition', '') + '-' + indexwd(l, colnames, 'item', '')
-        cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
+        #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
         #cond = [cond, items[str(sid) + '-' + str(int(indexwd(l, colnames, 'item')))]]
@@ -351,12 +352,12 @@ def gen_item(sid, sn, l, colnames, line_index):
         controller ="DAJ"
     elif isQAJ:
         controller = "QAJ"
+        html = '<br>'
     else:
         controller = "AJ"
         html = "Read the passage below carefully: <br><br>" + indexwd(l, colnames, 'context', '')
     ajoptions = None
-
-    #html = indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
+    
     #if indexwd(l, colnames, 'setup', '') is not None:
     #    html = indexwd(l, colnames, 'setup', '') + '<br>' + indexwd(l, colnames, 'context', '') + '<br>' + indexwd(l, colnames, 'text', '')
         #commented code below is for reading unicode strings backwards, didn't end up using this but maybe helpful later
