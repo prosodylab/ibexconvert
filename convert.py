@@ -10,12 +10,12 @@ from itertools import *
 wIntro = False
 # add filler trials trigger
 # default is true
-noFiller = True
+noFiller = False
 # separators trigger
 # default is false
 sep = False
 # defaults to AJ when off
-isQAJ = False
+isQAJ = True
 
 
 def indexwd(l, colnames, name, default=None):
@@ -429,7 +429,7 @@ def gen_item(sid, sn, l, colnames, line_index):
                     q = questions[line_index],
                     leftComment = scale_comment_lefts[line_index],
                     rightComment = scale_comment_rights[line_index],
-                    as = ["1","2","3","4","5","6","7"],
+                    #as = ["1","2","3","4","5","6","7"],
                     presentAsScale = "true"
                 )
         else:
