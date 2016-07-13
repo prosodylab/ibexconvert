@@ -181,7 +181,7 @@ if num_input_files>3:
     #-f=noFiller
     #-e=sep
     #-q=isQAJ
-    for flag in sys.argv[2:]:
+    for flag in sys.argv[3:]:
         if flag=="-s":
             isSelfPaced=True
         elif flag=="-w":
