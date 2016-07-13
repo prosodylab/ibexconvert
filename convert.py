@@ -15,7 +15,7 @@ noFiller = False
 # default is false
 sep = False
 # defaults to AJ when off
-isQAJ = True
+isQAJ = False
 
 
 def indexwd(l, colnames, name, default=None):
@@ -176,8 +176,25 @@ isSelfPaced=False
 #Check what flags are given
 #EX: -s indicates that the experiment is a self-paced reading experiment
 if num_input_files>3:
-    if sys.argv[3]=="-s":
-        isSelfPaced=True
+    #-s=isSelfPaced
+    #-w=wIntro
+    #-f=noFiller
+    #-e=sep
+    #-q=isQAJ
+    for flag in sys.argv[2:]:
+        if flag=="-s":
+            isSelfPaced=True
+        elif flag=="-w":
+            wIntro=True
+        elif flag=="-f":
+            noFiller=True
+        elif flag=="-e":
+            sep=True
+        elif flag=="-q":
+            isQAJ=True
+        else:
+            sys.stderr.write("Flag not recognized. Please use one of the approved flags, -s for self paced, -w for adding intro, -f for no filler, -e for seperator, and -q for QAJ format.\n")
+            sys.exit(1)
 f = open(expfile)
 lines = [x for x in re.split(r"(?:\r\n)|(?:\n)|(?:\r)", f.read()) if len(x) > 1 or (len(x) == 1 and not re.match(r"^\s*$", x[0]))]
 
@@ -272,13 +289,15 @@ scale_comment_lefts = [ ]
 scale_comment_rights = [ ]
 for l in lines:
     if indexwd(l, colnames, 'qType2', '') is not None:
-        m = re.match(scale_regexp, indexwd(l, colnames, 'question2', ''))
+        questions.append(indexwd(l,colnames, 'qType2', ''))
     else:
-        m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
-    if not m:
-        sys.stderr.write("Error: could not parse scale comments\n")
-        sys.exit(1)
-    questions.append(m.group(1))
+        questions.append(indexwd(l,colnames, 'qType', ''))
+    #   m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+    #   m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
+    #if not m:
+    #    sys.stderr.write("Error: could not parse scale comments\n")
+    #    sys.exit(1)
+    #questions.append(m.group(1))
     checkQType = indexwd(l, colnames, 'qType', '')
     if checkQType.find('_') > 0:
         m2=re.match(column_style_scale_regexp, indexwd(l, colnames, 'qType', ''))
@@ -350,6 +369,7 @@ def gen_item(sid, sn, l, colnames, line_index):
         sys.exit(1)
     if isSelfPaced:
         controller ="DAJ"
+        html='<br>'
     elif isQAJ:
         controller = "QAJ"
         html = '<br>'
@@ -421,6 +441,7 @@ def gen_item(sid, sn, l, colnames, line_index):
                 s= questions[line_index],
                 leftComment = scale_comment_lefts[line_index],
                 rightComment = scale_comment_rights[line_index],
+                mode = "self-paced reading",
                 moreHTML = indexwd(l, colnames, 'text', '')
         )
         elif indexwd(l, colnames, 'qType', '') == "jm":
@@ -430,6 +451,7 @@ def gen_item(sid, sn, l, colnames, line_index):
                     q = questions[line_index],
                     leftComment = scale_comment_lefts[line_index],
                     rightComment = scale_comment_rights[line_index],
+                    mode = "self-paced reading",
                     #as = ["1","2","3","4","5","6","7"],
                     presentAsScale = "true"
                 )
