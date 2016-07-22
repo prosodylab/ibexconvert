@@ -63,45 +63,134 @@ def WOI_Annotation(Exp,Res,Out):
     ResRowList.insert(0,ResHeaderString)
         #see above section(else)
     #-Loop through woi text to extract woi and their markers, store at same index in 2 arr
-    #thought about other approaches
-    #matrix/listoflists:too much overhead
-    #dictionary: need to refer to them and keys/markers differ
+     #thought about other approaches
+     #matrix/listoflists:too much overhead
+     #dictionary: need to refer to them and keys/markers differ
     woiPattern=re.compile(r"^(.*)_(.*)$")
     actualWOI=[]
     actualWOIMarkers=[]
+    currentSentenceArr=[]
     for woi in WoiTextArray:
         woiArr=woi.split(" ")
+        sanitizedText=[]
+        WOIInCurrentSentence=0
+        inWOISentence=False
         for w in woiArr:
+            if "_" in w:
+                inWOISentence=True
             match=woiPattern.match(w)
             if match:
-                print "Match!"
                 actualWOI.append(match.group(1))
+                WOIInCurrentSentence+=1
+                #currentSentenceArr.append(woi)
                 actualWOIMarkers.append(match.group(2))
+                sanitizedText.append(match.group(1))
+            else:
+                sanitizedText.append(w)
+        sanitizedTextW=" ".join(sanitizedText)
+        i=0
+        while i<=WOIInCurrentSentence and inWOISentence:
+            currentSentenceArr.append(sanitizedTextW)
+            i+=1
+        sanitizedTextW=""
     #go through results list, if the word matches the woi, place the woimarker after it surrounded by commas
     if len(actualWOI)<1:
         sys.stderr.write("Expecting words of interest to be marked with _\n" % (k, sn))
         sys.exit(1)
     resInd=0
     woiInd=0
+    #need to traverse entire file once per woi
+    headerAdded=False
+    FillerWOI=[False]*len(ResRowList)
+    CheckedWOI=[False]*len(ResRowList)
+    for woi in actualWOI:
+        for r in ResRowList:
+            if woiInd==0:
+                ResRowList[resInd]=r.split(",")
+            if woiInd>=len(actualWOI):
+                pass
+            else:
+                #print ResRowList[resInd]
+                #print indexwd(ResRowList[resInd],ResHeaderList,wordColName)+"="+actualWOI[woiInd]
+                if ResRowList[resInd][-1]==currentSentenceArr[woiInd] and indexwd(ResRowList[resInd],ResHeaderList,wordColName)==actualWOI[woiInd]:
+                    ind=ResRowList[resInd].index(actualWOI[woiInd])
+                    #actualWoi comes up twice bc it needs to be in the woi and the zoi col
+                    #print "inserting "+actualWOIMarkers[woiInd]+" at woiInd: "+str(woiInd)
+                    #print ResRowList[resInd][ind+1]
+                    if ResRowList[resInd][ind+1]=="!WOI" and ResRowList[resInd][ind+2]=="NA":
+                        ResRowList[resInd][ind+1]=actualWOIMarkers[woiInd]
+                        ResRowList[resInd][ind+2]=actualWOIMarkers[woiInd]
+                    else:
+                        ResRowList[resInd].insert(ind+1,actualWOIMarkers[woiInd])
+                        ResRowList[resInd].insert(ind+2,actualWOIMarkers[woiInd])
+                    CheckedWOI[resInd]=True
+                    #woiInd+=1
+                else:
+                    ind=ResRowList[resInd].index(indexwd(ResRowList[resInd],ResHeaderList,wordColName))
+                    if resInd==0 and not headerAdded:
+                        ResRowList[resInd].insert(ind+1,"Words of Interest")
+                        ResRowList[resInd].insert(ind+2,"Zone of Interest")
+                        ResHeaderList.insert(ind+1,"Words of Interest")
+                        ResHeaderList.insert(ind+2,"Zone of Interest")
+                        headerAdded=True
+                    else:
+                        #place !woi, in zoi insert next woiMarker, if it belongs to this sentence
+                        #Current issue: Need to make sure that the words beyond the last marker aren't marked
+                            #need to tie the woi to the sentence specifically... Introduce currentSentence var?
+                        ZOI="NA"
+                        #if ResRowList[resInd][-1]==currentSentenceArr[woiInd]:
+                           # ZOI=actualWOIMarkers[woiInd]
+                        if CheckedWOI[resInd]==False and FillerWOI[resInd]==False and not resInd==0:
+                            ResRowList[resInd].insert(ind+1,"!WOI")
+                            ResRowList[resInd].insert(ind+2,ZOI)
+                            FillerWOI[resInd]=True
+                while len(ResRowList[resInd])<commaCount+2:
+                    ResRowList[resInd].append("NULL")
+            resInd+=1
+        woiInd+=1
+        resInd=0
+    #ZOI Stuff!
+    #For every row, first keep track of which sentence I'm in.
+    #Once a new sentence is entered, check if it has WOI markers
+    #If it does, find out how far forward it is, then write that many times, and continue down the column
+    ZoneOfInterestCurrentSentence=""
     for r in ResRowList:
-        ResRowList[resInd]=r.split(",")
-        if woiInd>=len(actualWOI):
+        WOISolved=False
+        #need a way to check if r[-1] is actually a sentence or if it's a form/mcq/etc
+        if r[-1]=="NULL" or resInd==0:
             pass
         else:
-            if indexwd(ResRowList[resInd],ResHeaderList,wordColName)==actualWOI[woiInd]:
-                ind=ResRowList[resInd].index(actualWOI[woiInd])
-                ResRowList[resInd].insert(ind+1,actualWOIMarkers[woiInd])
-                woiInd+=1
+            if r[-1]!=ZoneOfInterestCurrentSentence:
+                ZoneOfInterestCurrentSentence=r[-1]
+                #if new sentence, check forwards and count the number of woi
+                sentenceLength=len(ZoneOfInterestCurrentSentence.split())
+                currentIndexInSentence=0
+                woiNum=0
+                currentZOI="NA"
+                startingIndex=ResRowList.index(r)
+                zoiColInd=r.index(indexwd(r,ResHeaderList,"Words of Interest"))+1
+                while currentIndexInSentence<sentenceLength:
+                    #each step, examine the zoi col to see if there is something in it
+                    #if something is found, go back to starting index(after filling in, update starting index to filled area)
+                    #then go forwards filling in zoi with the woi which was found
+                    ##if not (indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest") == "NA"): 
+                        ##print indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")
+                    if not (indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")=="NA"):
+                        currentZOI=indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")
+                        #ind=ResRowList[startingIndex+currentIndexInSentence].index(NA)
+                    else:
+                        ResRowList[startingIndex+currentIndexInSentence][zoiColInd]=currentZOI
+                        #print "WRITING: " + currentZOI
+                    currentIndexInSentence+=1
+                #woiNum=#ZoneOfInterestCurrentSentence.count("_")
             else:
-                ind=ResRowList[resInd].index(indexwd(ResRowList[resInd],ResHeaderList,wordColName))
-                if resInd==0:
-                    ResRowList[resInd].insert(ind+1,"Words of Interest")
-                else:
-                    ResRowList[resInd].insert(ind+1,"!WOI")
-            while len(ResRowList[resInd])<commaCount+2:
-                ResRowList[resInd].append("NULL")
+                WOISolved=True
+                #print "things"
+                #in current sentence
         resInd+=1
     #rowlist now a list of lists of strings, each inner list is a row
+    print ResHeaderList
+    print ResRowList[5]
     output=open(Out,"w")
     for rl in ResRowList:
         output.write('\t'.join(rl)+'\n')
@@ -149,10 +238,10 @@ def spr_Exp_Combination(Exp, Res, Out):
             #ExpRow[item]+=
             #check if end of sentence, if so, set inSentence
         #else:
-            #take everything from resrow[j], set inSentence
-            #ExpRow[item]+=ResRowList
-            #inSentence=True
-        #j+=1
+                #take everything from resrow[j], set inSentence
+                #ExpRow[item]+=ResRowList
+                #inSentence=True
+            #j+=1
     print ExpLines[0]
     print ExpLines[5]
     for ex in ExpLines:
