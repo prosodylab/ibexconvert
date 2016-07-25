@@ -154,35 +154,80 @@ def WOI_Annotation(Exp,Res,Out):
     #Once a new sentence is entered, check if it has WOI markers
     #If it does, find out how far forward it is, then write that many times, and continue down the column
     ZoneOfInterestCurrentSentence=""
+    topLvlSentenceLength=0
+    topLvlProgress=-1
     for r in ResRowList:
         WOISolved=False
         #need a way to check if r[-1] is actually a sentence or if it's a form/mcq/etc
         if r[-1]=="NULL" or resInd==0:
             pass
         else:
-            if r[-1]!=ZoneOfInterestCurrentSentence:
+            topLvlProgress+=1
+            if topLvlSentenceLength==topLvlProgress:#r[-1]!=ZoneOfInterestCurrentSentence:
+                topLvlProgress=0
+                topLvlSentenceLength=len(r[-1].split())
                 ZoneOfInterestCurrentSentence=r[-1]
                 #if new sentence, check forwards and count the number of woi
                 sentenceLength=len(ZoneOfInterestCurrentSentence.split())
                 currentIndexInSentence=0
-                woiNum=0
                 currentZOI="NA"
                 startingIndex=ResRowList.index(r)
+                sentenceList=ZoneOfInterestCurrentSentence.split()
                 zoiColInd=r.index(indexwd(r,ResHeaderList,"Words of Interest"))+1
-                while currentIndexInSentence<sentenceLength:
+                filledZOI=False
+                wordsProcessed=0
+                finished=False
+                while wordsProcessed<sentenceLength-1:
                     #each step, examine the zoi col to see if there is something in it
                     #if something is found, go back to starting index(after filling in, update starting index to filled area)
                     #then go forwards filling in zoi with the woi which was found
                     ##if not (indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest") == "NA"): 
                         ##print indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")
-                    if not (indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")=="NA"):
+                    if (not r[-1].isdigit()) and not (indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")=="NA"):
                         currentZOI=indexwd(ResRowList[startingIndex+currentIndexInSentence],ResHeaderList,"Zone of Interest")
+                        print currentZOI
                         #ind=ResRowList[startingIndex+currentIndexInSentence].index(NA)
+                        fZInd=0
+                        while True:#not (fZInd==currentIndexInSentence):
+                            if not (ResRowList[startingIndex+fZInd][zoiColInd]=="NA"):
+                                print "changing si from "+str(startingIndex)+" to "+str(startingIndex+currentIndexInSentence)
+                                startingIndex+=currentIndexInSentence+1
+                                currentIndexInSentence=0
+                                filledZOI=True
+                                currentZOI="NA"
+                                break
+                            elif ResRowList[startingIndex+fZInd][-1]!=ZoneOfInterestCurrentSentence:
+                                break
+                            else:
+                                print "setting: " + ResRowList[startingIndex+fZInd][zoiColInd]+" to " + currentZOI
+                                ResRowList[startingIndex+fZInd][zoiColInd]=currentZOI
+                            fZInd+=1
                     else:
-                        ResRowList[startingIndex+currentIndexInSentence][zoiColInd]=currentZOI
+                        #topLvlProgress=0
+                        #topLvlSentenceLength=len(r[-1].split())
+                        pass#ZoneOfInterestCurrentSentence=""
+                        #if firstZoiFound:
+                            #fZInd=0
+                            #while not (fZInd==currentIndexInSentence):
+                                #if ResRowList[startingIndex+fZInd][zoiColInd]=="NA":
+                                   #ResRowList[startingIndex+fZInd][zoiColInd]=currentZOI
+                                    ##fZInd+=1
+                                #else:
+                                    #startingIndex+=currentIndexInSentence
+                                    #currentIndexInSentence=-1
+                                    #print ResRowList[startingIndex+fZInd][zoiColInd]
+                                    #break
+                                #fZInd+=1
+                        #else:
+                            #pass
+                        #ResRowList[startingIndex+currentIndexInSentence][zoiColInd]=currentZOI
                         #print "WRITING: " + currentZOI
+                    wordsProcessed+=1
                     currentIndexInSentence+=1
                 #woiNum=#ZoneOfInterestCurrentSentence.count("_")
+            #elif finished and r[-1]==ZoneOfInterestCurrentSentence:
+                #print "triggering special case at "+str(resInd)
+                #finished=False
             else:
                 WOISolved=True
                 #print "things"
