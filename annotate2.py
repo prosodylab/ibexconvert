@@ -67,24 +67,26 @@ def WOI_Annotation(Exp,Res,Out):
         else:
             ResRowList[ind].insert(10,"NA")
             ResRowList[ind].insert(10,"NA")
-            while len(ResRowList[ind])<commaCount+2:
+            while len(ResRowList[ind])<commaCount+3:
                 ResRowList[ind].append("NULL")
     #Two for loops: Outer loop(experiment file), inner loop(results file)
     resInd=0
     senPos=0
-    expPattern=re.compile(r"^(\w*.?)_(.*)$")
-    expPattern2=re.compile(r"^(\w*)$")
+    expPattern=re.compile(r"^(.*)_(.*)$")#(r"^(\w*.?,?)_(.*)$")
+    expPattern2=re.compile(r"^(.*)$")#(r"^(\w*.?,?)$")
     resCondPattern=re.compile(r"0-(\d)")
+    print ResRowList[0]
+    print ResRowList[1]
+    print ResRowList[2]
     for expR in ExpLines:
+        print expR
         #extracting experiment condition and item number(matches item in the Res to the row num in the Exp)
-        expItem=ExpLines.index(expR)#indexwd(expR,ColNames,"item")
+        expItem=indexwd(expR,ColNames,"item")#ExpLines.index(expR)
         expCond=indexwd(expR,ColNames,"condition")
         #need regex to retrieve array of words and markers
         expText=""
-        print indexwd(expR,ColNames,"text")
         if indexwd(expR,ColNames,"text")!=None:
             expText=indexwd(expR,ColNames,"text").split(" ")
-            print expText
         wordArray=[]
         markerArray=[]
         #this places all the words for the current sentence in the wordArray, and all the markers in the markerArray
@@ -93,7 +95,7 @@ def WOI_Annotation(Exp,Res,Out):
             expMatch=expPattern.match(e)
             expMatch2=expPattern2.match(e)
             if expMatch:
-                print "match!"
+                print "match for markers!"
                 wordArray.append(expMatch.group(1))
                 markerArray.append(expMatch.group(2))
             elif expMatch2:
@@ -101,13 +103,11 @@ def WOI_Annotation(Exp,Res,Out):
                 markerArray.append("NA")
         print markerArray
         print wordArray
-        print ResHeaderList
-        print ResRowList[100]
         resInd=0
         for resR in ResRowList:
             resItem="!"
-            if indexwd(resR,ResHeaderList,"Item number.")!=None and indexwd(resR,ResHeaderList,"Item number.")!="Item number.":
-                resItem=int(indexwd(resR,ResHeaderList,"Item number."))-5
+            if indexwd(resR,ResHeaderList,"Group.").isdigit():
+                resItem=int(indexwd(resR,ResHeaderList,"Group."))/2
             resCond=""
             if indexwd(resR,ResHeaderList,"Type.")!=None:
                 resCond=indexwd(resR,ResHeaderList,"Type.")
@@ -129,10 +129,13 @@ def WOI_Annotation(Exp,Res,Out):
                 for idx, val in enumerate(wordArray):
                     #goals: using idx, check each word against the experiment file and mark woi by appending to ResRowList
                     #how to:
+                    print resInd
                     if resR[-1]=="NULL" or (resInd)>len(ResRowList) or resR[-1].isdigit():
+                        resInd+=1
                         break
-                    print val+"=="+indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer.")
-                    if val==indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer."):
+                    #issue:resInd is off in some cases
+                    print val+"=="+indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer.").replace("%2C",",")
+                    if val==indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer.").replace("%2C",","):
                         print "value matched"
                         if ResRowList[resInd][10]=="NA":
                             ResRowList[resInd][10]=markerArray[idx]
@@ -143,7 +146,8 @@ def WOI_Annotation(Exp,Res,Out):
             #include elif to catch up to current resInd position, assuming I move by more than one resind
             #else
             elif sentenceFinished==True:
-                continue
+                #if str(resInd)<=str(ResRowList.index(resR)):
+                pass
             else:
                 resInd+=1
     ##ZONES OF INTEREST STUFF
@@ -153,7 +157,6 @@ def WOI_Annotation(Exp,Res,Out):
         #variable needed: Current Zoi
         #paste current zoi in any space with NA
         #if not NA, change currrent zoi
-        print
         if ResRowList[idx][11]=="Zone of Interest":
             print "BREAKING"
             break
@@ -167,6 +170,49 @@ def WOI_Annotation(Exp,Res,Out):
             else:
                 currentZoi=indexwd(r,ResHeaderList,"Zone of Interest")
                 ResRowList[idx][11]=currentZoi
+    ###WORKERID ANNOTATION PART
+    currentID="NULL"
+    ResRowList[0].append("workerID")
+    ResHeaderList.append("workerID")
+    for idx, row in enumerate(ResRowList):
+        if idx==0:
+            pass
+        elif idx!=0 and "workerid" in row:
+            currentID=indexwd(row,ResHeaderList,"Field value./Word./Answer.")
+            if currentID=="":
+                currentID="NULL"
+            ResRowList[idx].append(currentID)
+        else:
+            ResRowList[idx].append(currentID)
+    ###ORIGINAL ITEM NUMBER AND CONDITION ANNOTATION
+    resCondPattern=re.compile(r"0-(\d)")
+    originalItemNum=0
+    originalCondition=-1
+    ResRowList[0].append("Original Item Number")
+    ResRowList[0].append("Condition")
+    for idx, row in enumerate(ResRowList):
+        if idx==0:
+            pass
+        elif idx!=0 and indexwd(row,ResHeaderList,"Group.")!="NULL":
+            originalItemNum=int(indexwd(row,ResHeaderList,"Group."))/2
+            ResRowList[idx].append(str(originalItemNum))
+        else:
+            ResRowList[idx].append("NULL")
+        if idx==0:
+            pass
+        elif idx!=0 and indexwd(row,ResHeaderList,"Type.")!="NULL":
+            if indexwd(row,ResHeaderList,"Type.")!=None:
+                resCond=indexwd(row,ResHeaderList,"Type.")
+            resMatch=resCondPattern.match(resCond)
+            if resMatch:
+                originalCondition=resMatch.group(1)
+            else:
+                originalCondition="NULL"
+            #print "Original condition is: "+originalCondition
+            ResRowList[idx].append(str(originalCondition))
+        else:
+            ResRowList[idx].append("NULL")
+    ###QUESTION COMBINATION(Word+Understanding)
     o=open(Out,"w")
     for r in ResRowList:
         o.write('\t'.join(r)+'\n')
