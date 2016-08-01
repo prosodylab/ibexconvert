@@ -75,11 +75,7 @@ def WOI_Annotation(Exp,Res,Out):
     expPattern=re.compile(r"^(.*)_(.*)$")#(r"^(\w*.?,?)_(.*)$")
     expPattern2=re.compile(r"^(.*)$")#(r"^(\w*.?,?)$")
     resCondPattern=re.compile(r"0-(\d)")
-    print ResRowList[0]
-    print ResRowList[1]
-    print ResRowList[2]
     for expR in ExpLines:
-        print expR
         #extracting experiment condition and item number(matches item in the Res to the row num in the Exp)
         expItem=indexwd(expR,ColNames,"item")#ExpLines.index(expR)
         expCond=indexwd(expR,ColNames,"condition")
@@ -95,14 +91,11 @@ def WOI_Annotation(Exp,Res,Out):
             expMatch=expPattern.match(e)
             expMatch2=expPattern2.match(e)
             if expMatch:
-                print "match for markers!"
                 wordArray.append(expMatch.group(1))
                 markerArray.append(expMatch.group(2))
             elif expMatch2:
                 wordArray.append(expMatch2.group(1))
                 markerArray.append("NA")
-        print markerArray
-        print wordArray
         resInd=0
         for resR in ResRowList:
             resItem="!"
@@ -124,23 +117,17 @@ def WOI_Annotation(Exp,Res,Out):
             #print resItem+"=="+expItem
             #print str(rCond)+"=="+str(expCond)
             if str(resItem)==str(expItem) and str(rCond)==str(expCond) and sentenceFinished==False:
-                if resR[-1]!="NULL":
-                    print "IF REACHED: "+resR[-1]
                 for idx, val in enumerate(wordArray):
                     #goals: using idx, check each word against the experiment file and mark woi by appending to ResRowList
                     #how to:
-                    print resInd
                     if resR[-1]=="NULL" or (resInd)>len(ResRowList) or resR[-1].isdigit():
                         resInd+=1
                         break
                     #issue:resInd is off in some cases
-                    print val+"=="+indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer.").replace("%2C",",")
                     if val==indexwd(ResRowList[resInd],ResHeaderList,"Field value./Word./Answer.").replace("%2C",","):
-                        print "value matched"
                         if ResRowList[resInd][10]=="NA":
                             ResRowList[resInd][10]=markerArray[idx]
                             ResRowList[resInd][11]=markerArray[idx]
-                            print "inserting marker: "+markerArray[idx]+" at " +str(idx)
                     resInd+=1
                 sentenceFinished=True
             #include elif to catch up to current resInd position, assuming I move by more than one resind
@@ -158,7 +145,6 @@ def WOI_Annotation(Exp,Res,Out):
         #paste current zoi in any space with NA
         #if not NA, change currrent zoi
         if ResRowList[idx][11]=="Zone of Interest":
-            print "BREAKING"
             break
         if str(indexwd(r,ResHeaderList,"Field name./Question2 (NULL if none)./Word number./Question (NULL if none)."))=="1":
             if indexwd(r,ResHeaderList,"Zone of Interest")=="NA":
@@ -189,8 +175,11 @@ def WOI_Annotation(Exp,Res,Out):
     originalItemNum=0
     originalCondition=-1
     ResRowList[0].append("Original Item Number")
+    ResHeaderList.append("Original Item Number")
     ResRowList[0].append("Condition")
+    ResHeaderList.append("Condition")
     for idx, row in enumerate(ResRowList):
+        #ITEM
         if idx==0:
             pass
         elif idx!=0 and indexwd(row,ResHeaderList,"Group.")!="NULL":
@@ -198,6 +187,7 @@ def WOI_Annotation(Exp,Res,Out):
             ResRowList[idx].append(str(originalItemNum))
         else:
             ResRowList[idx].append("NULL")
+        #CONDITION
         if idx==0:
             pass
         elif idx!=0 and indexwd(row,ResHeaderList,"Type.")!="NULL":
@@ -213,9 +203,79 @@ def WOI_Annotation(Exp,Res,Out):
         else:
             ResRowList[idx].append("NULL")
     ###QUESTION COMBINATION(Word+Understanding)
+    understandingRows=[]
+    ##Go through once, add all rows that aren't understanding questions##the actual spr rows
+    ##Second time, use nested loops of [sprRows(fullResults)], if an understanding questions has the same(id,cond,item)
+    ##then place them on the corresponding sprRow
+    ##this list is what will be written 
+    ###ALTERNATE IDEA: Grab all understanding questions, copy into a new list, and delete them from the old list
+    ##Then match them
+    for row in ResRowList[:]:
+        #grab all understanding questions
+        ##if it has a condition, an item number, a workerid!=null, and the word column isdigit()
+        if indexwd(row,ResHeaderList,"Field value./Word./Answer.").isdigit() and indexwd(row,ResHeaderList,"workerID")!="NULL"and indexwd(row,ResHeaderList,"Original Item Number")!="NULL" and indexwd(row,ResHeaderList,"Condition")!="NULL":
+            #store row
+            understandingRows.append(row)
+            #deleting from main list
+            ##need to change, can't modify list while iterating over it
+            ResRowList.remove(row)
+        else:
+            pass
+    #RRL2=ResRowList
+    #for idx, row in enumerate(RRL2):
+    #    if row in understandingRows:
+    #        print "removing: "+str(row)
+    #        ResRowList.remove(row)
+    ###add understanding rows to rows which have matching item num, workerid, and condition
+    ResRowList[0].append("Understanding Question")
+    ResHeaderList.append("Understanding Question")
+    ResRowList[0].append("Answer Correctness")
+    ResHeaderList.append("Answer Correctness")
+    ResRowList[0].append("Field Value")
+    ResHeaderList.append("Field Value")
+    ResRowList[0].append("Response Time")
+    ResHeaderList.append("Response Time")
+    ResRowList[0].append("Rating Question")
+    ResHeaderList.append("Rating Question")
+    ResRowList[0].append("Whether or not answer was correct(NULL if not applicable)")
+    ResHeaderList.append("Whether or not answer was correct(NULL if not applicable)")
+    ResRowList[0].append("Naturalness Value")
+    ResHeaderList.append("Naturalness Value")
+    ResRowList[0].append("Response Time")
+    ResHeaderList.append("Response Time")
+    for idx, row in enumerate(ResRowList):
+        for jdx, uRow in enumerate(understandingRows):
+            if idx==0:
+                pass
+            elif (indexwd(row,ResHeaderList,"workerID")==indexwd(uRow,ResHeaderList,"workerID")) and indexwd(row,ResHeaderList,"Original Item Number")==indexwd(uRow,ResHeaderList,"Original Item Number") and indexwd(row,ResHeaderList,"Condition")==indexwd(uRow,ResHeaderList,"Condition"):
+                ResRowList[idx].append(indexwd(uRow,ResHeaderList,"Field name./Question2 (NULL if none)./Word number./Question (NULL if none)."))
+                ResRowList[idx].append(indexwd(uRow,ResHeaderList,"Whether or not answer was correct (NULL if N/A)./Reading time."))
+                ResRowList[idx].append(indexwd(uRow,ResHeaderList,"Field value./Word./Answer."))
+                ResRowList[idx].append(indexwd(uRow,ResHeaderList,"Time taken to answer./Newline?"))
+            else:
+                pass
+    for idx, row in enumerate(ResRowList):
+        if idx==0:
+            pass
+        else:
+            #fill in nulls on non question columns
+            #change to for loop, for each cell that needs to be filled(based on length)
+            if len(row)<len(ResHeaderList):
+                for x in range(0,len(ResHeaderList)-len(row)):
+                    ResRowList[idx].append("NULL")
     o=open(Out,"w")
-    for r in ResRowList:
-        o.write('\t'.join(r)+'\n')
+    #for right now, I'm going to ignore the weird stuff at the beginning, i.e. the yes/no questions, heynows
+    ##and giant list of understanding questions which aren't assigned to anything.
+    ###basically the whole stretch of the first ip address(it is most likely us testing?)
+    for i,r in enumerate(ResRowList):
+        if i==0:
+            o.write('\t'.join(r)+'\n')
+        else:
+            if indexwd(r,ResHeaderList,"Field name./Question2 (NULL if none)./Word number./Question (NULL if none).").isdigit():
+                o.write('\t'.join(r)+'\n')
+            else:
+                pass
     o.close()
 
 WOI_Annotation(ExperimentFile,ResultsFile,OutputFile)
+print "Success!"
