@@ -4,6 +4,8 @@ import json
 import sys
 from itertools import *
 
+#README
+#This script takes as input at least two files. The first of which is the experiment file which is to be converted, and the second of which is the name of the desired output. This should usually have .js as an extension. Next, there are a number of flags which can be added, which are detailed below.
 
 # trigger to write consent intro and instructions into file
 # default is off (False) because most experiments won't have this
