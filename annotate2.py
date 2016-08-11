@@ -2,6 +2,11 @@ import sys
 import re
 import json
 
+#README
+#Instructions: This script takes as input (1) an experiment file, annotated with words of interest, (2) a results file from an ibexfarm experiment(old formatting, this should be obsolete now that Megan has given tab-delimited output) and (3) the desired name of output file.
+
+#This is specially formatted to the second spr experiment right now, but this can be changed by going through and editing the column titles, in the future, if this script is needed again, it would be wise to generate these automatically by grabbing the relevant columns. However, this script is very likely obsolete now.
+
 ExperimentFile=sys.argv[1]
 ResultsFile=sys.argv[2]
 OutputFile=sys.argv[3]
