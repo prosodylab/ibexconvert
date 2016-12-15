@@ -312,6 +312,7 @@ for l in lines:
         scale_comment_rights.append(m2.group(5))
         scale_comment_lefts.append(m2.group(4))
     else:
+        m = re.match(scale_regexp, indexwd(l, colnames, 'question', ''))
         firstdigits=m.group(2)
         scale_comment_lefts.append(m.group(3))
         seconddigits=m.group(4)
